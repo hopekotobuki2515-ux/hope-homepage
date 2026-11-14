@@ -16,12 +16,12 @@
 #hope-home img{max-width:100%;height:auto;display:block}
 #hope-home a{color:inherit;text-decoration:none}
 #hope-home h1,#hope-home h2,#hope-home h3,#hope-home p{margin:0}
-#hope-home .hope-hero{position:relative;overflow:hidden;aspect-ratio:1100/296}
-#hope-home .hope-hero>img{width:100%;height:100%;object-fit:cover;object-position:center top}
+#hope-home .hope-hero{position:relative;overflow:hidden}
+#hope-home .hope-hero>img{width:100%;height:auto;object-fit:contain;object-position:center top}
 
 
 #hope-home .hope-hero details{position:absolute;right:1.1%;top:1.4%;z-index:3}
-#hope-home .hope-hero summary{width:48px;height:49px;cursor:pointer;list-style:none;border-radius:9px;background:transparent;color:transparent}
+#hope-home .hope-hero summary{position:relative;width:48px;height:49px;cursor:pointer;list-style:none;border-radius:9px;background:#fff;color:transparent;background-image:linear-gradient(#513021 0 0),linear-gradient(#513021 0 0),linear-gradient(#513021 0 0);background-repeat:no-repeat;background-size:24px 2px;background-position:center 15px,center 23px,center 31px}
 #hope-home .hope-hero summary::-webkit-details-marker{display:none}
 #hope-home .hope-hero nav{position:absolute;right:0;top:52px;min-width:190px;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 6px 18px #0002;padding:8px}
 #hope-home .hope-hero nav a{display:block;padding:9px 12px;color:var(--deep);font-size:14px}
@@ -117,7 +117,7 @@
 @media(max-width:650px){
 #hope-home{font-size:15px}
 
-#hope-home .hope-hero summary{width:30px;height:30px}
+#hope-home .hope-hero summary{width:30px;height:30px;background-size:18px 2px;background-position:center 8px,center 14px,center 20px}
 #hope-home .hope-hero nav{top:32px}
 #hope-home .hope-call{font-size:16px;padding:8px 10px}
 #hope-home .hope-quick{gap:4px;padding:15px 5px}
@@ -161,7 +161,7 @@
 <div id="hope-home" lang="ja">
  <h1 class="hope-sr-only">宇部市の加圧パーソナルトレーニング｜スタジオHOPE</h1>
  <header class="hope-hero">
-  <img src="assets/hero.png" alt="目指せ−10歳のボディデザイン。加圧・パーソナルトレーニングのご案内" fetchpriority="high">
+  <img src="assets/hero.jpg" alt="加圧パーソナルエクササイズスタジオHOPE。目指せ−10歳のボディデザイン" fetchpriority="high">
   
   <details><summary aria-label="メニューを開く">メニュー</summary><nav aria-label="ページ内メニュー"><a href="#hope-training">HOPEのトレーニング</a><a href="#hope-smart">SMART Diet</a><a href="#hope-items">おすすめアイテム</a><a href="experience.html">体験トレーニング</a><a href="#hope-access">アクセス</a></nav></details>
  </header>
