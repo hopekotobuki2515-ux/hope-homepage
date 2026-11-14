@@ -11,7 +11,7 @@
 <style>
 
 /* WordPress HOPE main page: all rules scoped to #hope-home */
-#hope-home{--orange:#ed6900;--deep:#513021;--cream:#fff7f0;--line:#f3d6bf;--text:#333;box-sizing:border-box;width:100%;max-width:1100px;margin:0 auto;background:#fff;color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;line-height:1.65;font-size:16px;overflow-x:clip}
+#hope-home{--orange:#ed6900;--deep:#513021;--cream:#fff7f0;--line:#f3d6bf;--text:#333;box-sizing:border-box;width:100%;max-width:1100px;margin:0 auto;padding-bottom:82px;background:#fff;color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;line-height:1.65;font-size:16px;overflow-x:clip}
 #hope-home *,#hope-home *::before,#hope-home *::after{box-sizing:border-box}
 #hope-home img{max-width:100%;height:auto;display:block}
 #hope-home a{color:inherit;text-decoration:none}
@@ -83,7 +83,8 @@
 #hope-home .hope-stats{background:#ffead8;border-radius:12px;padding:14px 20px;margin:15px 0 22px}
 #hope-home .hope-stats strong{display:block;color:#a65a2c}
 #hope-home .hope-posts-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-#hope-home .hope-post{border:1px solid var(--line);border-radius:18px;padding:12px}
+#hope-home .hope-post{display:block;border:1px solid var(--line);border-radius:18px;padding:12px;color:inherit;text-decoration:none}
+#hope-home .hope-post-image{width:100%;aspect-ratio:492/230;object-fit:cover;border-radius:13px}
 #hope-home .hope-post-art{background:#fff3e7;border-radius:13px;height:170px;display:flex;align-items:center;justify-content:center;flex-direction:column;color:#bf977b}
 #hope-home .hope-post-art span{font-size:42px}
 #hope-home .hope-post .tag{color:var(--orange);font-weight:700;margin-top:14px}
@@ -104,7 +105,7 @@
 #hope-home .hope-insta-logo{background:linear-gradient(135deg,#793db7,#e12d6b,#ff9b31);border-radius:24px;color:#fff;font-size:75px;text-align:center;line-height:1.3}
 #hope-home .hope-instagram-card h3{font-size:23px}
 #hope-home .hope-instagram-card .hope-btn{margin-top:18px}
-#hope-home .hope-final{padding:18px 20px;background:#fff;border-top:1px solid #eee}
+#hope-home .hope-final{position:fixed;left:0;right:0;bottom:0;z-index:10;padding:10px 20px;background:#fff;border-top:1px solid #eee;max-width:1100px;margin:0 auto}
 #hope-home .hope-final .hope-btn{font-size:20px}
 #hope-home .hope-unlinked{font-size:12px;color:#8a817b;margin-top:6px}
 #hope-home .hope-sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
@@ -138,7 +139,7 @@
 #hope-home .hope-audience-card p{font-size:13px}
 #hope-home .hope-posts-grid{gap:9px}
 #hope-home .hope-post{padding:8px}
-#hope-home .hope-post-art{height:115px;font-size:11px}
+#hope-home .hope-post-image{aspect-ratio:492/230}
 #hope-home .hope-post h3{font-size:15px}
 #hope-home .hope-access-card{padding:14px}
 #hope-home .hope-address{font-size:18px}
@@ -158,7 +159,7 @@
   <img src="assets/hero.png" alt="目指せ−10歳のボディデザイン。加圧・パーソナルトレーニングのご案内" fetchpriority="high">
   <div class="hope-hero-brand" aria-label="加圧パーソナルエクササイズスタジオ">加圧パーソナル<br>エクササイズスタジオ</div>
   <a class="hope-hero-cta" href="experience.html" aria-label="初めての方はこちら・体験トレーニングへ"></a>
-  <a class="hope-web" href="experience.html" aria-label="WEB申込み・体験のご案内へ"></a>
+  <a class="hope-web" href="experience.html" aria-label="体験トレーニングの案内を見る"></a>
   <details><summary aria-label="メニューを開く">メニュー</summary><nav aria-label="ページ内メニュー"><a href="#hope-training">HOPEのトレーニング</a><a href="#hope-smart">SMART Diet</a><a href="#hope-items">おすすめアイテム</a><a href="experience.html">体験トレーニング</a><a href="#hope-access">アクセス</a></nav></details>
  </header>
  <a class="hope-call" href="tel:0836398200">電話で問い合わせる</a>
@@ -172,12 +173,8 @@
 <article class="hope-training-card"><img src="assets/training_stretch.png" alt="ストレッチングの紹介写真" loading="lazy"><h3>ストレッチング</h3><p>身体の状態に合わせて、筋肉や関節をゆっくり動かします。</p><a class="hope-btn" href="experience.html">体験ページを見る ›</a></article>
 <article class="hope-training-card"><img src="assets/training_care.png" alt="ボディケアの紹介写真" loading="lazy"><h3>ボディケア</h3><p>無理のない動きと休息を取り入れ、身体をゆったり整える時間に。</p><a class="hope-btn" href="experience.html">体験ページを見る ›</a></article></div></section>
  <section class="hope-section hope-smart" id="hope-smart"><div class="hope-section-head"><h2>SMART Diet</h2><p>食習慣を見直す、12週間のサポートアプリ</p></div><div class="hope-smart-card"><span class="hope-pill">現在、準備中</span><h3>SMART Diet</h3><p class="lead">食事を記録し、学び、振り返る。</p><p class="desc">自分のペースで食習慣を整えるための<br>12週間サポートアプリを制作しています。</p><div class="hope-smart-steps"><div class="hope-smart-step"><span class="circle" aria-hidden="true">♜</span><strong>食事を記録</strong><small>毎日の食事を見つめる</small></div><div class="hope-smart-step"><span class="circle" aria-hidden="true">▣</span><strong>毎週の学び</strong><small>12週間のテーマを学ぶ</small></div><div class="hope-smart-step"><span class="circle" aria-hidden="true">↗</span><strong>振り返り</strong><small>変化や気づきを確認する</small></div></div></div><p class="hope-smart-foot">毎日の食事と向き合い、無理なく続ける習慣づくりをサポート。<br>公開に向けて制作を進めています。</p><p class="hope-note">※アプリは現在準備中です。掲載内容は開発中の構想です。</p></section>
- <section class="hope-section hope-items" id="hope-items"><div class="hope-section-head"><h2>おすすめアイテム</h2><p>トレーニングやセルフケアに役立つアイテムをご紹介</p></div><div class="hope-line"></div><div class="hope-items-track" aria-label="おすすめアイテム・横スクロール"><article class="hope-item" id="hope-item-1"><div class="hope-item-art" aria-hidden="true">▥</div><strong>プレート式<br>ダンベル</strong><small>掲載内容は確認中</small></article>
-<article class="hope-item" id="hope-item-2"><div class="hope-item-art" aria-hidden="true">●</div><strong>ストレッチ<br>セルフケア用品</strong><small>掲載内容は確認中</small></article>
-<article class="hope-item" id="hope-item-3"><div class="hope-item-art" aria-hidden="true">＋</div><strong>掲載商品<br>準備中</strong><small>順次追加予定</small></article>
-<article class="hope-item" id="hope-item-4"><div class="hope-item-art" aria-hidden="true">＋</div><strong>掲載商品<br>準備中</strong><small>順次追加予定</small></article>
-<article class="hope-item" id="hope-item-5"><div class="hope-item-art" aria-hidden="true">＋</div><strong>掲載商品<br>準備中</strong><small>順次追加予定</small></article>
-<article class="hope-item" id="hope-item-6"><div class="hope-item-art" aria-hidden="true">＋</div><strong>掲載商品<br>準備中</strong><small>順次追加予定</small></article></div><a class="hope-btn" href="https://rakudadou719.web.fc2.com/" target="_blank" rel="noopener noreferrer">おすすめアイテムを見に行く ›</a><div class="hope-line"></div></section>
+ <section class="hope-section hope-items" id="hope-items"><div class="hope-section-head"><h2>おすすめアイテム</h2><p>トレーニングやセルフケアに役立つアイテムをご紹介</p></div><div class="hope-line"></div><div class="hope-items-track" aria-label="おすすめアイテム・横スクロール"><a class="hope-item" id="hope-item-1" href="https://rakudadou719.web.fc2.com/" target="_blank" rel="noopener noreferrer"><div class="hope-item-art" aria-hidden="true">▥</div><strong>プレート式<br>ダンベル</strong><small>商品選びの情報を見る</small></a>
+<a class="hope-item" id="hope-item-2" href="https://rakudadou719.web.fc2.com/" target="_blank" rel="noopener noreferrer"><div class="hope-item-art" aria-hidden="true">●</div><strong>ストレッチ・<br>セルフケア用品</strong><small>商品選びの情報を見る</small></a></div><a class="hope-btn" href="https://rakudadou719.web.fc2.com/" target="_blank" rel="noopener noreferrer">おすすめアイテムを見に行く ›</a><div class="hope-line"></div></section>
  <section class="hope-section hope-experience" id="hope-experience"><div class="hope-section-head"><h2>体験トレーニングのご案内</h2><p>初めての方は、体験トレーニングから。</p></div><div class="hope-body"><p>目的や身体の状態に合わせて、<br>ご自身に合ったトレーニングを体験いただけます。</p><ul><li>理想のカラダづくりコース</li><li>カラダすっきりケアコース</li><li>あなたにぴったり体験コース</li></ul></div><div class="hope-line"></div></section>
  <section class="hope-section hope-profile" id="hope-profile"><div class="hope-section-head"><h2>トレーナープロフィール</h2><p><strong>HOPE代表 村田 健作</strong></p></div><div class="hope-body"><p>2006年に加圧インストラクター資格を取得。<br>スポーツクラブなどでの指導経験を経て、2010年に<br>宇部市でパーソナルエクササイズスタジオHOPEを開業。</p><p style="margin-top:24px">運動経験や体力、目標、その日の体調を確認しながら、<br>一人ひとりに合わせたマンツーマンの運動を提案します。<br>初めての方も、自分のペースでご相談ください。</p></div><div class="hope-cert">加圧インストラクター認定：2006年7月6日</div><div class="hope-line"></div></section>
  <section class="hope-section cream" id="hope-blog"><div class="hope-section-head"><h2>ブログ</h2><p>トレーニングや身体のケアに関する情報を発信しています。</p></div><div class="hope-blog-feature"><div class="hope-blog-icon" aria-hidden="true">▤</div><div><h3>HOPEブログ</h3><p>加圧トレーニングやストレッチ、<br>セルフケアについてご紹介します。</p><a class="hope-btn" href="https://hope-fitness.jp/" target="_blank" rel="noopener noreferrer">ブログを見る ›</a></div></div></section>
@@ -186,14 +183,8 @@
 <article class="hope-audience-card"><div class="symbol" aria-hidden="true">▣</div><div><h3>減量・体重管理に<br>取り組みたい方</h3><p>体重や身体の変化が気になり、運動を生活に取り入れたい方の目標づくりをサポートします。</p></div></article>
 <article class="hope-audience-card"><div class="symbol" aria-hidden="true">♧</div><div><h3>姿勢や柔軟性を<br>高めたい方</h3><p>姿勢を意識した運動やストレッチを通じて、身体を動かしやすくしたい方に。</p></div></article>
 <article class="hope-audience-card"><div class="symbol" aria-hidden="true">▰</div><div><h3>筋肉・筋力を<br>向上させたい方</h3><p>今の体力に合わせたトレーニングで、筋力アップを目指す方にご利用いただいています。</p></div></article><div class="hope-stats"><strong>ご利用者の傾向</strong><b>年齢層：30〜60代　／　男女比：約半々</b></div><a class="hope-btn" href="experience.html">体験トレーニングの内容を見る ›</a></section>
- <section class="hope-section hope-posts" id="hope-posts"><div class="hope-line" style="margin:0 auto 22px"></div><div class="hope-section-head"><h2>新着ブログ記事</h2><p>HOPEブログの新しい記事を8件ご紹介します。</p></div><div class="hope-posts-grid"><article class="hope-post"><div class="hope-post-art"><span aria-hidden="true">▧</span>アイキャッチ画像</div><p class="tag">新着記事 01</p><h3>記事タイトルがここに<br>表示されます</h3></article>
-<article class="hope-post"><div class="hope-post-art"><span aria-hidden="true">▧</span>アイキャッチ画像</div><p class="tag">新着記事 02</p><h3>記事タイトルがここに<br>表示されます</h3></article>
-<article class="hope-post"><div class="hope-post-art"><span aria-hidden="true">▧</span>アイキャッチ画像</div><p class="tag">新着記事 03</p><h3>記事タイトルがここに<br>表示されます</h3></article>
-<article class="hope-post"><div class="hope-post-art"><span aria-hidden="true">▧</span>アイキャッチ画像</div><p class="tag">新着記事 04</p><h3>記事タイトルがここに<br>表示されます</h3></article>
-<article class="hope-post"><div class="hope-post-art"><span aria-hidden="true">▧</span>アイキャッチ画像</div><p class="tag">新着記事 05</p><h3>記事タイトルがここに<br>表示されます</h3></article>
-<article class="hope-post"><div class="hope-post-art"><span aria-hidden="true">▧</span>アイキャッチ画像</div><p class="tag">新着記事 06</p><h3>記事タイトルがここに<br>表示されます</h3></article>
-<article class="hope-post"><div class="hope-post-art"><span aria-hidden="true">▧</span>アイキャッチ画像</div><p class="tag">新着記事 07</p><h3>記事タイトルがここに<br>表示されます</h3></article>
-<article class="hope-post"><div class="hope-post-art"><span aria-hidden="true">▧</span>アイキャッチ画像</div><p class="tag">新着記事 08</p><h3>記事タイトルがここに<br>表示されます</h3></article></div><a class="hope-btn" href="https://hope-fitness.jp/" target="_blank" rel="noopener noreferrer">ブログ一覧を見る ›</a></section>
+ <section class="hope-section hope-posts" id="hope-posts"><div class="hope-line" style="margin:0 auto 22px"></div><div class="hope-section-head"><h2>新着ブログ記事</h2><p>公開中のブログから記事を一部ご紹介します。</p></div><div class="hope-posts-grid"><a class="hope-post" href="https://hope-fitness.jp/" target="_blank" rel="noopener noreferrer"><img class="hope-post-image" src="assets/training_kaatsu.png" alt="加圧トレーニングの様子"><p class="tag">2026年10月25日</p><h3>加圧トレーニングで腹筋は鍛えられる？筋肥大効果の転移と成長ホルモンの関係</h3></a>
+<a class="hope-post" href="https://hope-fitness.jp/" target="_blank" rel="noopener noreferrer"><img class="hope-post-image" src="assets/training_weight.png" alt="ウェイトトレーニングの様子"><p class="tag">2026年10月12日</p><h3>加圧トレーニングと通常のウェイトトレーニングを組み合わせる方法</h3></a></div><a class="hope-btn" href="https://hope-fitness.jp/" target="_blank" rel="noopener noreferrer">ブログ一覧を見る ›</a></section>
  <section class="hope-section cream hope-access" id="hope-access"><div class="hope-line" style="margin:0 auto 22px"></div><div class="hope-section-head"><h2>アクセス・お問い合わせ</h2><p style="color:#e96500;font-weight:800">加圧パーソナルエクササイズスタジオHOPE</p></div><div class="hope-access-card"><p class="orange">所在地</p><p class="hope-address">〒755-0032 山口県宇部市寿町2丁目5-15</p><p>JR琴芝駅から徒歩約2分<br>駐車場：施設脇に車を1台停められます</p></div><div class="hope-access-card"><h3>アクセス案内</h3><p>琴芝駅からHOPEまで</p><div class="hope-access-route"><div style="text-align:center">JR琴芝駅<div class="hope-dot" style="margin:10px auto 0"></div></div><div class="hope-dash"></div><div>徒歩約2分</div><div class="hope-dash"></div><div style="text-align:center;color:#ed6900">HOPE<div class="hope-dot orange" style="margin:10px auto 0"></div></div></div><p class="hope-note">※位置関係の案内図です。実際の地図は正式なリンクからご確認ください。</p></div><div class="hope-access-actions"><a class="hope-btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B1%B1%E5%8F%A3%E7%9C%8C%E5%AE%87%E9%83%A8%E5%B8%82%E5%AF%BF%E7%94%BA2%E4%B8%81%E7%9B%AE5-15" target="_blank" rel="noopener noreferrer">地図を開く ›</a><a class="hope-btn dark" href="tel:0836398200">電話をかける ›</a></div><p><strong>電話番号：0836-39-8200</strong></p><p>営業時間：11:00〜22:00 ／ 完全予約制</p></section>
  <section class="hope-section cream" id="hope-instagram"><div class="hope-line" style="margin:0 auto 22px"></div><div class="hope-section-head"><h2>Instagram</h2><p style="color:#ed6900;font-weight:800">HOPEのインスタグラム</p></div><div class="hope-instagram-card"><div class="hope-insta-logo" aria-hidden="true">◎</div><div><h3>InstagramでHOPEをチェック</h3><p>スタジオの情報やトレーニングの様子などを<br>Instagramからご覧いただけます。</p><a class="hope-btn" href="https://www.instagram.com/hope_ube/" target="_blank" rel="noopener noreferrer">Instagramを見る ›</a></div></div></section>
  <footer class="hope-final"><a class="hope-btn" href="experience.html">体験トレーニングのご案内を見る</a></footer>
