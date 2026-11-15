@@ -28,16 +28,13 @@
 #hope-trial-page details nav{position:absolute;right:0;top:calc(100% + 4px);width:max-content;max-width:calc(100vw - 26px);padding:8px;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 6px 18px #0002}
 #hope-trial-page details nav a{display:block;padding:9px 12px;color:var(--deep);font-size:14px;text-decoration:none}
 #hope-trial-page #contact{scroll-margin-top:80px}
+#hope-trial-page .hero{position:relative}
+#hope-trial-page .hero img{display:block;width:100%;height:auto}
+#hope-trial-page .hero-heading{position:absolute;width:1px;height:1px;margin:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+#hope-trial-page .hero-contact{position:absolute;left:16.7%;bottom:.85%;width:23.2%;height:8.6%;min-height:24px;border-radius:999px}
+#hope-trial-page .hero-contact:focus-visible{outline:3px solid var(--deep);outline-offset:2px}
 #hope-trial-page .wrap{max-width:960px;margin:auto}
-#hope-trial-page .hero{background:linear-gradient(125deg,#fff2dc 0%,#fff 55%,#ffe3b5 100%);border-bottom:6px solid var(--orange);text-align:center;padding:58px 24px 50px}
-#hope-trial-page .eyebrow{color:#d15e0b;font-size:15px;font-weight:800;letter-spacing:.06em}
-#hope-trial-page .hero h1{font-size:clamp(28px,4vw,48px);line-height:1.35;color:var(--deep);margin:12px 0 14px}
-#hope-trial-page .hero h1 em{font-style:normal;color:#e96b00}
-#hope-trial-page .hero .lead{font-size:18px;margin:0 auto 26px;max-width:660px}
-#hope-trial-page .keyfacts{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
-#hope-trial-page .fact{background:white;border:2px solid #f7bc70;border-radius:40px;padding:8px 18px;color:#803c1c;font-weight:800}
 #hope-trial-page .cta{display:inline-block;border:0;border-radius:40px;background:var(--orange);padding:13px 34px;color:#fff;text-decoration:none;font-weight:800;box-shadow:0 5px 0 #cc6500}
-#hope-trial-page .hero .cta{margin-top:28px}
 #hope-trial-page main{background:#fff}
 #hope-trial-page .section{padding:58px 32px;border-bottom:1px solid #eee6df}
 #hope-trial-page .section h2{font-size:clamp(24px,3.5vw,32px);font-weight:900;color:var(--deep);margin:0 0 20px;line-height:1.4;padding-bottom:12px;border-bottom:4px solid var(--orange)}
@@ -78,9 +75,6 @@
 #hope-trial-page .nav .web-pending{font-size:8px}
 #hope-trial-page .menu{font-size:20px}
 #hope-trial-page #contact{scroll-margin-top:65px}
-#hope-trial-page .hero{padding:38px 18px 32px}
-#hope-trial-page .hero .lead{font-size:15px}
-#hope-trial-page .fact{font-size:13px;padding:7px 12px}
 #hope-trial-page .section{padding:38px 19px}
 #hope-trial-page .section h2{font-size:24px}
 #hope-trial-page .section h3{font-size:21px}
@@ -96,7 +90,11 @@
 <div id="hope-trial-page">
 
 <header><div class="brand"><strong>加圧パーソナルエクササイズスタジオ</strong><small>山口県宇部市・完全予約制</small></div><div class="nav"><a class="home-link" href="index.html">ホーム</a><a class="web-pending" href="#contact" aria-label="WEB申し込み"><span>WEB<br>申し込み</span></a><details><summary class="menu" aria-label="メニューを開く">☰</summary><nav aria-label="サイトメニュー"><a href="index.html#hope-training">HOPEのトレーニング</a><a href="index.html#hope-smart">SMART Diet</a><a href="index.html#hope-items">おすすめアイテム</a><a href="#contact">体験のお問い合わせ・ご予約</a><a href="index.html#hope-access">アクセス</a></nav></details></div></header>
-<div class="hero"><div class="wrap"><div class="eyebrow">はじめての方へ</div><h1>まずは、<em>体験トレーニング</em>から。</h1><p class="lead">運動が初めての方も、久しぶりの方も。<br>目的や体力に合わせたマンツーマンの運動を、HOPEで体験してみませんか。</p><div class="keyfacts"><span class="fact">初回 3,000円</span><span class="fact">約60分</span><span class="fact">完全予約制</span></div><a class="cta" href="#contact">体験のお問い合わせはこちら　›</a></div></div>
+<div class="hero">
+  <img src="assets/experience-hero.png" width="1672" height="941" alt="初回3,000円、約60分、完全予約制。スタジオで体験トレーニングのご相談をしている様子。" fetchpriority="high">
+  <h1 class="hero-heading">まずは、体験トレーニングから。</h1>
+  <a class="hero-contact" href="#contact" aria-label="体験のお問い合わせはこちら"></a>
+</div>
 <main><div class="wrap">
 <section class="section" id="intro"><h2>HOPEの体験トレーニング</h2><p>「自分に合う運動がわからない」「体力や姿勢が気になる」「筋肉や筋力をつけたい」。そんな方に向けて、身体の状態やご希望を伺いながら、無理のない内容をご提案します。</p><p>トレーニング経験の有無にかかわらず、マンツーマンで一つひとつ確認しながら進めます。</p><div class="price"><span class="regular">通常料金 <s>6,000円</s></span><span class="first"><span>初回体験</span> 3,000円</span></div><p class="sub" style="text-align:center">カウンセリングを含めて約60分</p></section>
 <section class="section" id="courses"><h2>目的に合わせて選べる3つの体験コース</h2><p class="sub">迷った場合は、体験前にご希望をお聞きして内容を一緒に考えます。</p><article class="course"><div class="tag">COURSE 01</div><h3>理想のカラダづくり</h3><img class="photo" src="assets/taiken_photo_2.png" alt="ウェイトトレーニングのイメージ"><p>筋力アップ、引き締め、ボディラインづくりを目指す方に。ウェイトトレーニングを基本に、目的や体力に応じて加圧トレーニングも組み合わせます。</p><p>シェイプアップが目的の場合は、複数の運動を続けて行うサーキット形式にも対応します。</p></article><article class="course"><div class="tag">COURSE 02</div><h3>カラダすっきりケア</h3><img class="photo" src="assets/taiken_photo_3.png" alt="ストレッチングのイメージ"><p>身体の硬さ、姿勢、動かしにくさが気になる方に。ストレッチングやコンディショニングを中心に、身体の状態に合わせて無理なく動かします。</p><p class="note">※痛みやしびれなどの症状を治療するものではありません。強い症状や継続する症状は医療機関へご相談ください。</p></article><article class="course"><div class="tag">COURSE 03</div><h3>あなたにぴったり体験</h3><img class="photo" src="assets/trial-training-collage.jpg" alt="加圧・ウェイトトレーニング・ストレッチングを行う様子のコラージュ"><p>「どの運動が合うかわからない」「体力をつけたい」「自分の目標に合った内容を試したい」という方に。カウンセリングでお話を伺い、加圧・ウェイト・ストレッチングなどから組み立てます。</p></article></section>
