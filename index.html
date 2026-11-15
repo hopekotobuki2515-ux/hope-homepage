@@ -20,8 +20,10 @@
 #hope-home .hope-hero>img{width:100%;height:auto;object-fit:contain;object-position:center top}
 
 
-#hope-home .hope-hero details{position:absolute;right:1.1%;top:1.4%;z-index:3}
-#hope-home .hope-hero .hope-web{position:absolute;right:calc(1.1% + 60px);top:1.4%;z-index:3;min-width:118px;height:49px;display:flex;align-items:center;justify-content:center;padding:0 13px;border:1px solid #e7c3a6;border-radius:9px;background:#fff;color:#6d422f;font-size:13px;font-weight:800;line-height:1;text-align:center;box-shadow:0 2px 8px #0001}
+#hope-home .hope-hero{--button-inset:min(0.788vw,8.67px);--button-right:calc(max(0px,(100% - 1100px) / 2) + min(1.1%,12.1px));--button-gap:60px}
+#hope-home .hope-hero details,#hope-home .hope-hero .hope-web{position:fixed;top:max(var(--button-inset),env(safe-area-inset-top));z-index:21}
+#hope-home .hope-hero details{right:var(--button-right)}
+#hope-home .hope-hero .hope-web{right:calc(var(--button-right) + var(--button-gap));min-width:118px;height:49px;display:flex;align-items:center;justify-content:center;padding:0 13px;border:1px solid #e7c3a6;border-radius:9px;background:#fff;color:#6d422f;font-size:13px;font-weight:800;line-height:1;text-align:center;box-shadow:0 2px 8px #0001}
 #hope-home .hope-hero summary{position:relative;width:48px;height:49px;cursor:pointer;list-style:none;border-radius:9px;background:#fff;color:transparent;background-image:linear-gradient(#513021 0 0),linear-gradient(#513021 0 0),linear-gradient(#513021 0 0);background-repeat:no-repeat;background-size:24px 2px;background-position:center 15px,center 23px,center 31px}
 #hope-home .hope-hero summary::-webkit-details-marker{display:none}
 #hope-home .hope-hero nav{position:absolute;right:0;top:52px;min-width:190px;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 6px 18px #0002;padding:8px}
@@ -118,7 +120,8 @@
 @media(max-width:650px){
 #hope-home{font-size:15px}
 
-#hope-home .hope-hero .hope-web{right:calc(1.1% + 38px);min-width:82px;height:30px;padding:0 7px;border-radius:7px;font-size:10px}
+#hope-home .hope-hero{--button-gap:38px}
+#hope-home .hope-hero .hope-web{min-width:82px;height:30px;padding:0 7px;border-radius:7px;font-size:10px}
 #hope-home .hope-hero summary{width:30px;height:30px;background-size:18px 2px;background-position:center 8px,center 14px,center 20px}
 #hope-home .hope-hero nav{top:32px}
 #hope-home .hope-call{font-size:16px;padding:8px 10px}
@@ -163,7 +166,7 @@
 <div id="hope-home" lang="ja">
  <h1 class="hope-sr-only">宇部市の加圧パーソナルトレーニング｜スタジオHOPE</h1>
  <header class="hope-hero">
-  <img src="assets/hero.jpg" alt="加圧パーソナルエクササイズスタジオHOPE。目指せ−10歳のボディデザイン" fetchpriority="high">
+  <img src="assets/hero.jpg" width="1672" height="941" alt="加圧パーソナルエクササイズスタジオHOPE。目指せ−10歳のボディデザイン" fetchpriority="high">
   
   <a class="hope-web" href="experience.html#contact" aria-label="WEBで体験を申し込む">WEB申し込み</a>
   <details><summary aria-label="メニューを開く">メニュー</summary><nav aria-label="ページ内メニュー"><a href="#hope-training">HOPEのトレーニング</a><a href="#hope-smart">SMART Diet</a><a href="#hope-items">おすすめアイテム</a><a href="experience.html">体験トレーニング</a><a href="#hope-access">アクセス</a></nav></details>

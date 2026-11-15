@@ -14,14 +14,19 @@
 #hope-trial-page{scroll-behavior:smooth}
 #hope-trial-page{margin:0;background:#fffaf6;color:var(--ink);font-family:"Noto Sans JP","Yu Gothic",Meiryo,sans-serif;line-height:1.8}
 #hope-trial-page a{color:inherit}
-#hope-trial-page header{height:80px;background:white;display:flex;align-items:center;justify-content:space-between;padding:10px 4.5%;border-bottom:2px solid #ffe1b6}
+#hope-trial-page header{position:sticky;top:0;z-index:21;height:80px;background:white;display:flex;align-items:center;justify-content:space-between;padding:10px 4.5%;border-bottom:2px solid #ffe1b6}
 #hope-trial-page .brand{display:flex;align-items:center;gap:9px}
 #hope-trial-page .brand strong{font-family:inherit;font-size:16px;line-height:1.4;color:#74391f;letter-spacing:0}
 #hope-trial-page .brand small{font-size:12px;line-height:1.5;color:#49382d;font-weight:700}
 #hope-trial-page .nav{display:flex;align-items:center;gap:12px}
 #hope-trial-page .nav .home-link{display:inline-block;padding:9px 14px;border:1px solid #e9c39f;border-radius:8px;color:#74391f;font-size:14px;font-weight:800;text-decoration:none}
 #hope-trial-page .nav .web-pending{display:inline-block;background:var(--orange);border-radius:8px;color:#fff;font-size:14px;font-weight:800;text-decoration:none;padding:11px 16px}
-#hope-trial-page .menu{font-size:25px;border:1px solid #ddd;border-radius:8px;padding:3px 11px;line-height:1.2}
+#hope-trial-page details{position:relative}
+#hope-trial-page .menu{display:block;cursor:pointer;list-style:none;font-size:25px;border:1px solid #ddd;border-radius:8px;padding:3px 11px;line-height:1.2}
+#hope-trial-page .menu::-webkit-details-marker{display:none}
+#hope-trial-page details nav{position:absolute;right:0;top:calc(100% + 4px);width:max-content;max-width:calc(100vw - 26px);padding:8px;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 6px 18px #0002}
+#hope-trial-page details nav a{display:block;padding:9px 12px;color:var(--deep);font-size:14px;text-decoration:none}
+#hope-trial-page #contact{scroll-margin-top:80px}
 #hope-trial-page .wrap{max-width:960px;margin:auto}
 #hope-trial-page .hero{background:linear-gradient(125deg,#fff2dc 0%,#fff 55%,#ffe3b5 100%);border-bottom:6px solid var(--orange);text-align:center;padding:58px 24px 50px}
 #hope-trial-page .eyebrow{color:#d15e0b;font-size:15px;font-weight:800;letter-spacing:.06em}
@@ -70,6 +75,7 @@
 #hope-trial-page .brand small{font-size:9px}
 #hope-trial-page .nav .web-pending{font-size:11px;padding:8px 9px}
 #hope-trial-page .menu{font-size:20px;padding:3px 8px}
+#hope-trial-page #contact{scroll-margin-top:65px}
 #hope-trial-page .hero{padding:38px 18px 32px}
 #hope-trial-page .hero .lead{font-size:15px}
 #hope-trial-page .fact{font-size:13px;padding:7px 12px}
@@ -87,7 +93,7 @@
 </style>
 <div id="hope-trial-page">
 
-<header><div class="brand"><strong>加圧パーソナルエクササイズスタジオ</strong><small>山口県宇部市・完全予約制</small></div><div class="nav"><a class="home-link" href="index.html">ホーム</a><a class="web-pending" href="#contact">WEB申し込み</a><span class="menu" aria-label="メニュー表示イメージ">☰</span></div></header>
+<header><div class="brand"><strong>加圧パーソナルエクササイズスタジオ</strong><small>山口県宇部市・完全予約制</small></div><div class="nav"><a class="home-link" href="index.html">ホーム</a><a class="web-pending" href="#contact">WEB申し込み</a><details><summary class="menu" aria-label="メニューを開く">☰</summary><nav aria-label="サイトメニュー"><a href="index.html#hope-training">HOPEのトレーニング</a><a href="index.html#hope-smart">SMART Diet</a><a href="index.html#hope-items">おすすめアイテム</a><a href="#contact">体験のお問い合わせ・ご予約</a><a href="index.html#hope-access">アクセス</a></nav></details></div></header>
 <div class="hero"><div class="wrap"><div class="eyebrow">はじめての方へ</div><h1>まずは、<em>体験トレーニング</em>から。</h1><p class="lead">運動が初めての方も、久しぶりの方も。<br>目的や体力に合わせたマンツーマンの運動を、HOPEで体験してみませんか。</p><div class="keyfacts"><span class="fact">初回 3,000円</span><span class="fact">約60分</span><span class="fact">完全予約制</span></div><a class="cta" href="#contact">体験のお問い合わせはこちら　›</a></div></div>
 <main><div class="wrap">
 <section class="section" id="intro"><h2>HOPEの体験トレーニング</h2><p>「自分に合う運動がわからない」「体力や姿勢が気になる」「筋肉や筋力をつけたい」。そんな方に向けて、身体の状態やご希望を伺いながら、無理のない内容をご提案します。</p><p>トレーニング経験の有無にかかわらず、マンツーマンで一つひとつ確認しながら進めます。</p><div class="price"><span class="regular">通常料金 <s>6,000円</s></span><span class="first"><span>初回体験</span> 3,000円</span></div><p class="sub" style="text-align:center">カウンセリングを含めて約60分</p></section>
