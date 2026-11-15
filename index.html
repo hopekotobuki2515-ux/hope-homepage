@@ -17,7 +17,8 @@
 #hope-home a{color:inherit;text-decoration:none}
 #hope-home h1,#hope-home h2,#hope-home h3,#hope-home p{margin:0}
 #hope-home .hope-hero{position:relative;overflow:hidden}
-#hope-home .hope-hero>img{width:100%;height:auto;object-fit:contain;object-position:center top}
+#hope-home .hope-hero picture>img{width:100%;height:auto;object-fit:contain;object-position:center top}
+#hope-home .hope-hero .hope-mobile-intro,#hope-home .hope-hero .hope-mobile-trial{display:none}
 
 
 #hope-home .hope-hero{--button-inset:min(0.788vw,8.67px);--button-right:calc(max(0px,(100% - 1100px) / 2) + min(1.1%,12.1px));--button-size-x:48px;--button-size-y:49px;--button-gap:calc(var(--button-size-x) + 12px)}
@@ -121,10 +122,13 @@
 @media(max-width:650px){
 #hope-home{font-size:15px}
 
-#hope-home .hope-hero{--button-size-x:30px;--button-size-y:30px;--button-gap:calc(var(--button-size-x) + 8px)}
-#hope-home .hope-hero .hope-web{border-radius:7px;font-size:7px}
-#hope-home .hope-hero summary{background-size:18px 2px;background-position:center 8px,center 14px,center 20px}
-#hope-home .hope-hero nav{top:32px}
+#hope-home .hope-hero .hope-web{display:none}
+#hope-home .hope-hero .hope-mobile-intro,#hope-home .hope-hero .hope-mobile-trial{display:block}
+#hope-home .hope-hero .hope-mobile-trial{position:absolute;left:3.7%;right:4.17%;top:88.52%;height:8.3%}
+#hope-home .hope-hero details{position:absolute;top:2.22%;right:1.57%;width:13.33%;height:10.67%}
+#hope-home .hope-hero summary{width:100%;height:100%;background:none}
+#hope-home .hope-hero nav{top:calc(100% + 4px)}
+#hope-home .hope-hero summary:focus-visible,#hope-home .hope-hero .hope-mobile-trial:focus-visible{outline:3px solid #513021;outline-offset:-3px}
 #hope-home .hope-call{font-size:16px;padding:8px 10px}
 #hope-home .hope-quick{gap:4px;padding:15px 5px}
 #hope-home .hope-section{padding:30px 16px}
@@ -168,7 +172,12 @@
 <div id="hope-home" lang="ja">
  <h1 class="hope-sr-only">宇部市の加圧パーソナルトレーニング｜スタジオHOPE</h1>
  <header class="hope-hero">
-  <img src="assets/hero.jpg" width="1672" height="941" alt="加圧パーソナルエクササイズスタジオHOPE。目指せ−10歳のボディデザイン" fetchpriority="high">
+  <picture>
+    <source media="(max-width: 650px)" srcset="assets/home-hero-mobile.png" width="1080" height="1350">
+    <img src="assets/hero.jpg" width="1672" height="941" alt="加圧パーソナルエクササイズスタジオHOPE。目指せ−10歳のボディデザイン" fetchpriority="high">
+  </picture>
+  <p class="hope-mobile-intro hope-sr-only">忙しい大人のためのパーソナルトレーニングジム。専任のパーソナルトレーナーが、体力や目標に合わせて1対1でサポートします。</p>
+  <a class="hope-mobile-trial" href="experience.html" aria-label="初めての方はこちら"></a>
   
   <a class="hope-web" href="experience.html#contact" aria-label="WEBで体験を申し込む"><span>WEB<br>申し込み</span></a>
   <details><summary aria-label="メニューを開く">メニュー</summary><nav aria-label="ページ内メニュー"><a href="#hope-training">HOPEのトレーニング</a><a href="#hope-smart">SMART Diet</a><a href="#hope-items">おすすめアイテム</a><a href="experience.html">体験トレーニング</a><a href="#hope-access">アクセス</a></nav></details>
