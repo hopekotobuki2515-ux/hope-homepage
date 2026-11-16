@@ -30,9 +30,10 @@
 #hope-home .hope-hero nav{position:absolute;right:0;top:52px;min-width:190px;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 6px 18px #0002;padding:8px}
 #hope-home .hope-hero nav a{display:block;padding:9px 12px;color:var(--deep);font-size:14px}
 #hope-home .hope-call{display:flex;align-items:center;justify-content:center;width:100%;height:54px;min-height:54px;text-align:center;background:#f07809;color:#fff!important;font-weight:800;padding:8px 10px;font-size:20px;line-height:1.3}
-#hope-home .hope-quick{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch;gap:7px;padding:34px 8px 18px;background:#fffaf6}
-#hope-home .hope-quick img{display:block;width:100%;height:100%;object-fit:contain;background:#fff;border-radius:10px}
-#hope-home .hope-quick a,#hope-home .hope-quick .hope-inactive{display:block;aspect-ratio:358/271;border-radius:10px;overflow:hidden}
+#hope-home .hope-intro-graphic{position:relative;max-width:650px;margin:0 auto}
+#hope-home .hope-intro-graphic img{width:100%;height:auto}
+#hope-home .hope-intro-phone{position:absolute;left:43%;right:8%;bottom:0;height:7.5%;min-height:44px;border-radius:4px}
+#hope-home .hope-intro-phone:focus-visible{outline:3px solid #ffdc68;outline-offset:-4px}
 #hope-home .hope-section{padding:42px 5.5%;border-top:1px solid #f3eee9}
 #hope-home .hope-section.cream{background:#fff8f2}
 #hope-home .hope-section-head{margin-bottom:24px}
@@ -130,7 +131,6 @@
 #hope-home .hope-hero nav{top:calc(100% + 4px)}
 #hope-home .hope-hero summary:focus-visible,#hope-home .hope-hero .hope-mobile-trial:focus-visible,#hope-home .hope-hero .hope-mobile-program:focus-visible{outline:3px solid #513021;outline-offset:-3px}
 #hope-home .hope-call{font-size:16px;padding:8px 10px}
-#hope-home .hope-quick{gap:4px;padding:15px 5px}
 #hope-home .hope-section{padding:30px 16px}
 #hope-home .hope-section-head{margin-bottom:20px}
 #hope-home .hope-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
@@ -187,11 +187,10 @@
   <details><summary aria-label="メニューを開く">メニュー</summary><nav aria-label="ページ内メニュー"><a href="#hope-training">HOPEのトレーニング</a><a href="#hope-smart">SMART Diet</a><a href="#hope-items">おすすめアイテム</a><a href="experience.html">体験トレーニング</a><a href="#hope-access">アクセス</a></nav></details>
  </header>
  <a class="hope-call" href="tel:0836398200">電話で問い合わせる</a>
- <div class="hope-quick" aria-label="関連コンテンツ">
-  <a href="https://hope-fitness.jp/" target="_blank" rel="noopener noreferrer"><img src="assets/nav_blog.png" alt="ブログを読む"></a>
-  <a href="https://rakudadou719.web.fc2.com/self.html"><img src="assets/nav_items.png" alt="おすすめアイテムをチェック"></a>
-  <a href="#hope-smart"><img src="assets/nav_smart.png" alt="SMART Dietを詳しく見る"></a>
- </div>
+ <figure class="hope-intro-graphic">
+  <img src="assets/home-hope-eyecatch.png" width="1080" height="1350" loading="lazy" alt="忙しい大人のためのパーソナルトレーニングジム。60分間の貸し切りで、人目や器具の順番待ちを気にせず運動に集中できます。専任トレーナーが体力や目標に合った運動をご提案。営業時間は11:00〜22:00。">
+  <a class="hope-intro-phone" href="tel:0836398200" aria-label="HOPEに電話する 0836-39-8200"></a>
+ </figure>
  <section class="hope-section hope-training" id="hope-training"><div class="hope-section-head"><h2>HOPEのトレーニング</h2><p>一人ひとりの目的や体力に合わせて、マンツーマンで丁寧にサポートします。</p></div><div class="hope-grid"><article class="hope-training-card" id="hope-training-kaatsu"><img src="assets/training_kaatsu.png" alt="加圧トレーニングの紹介写真" loading="lazy"><h3>加圧トレーニング</h3><p>専用ベルトを使用し、体力や目的に合わせて運動の負荷を調整します。</p><a class="hope-btn" href="experience.html">体験ページを見る ›</a></article>
 <article class="hope-training-card" id="hope-training-weight"><img src="assets/training_weight.png" alt="ウェイトトレーニングの紹介写真" loading="lazy"><h3>ウェイトトレーニング</h3><p>ダンベルやマシンを使い、目的に合わせて筋力を鍛えます。</p><a class="hope-btn" href="experience.html">体験ページを見る ›</a></article>
 <article class="hope-training-card" id="hope-training-stretch"><img src="assets/training_stretch.png" alt="ストレッチングの紹介写真" loading="lazy"><h3>ストレッチング</h3><p>身体の状態に合わせて、筋肉や関節をゆっくり動かします。</p><a class="hope-btn" href="experience.html">体験ページを見る ›</a></article>
