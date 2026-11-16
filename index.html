@@ -18,7 +18,7 @@
 #hope-home h1,#hope-home h2,#hope-home h3,#hope-home p{margin:0}
 #hope-home .hope-hero{position:relative;overflow:hidden}
 #hope-home .hope-hero picture>img{width:100%;height:auto;object-fit:contain;object-position:center top}
-#hope-home .hope-hero .hope-mobile-intro,#hope-home .hope-hero .hope-mobile-trial{display:none}
+#hope-home .hope-hero .hope-mobile-intro,#hope-home .hope-hero .hope-mobile-trial,#hope-home .hope-hero .hope-mobile-program{display:none}
 
 
 #hope-home .hope-hero{--button-inset:min(0.788vw,8.67px);--button-right:calc(max(0px,(100% - 1100px) / 2) + min(1.1%,12.1px));--button-size-x:48px;--button-size-y:49px;--button-gap:calc(var(--button-size-x) + 12px)}
@@ -123,12 +123,12 @@
 #hope-home{font-size:15px}
 
 #hope-home .hope-hero .hope-web{display:none}
-#hope-home .hope-hero .hope-mobile-intro,#hope-home .hope-hero .hope-mobile-trial{display:block}
-#hope-home .hope-hero .hope-mobile-trial{position:absolute;left:3.7%;right:4.17%;top:88.52%;height:8.3%}
-#hope-home .hope-hero details{position:absolute;top:2.22%;right:1.57%;width:13.33%;height:10.67%}
+#hope-home .hope-hero .hope-mobile-intro,#hope-home .hope-hero .hope-mobile-trial,#hope-home .hope-hero .hope-mobile-program{display:block}
+#hope-home .hope-hero .hope-mobile-trial,#hope-home .hope-hero .hope-mobile-program{position:absolute;left:var(--left);top:var(--top);width:var(--width);height:var(--height)}
+#hope-home .hope-hero details{position:absolute;top:1.26%;right:1.76%;width:13.33%;height:10.67%}
 #hope-home .hope-hero summary{width:100%;height:100%;background:none}
 #hope-home .hope-hero nav{top:calc(100% + 4px)}
-#hope-home .hope-hero summary:focus-visible,#hope-home .hope-hero .hope-mobile-trial:focus-visible{outline:3px solid #513021;outline-offset:-3px}
+#hope-home .hope-hero summary:focus-visible,#hope-home .hope-hero .hope-mobile-trial:focus-visible,#hope-home .hope-hero .hope-mobile-program:focus-visible{outline:3px solid #513021;outline-offset:-3px}
 #hope-home .hope-call{font-size:16px;padding:8px 10px}
 #hope-home .hope-quick{gap:4px;padding:15px 5px}
 #hope-home .hope-section{padding:30px 16px}
@@ -173,11 +173,15 @@
  <h1 class="hope-sr-only">宇部市の加圧パーソナルトレーニング｜スタジオHOPE</h1>
  <header class="hope-hero">
   <picture>
-    <source media="(max-width: 650px)" srcset="assets/home-hero-mobile.png" width="1080" height="1350">
+    <source media="(max-width: 650px)" srcset="assets/home-hero-mobile-v2.png" width="1080" height="1350">
     <img src="assets/hero.jpg" width="1672" height="941" alt="加圧パーソナルエクササイズスタジオHOPE。目指せ−10歳のボディデザイン" fetchpriority="high">
   </picture>
   <p class="hope-mobile-intro hope-sr-only">忙しい大人のためのパーソナルトレーニングジム。専任のパーソナルトレーナーが、体力や目標に合わせて1対1でサポートします。</p>
-  <a class="hope-mobile-trial" href="experience.html" aria-label="初めての方はこちら"></a>
+  <a class="hope-mobile-trial" href="experience.html" aria-label="初めてのHOPE" style="--left:19.44%;--top:45.70%;--width:54.72%;--height:7.26%"></a>
+  <a class="hope-mobile-program" href="#hope-training-kaatsu" aria-label="加圧トレーニング" style="--left:1.85%;--top:69.93%;--width:46.85%;--height:12.44%"></a>
+  <a class="hope-mobile-program" href="#hope-training-stretch" aria-label="ストレッチング" style="--left:50.19%;--top:69.93%;--width:47.96%;--height:12.44%"></a>
+  <a class="hope-mobile-program" href="#hope-training-weight" aria-label="ウェイトトレーニング" style="--left:2.22%;--top:84.22%;--width:46.94%;--height:12.37%"></a>
+  <a class="hope-mobile-program" href="#hope-smart" aria-label="スマートダイエット" style="--left:50.65%;--top:84.22%;--width:47.22%;--height:12.37%"></a>
   
   <a class="hope-web" href="experience.html#contact" aria-label="WEBで体験を申し込む"><span>WEB<br>申し込み</span></a>
   <details><summary aria-label="メニューを開く">メニュー</summary><nav aria-label="ページ内メニュー"><a href="#hope-training">HOPEのトレーニング</a><a href="#hope-smart">SMART Diet</a><a href="#hope-items">おすすめアイテム</a><a href="experience.html">体験トレーニング</a><a href="#hope-access">アクセス</a></nav></details>
@@ -188,9 +192,9 @@
   <a href="https://rakudadou719.web.fc2.com/self.html"><img src="assets/nav_items.png" alt="おすすめアイテムをチェック"></a>
   <a href="#hope-smart"><img src="assets/nav_smart.png" alt="SMART Dietを詳しく見る"></a>
  </div>
- <section class="hope-section hope-training" id="hope-training"><div class="hope-section-head"><h2>HOPEのトレーニング</h2><p>一人ひとりの目的や体力に合わせて、マンツーマンで丁寧にサポートします。</p></div><div class="hope-grid"><article class="hope-training-card"><img src="assets/training_kaatsu.png" alt="加圧トレーニングの紹介写真" loading="lazy"><h3>加圧トレーニング</h3><p>専用ベルトを使用し、体力や目的に合わせて運動の負荷を調整します。</p><a class="hope-btn" href="experience.html">体験ページを見る ›</a></article>
-<article class="hope-training-card"><img src="assets/training_weight.png" alt="ウェイトトレーニングの紹介写真" loading="lazy"><h3>ウェイトトレーニング</h3><p>ダンベルやマシンを使い、目的に合わせて筋力を鍛えます。</p><a class="hope-btn" href="experience.html">体験ページを見る ›</a></article>
-<article class="hope-training-card"><img src="assets/training_stretch.png" alt="ストレッチングの紹介写真" loading="lazy"><h3>ストレッチング</h3><p>身体の状態に合わせて、筋肉や関節をゆっくり動かします。</p><a class="hope-btn" href="experience.html">体験ページを見る ›</a></article>
+ <section class="hope-section hope-training" id="hope-training"><div class="hope-section-head"><h2>HOPEのトレーニング</h2><p>一人ひとりの目的や体力に合わせて、マンツーマンで丁寧にサポートします。</p></div><div class="hope-grid"><article class="hope-training-card" id="hope-training-kaatsu"><img src="assets/training_kaatsu.png" alt="加圧トレーニングの紹介写真" loading="lazy"><h3>加圧トレーニング</h3><p>専用ベルトを使用し、体力や目的に合わせて運動の負荷を調整します。</p><a class="hope-btn" href="experience.html">体験ページを見る ›</a></article>
+<article class="hope-training-card" id="hope-training-weight"><img src="assets/training_weight.png" alt="ウェイトトレーニングの紹介写真" loading="lazy"><h3>ウェイトトレーニング</h3><p>ダンベルやマシンを使い、目的に合わせて筋力を鍛えます。</p><a class="hope-btn" href="experience.html">体験ページを見る ›</a></article>
+<article class="hope-training-card" id="hope-training-stretch"><img src="assets/training_stretch.png" alt="ストレッチングの紹介写真" loading="lazy"><h3>ストレッチング</h3><p>身体の状態に合わせて、筋肉や関節をゆっくり動かします。</p><a class="hope-btn" href="experience.html">体験ページを見る ›</a></article>
 <article class="hope-training-card"><img src="assets/training_care.png" alt="ボディケアの紹介写真" loading="lazy"><h3>ボディケア</h3><p>無理のない動きと休息を取り入れ、身体をゆったり整える時間に。</p><a class="hope-btn" href="experience.html">体験ページを見る ›</a></article></div></section>
  <section class="hope-section hope-smart" id="hope-smart"><div class="hope-section-head"><h2>SMART Diet</h2><p>食習慣を見直す、12週間のサポートアプリ</p></div><div class="hope-smart-card"><span class="hope-pill">現在、準備中</span><h3>SMART Diet</h3><p class="lead">食事を記録し、学び、振り返る。</p><p class="desc">自分のペースで食習慣を整えるための<br>12週間サポートアプリを制作しています。</p><div class="hope-smart-steps"><div class="hope-smart-step"><span class="circle" aria-hidden="true">♜</span><strong>食事を記録</strong><small>毎日の食事を見つめる</small></div><div class="hope-smart-step"><span class="circle" aria-hidden="true">▣</span><strong>毎週の学び</strong><small>12週間のテーマを学ぶ</small></div><div class="hope-smart-step"><span class="circle" aria-hidden="true">↗</span><strong>振り返り</strong><small>変化や気づきを確認する</small></div></div></div><p class="hope-smart-foot">毎日の食事と向き合い、無理なく続ける習慣づくりをサポート。<br>公開に向けて制作を進めています。</p><p class="hope-note">※アプリは現在準備中です。掲載内容は開発中の構想です。</p></section>
  <section class="hope-section hope-items" id="hope-items">
