@@ -185,7 +185,10 @@
   #hope-daily-goals { --orange: #ed7908; --deep: #68301c; --line: #f4a24b; box-sizing: border-box; width: 100%; max-width: 390px; margin: 0 auto; background: #fff; color: #302820; font-family: "Noto Sans CJK JP", "Noto Sans JP", "Yu Gothic", Meiryo, sans-serif; line-height: 1.8; }
   #hope-daily-goals *, #hope-daily-goals *::before { box-sizing: border-box; }
   #hope-daily-goals .hope-daily-content { padding: 38px 19px; }
-  #hope-daily-goals #hope-daily-heading { margin: 0 0 17px; padding-bottom: 12px; color: #68301c; border-bottom: 4px solid #ed7908; font-size: 24px; line-height: 1.4; font-weight: 900; text-wrap: pretty; }
+  #hope-daily-goals #hope-daily-heading { margin: 0 0 17px; padding-bottom: 12px; color: #68301c; border-bottom: 4px solid #ed7908; font-size: clamp(14px, 4.7vw, 18px); line-height: 1.4; font-weight: 900; text-wrap: pretty; }
+  #hope-daily-goals #hope-daily-heading span { display: block; }
+  #hope-daily-goals #hope-daily-heading .hope-daily-heading-conclusion { margin-top: .55em; }
+  @media (min-width: 651px) { #hope-daily-goals #hope-daily-heading { font-size: 24px; } }
   #hope-daily-goals p { margin: 0 0 16px; font-size: 15px; }
   #hope-daily-goals figure { margin: 0; }
   #hope-daily-goals figure img { display: block; width: 100%; height: auto; border-radius: 12px; }
@@ -248,7 +251,11 @@
  </section>
 <div id="hope-daily-goals">
 <section class="hope-daily-content" aria-labelledby="hope-daily-heading">
-    <h2 id="hope-daily-heading">階段をラクに、着たい服を楽しむための加圧トレーニング</h2>
+    <h2 id="hope-daily-heading">
+      <span>もし、今より階段を楽にのぼれたら……</span>
+      <span>もし、今より着たい服を楽しめたら……</span>
+      <span class="hope-daily-heading-conclusion">そんな毎日を、加圧トレーニングで。</span>
+    </h2>
     <figure>
       <img src="assets/kaatsu-daily-goals.webp" width="760" height="1140" alt="階段を、もう少し軽やかに。脚やお尻の筋力づくり。着たい服を、気持ちよく。肩や腕まわりの筋肉づくり。" loading="lazy" decoding="async">
     </figure>
