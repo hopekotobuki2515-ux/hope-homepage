@@ -47,7 +47,7 @@
 #hope-home .hope-feature-pagination button[aria-current="true"]{background:#f07809;transform:scale(1.15)}
 #hope-home .hope-feature-banner:focus-visible,#hope-home .hope-feature-arrow:focus-visible,#hope-home .hope-feature-pagination button:focus-visible{outline:3px solid #513021;outline-offset:-3px}
 @media(max-width:650px){
- #hope-home .hope-hero picture{display:block;aspect-ratio:1080/845;overflow:hidden}
+ #hope-home .hope-hero picture{display:block;width:100%;height:calc(100vw * 845 / 1080);max-height:calc(650px * 845 / 1080);overflow:hidden}
  #hope-home .hope-hero picture>img{width:100%;height:auto;max-width:none}
  #hope-home .hope-hero .hope-mobile-program{display:none!important}
  #hope-home .hope-hero .hope-mobile-trial{top:73%!important;height:11.6%!important}
