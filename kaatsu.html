@@ -90,6 +90,34 @@
 #hope-trial-page{display:block;box-sizing:border-box;width:100%;margin:0;min-width:0;overflow-x:clip}
 
 #hope-trial-page .section .kaatsu-detail-hook{font-size:clamp(29px,5vw,46px);line-height:1.35;color:var(--deep)}
+  #hope-daily-goals { --orange: #ed7908; --deep: #68301c; --line: #f4a24b; box-sizing: border-box; width: 100%; max-width: 390px; margin: 0 auto; background: #fff; color: #302820; font-family: "Noto Sans CJK JP", "Noto Sans JP", "Yu Gothic", Meiryo, sans-serif; line-height: 1.8; }
+  #hope-daily-goals *, #hope-daily-goals *::before { box-sizing: border-box; }
+  #hope-daily-goals .hope-daily-content { padding: 38px 19px; }
+  #hope-daily-goals #hope-daily-heading { margin: 0 0 17px; padding-bottom: 12px; color: #68301c; border-bottom: 4px solid #ed7908; font-size: 24px; line-height: 1.4; font-weight: 900; text-wrap: pretty; }
+  #hope-daily-goals p { margin: 0 0 16px; font-size: 15px; }
+  #hope-daily-goals figure { margin: 0; }
+  #hope-daily-goals figure img { display: block; width: 100%; height: auto; border-radius: 12px; }
+  #hope-daily-goals .hope-daily-light-load h3 { margin: 0 0 11px; color: #68301c; font-size: 20px; font-weight: 850; line-height: 1.45; }
+  #hope-daily-goals .hope-daily-light-load p { margin-bottom: 8px; }
+  #hope-daily-goals .hope-daily-light-load a { display: inline-block; color: #756b63; font-size: 12px; padding: 8px 0; }
+  #hope-daily-goals .hope-load-compare { margin: 18px 0; padding: 15px; border-radius: 12px; background: #fff8ef; color: #68301c; }
+  #hope-daily-goals .hope-load-compare figcaption { font-size: 16px; font-weight: 800; line-height: 1.45; }
+  #hope-daily-goals .hope-load-scale { color: #63554c; margin: 4px 0 12px; font-size: 12px; line-height: 1.55; }
+  #hope-daily-goals .hope-load-compare dl, #hope-daily-goals .hope-load-compare dd { margin: 0; }
+  #hope-daily-goals .hope-load-compare .hope-load-caveat { margin: 9px 0 0; }
+  #hope-daily-goals .hope-load-row + .hope-load-row { margin-top: 12px; }
+  #hope-daily-goals .hope-load-row dt { font-size: 13px; line-height: 1.45; }
+  #hope-daily-goals .hope-load-row dd { display: grid; grid-template-columns: 85px minmax(0, 1fr); align-items: center; gap: 9px; font-size: 21px; font-variant-numeric: tabular-nums; }
+  #hope-daily-goals .hope-load-track { position: relative; display: block; height: 8px; background: #e9e0d5; border-radius: 8px; }
+  #hope-daily-goals .hope-load-track span { position: absolute; inset-block: 0; left: var(--start); width: var(--range); background: #856d5e; border-radius: 8px; }
+  #hope-daily-goals .hope-load-kaatsu strong { color: #9f461d; }
+  #hope-daily-goals .hope-load-kaatsu .hope-load-track span { background: #dc6c20; }
+  #hope-daily-goals .hope-load-hormone { font-size: 14px; line-height: 1.7; margin: 0 0 10px; }
+  #hope-daily-goals .hope-load-hormone strong { color: #68301c; }
+  #hope-daily-goals .hope-load-references { display: flex; flex-wrap: wrap; column-gap: 10px; }
+@media (min-width: 651px) {
+  #hope-daily-goals { max-width: 668px; }
+}
 </style>
 <div id="hope-trial-page">
 <header><div class="brand"><strong>加圧パーソナルエクササイズスタジオ</strong><small>山口県宇部市・完全予約制</small></div><div class="nav"><a class="home-link" href="index.html">ホーム</a><a class="web-pending" href="experience.html#contact" aria-label="WEB申し込み"><span>WEB<br>申し込み</span></a><details><summary class="menu" aria-label="メニューを開く">☰</summary><nav aria-label="サイトメニュー"><a href="index.html#hope-training">HOPEのトレーニング</a><a href="index.html#hope-smart">SMART Diet</a><a href="index.html#hope-items">おすすめアイテム</a><a href="experience.html#contact">体験のお問い合わせ・ご予約</a><a href="index.html#hope-access">アクセス</a></nav></details></div></header>
@@ -148,6 +176,43 @@
   <p>山口県宇部市寿町2丁目5-15<br>営業時間 11:00〜22:00・完全予約制</p>
   <p><a class="phone" href="tel:0836398200" aria-label="HOPEに電話する 0836-39-8200">0836-39-8200</a></p>
 </section>
+<div id="hope-daily-goals">
+<section class="hope-daily-content" aria-labelledby="hope-daily-heading">
+    <h2 id="hope-daily-heading">階段をラクに、着たい服を楽しむための加圧トレーニング</h2>
+    <figure>
+      <img src="assets/kaatsu-daily-goals.webp" width="760" height="1140" alt="階段を、もう少し軽やかに。脚やお尻の筋力づくり。着たい服を、気持ちよく。肩や腕まわりの筋肉づくり。" loading="lazy" decoding="async">
+    </figure>
+    <section class="hope-daily-light-load" aria-labelledby="hope-daily-light-load-title">
+      <h3 id="hope-daily-light-load-title">通勤も、お出かけも、もっと軽やかに。</h3>
+      <p>専用ベルトで血流を調整すると、軽い重量から脚や肩まわりの筋力づくりに取り組めます。</p>
+
+      <figure class="hope-load-compare" aria-labelledby="hope-load-caption">
+        <figcaption id="hope-load-caption">筋肥大を目指すときの重量の目安</figcaption>
+        <p class="hope-load-scale">1回だけ持ち上げられる最大重量を100％とした場合</p>
+        <dl>
+          <div class="hope-load-row">
+            <dt>従来の筋肥大トレーニングの設定例</dt>
+            <dd><strong>70〜85％</strong><span class="hope-load-track" aria-hidden="true"><span style="--start:70%;--range:15%"></span></span></dd>
+          </div>
+          <div class="hope-load-row hope-load-kaatsu">
+            <dt>加圧トレーニングの研究で使われる範囲</dt>
+            <dd><strong>20〜40％</strong><span class="hope-load-track" aria-hidden="true"><span style="--start:20%;--range:20%"></span></span></dd>
+          </div>
+        </dl>
+        <p class="hope-load-scale hope-load-caveat">筋肥大は、使う重量だけで決まるものではありません。</p>
+      </figure>
+
+      <p class="hope-load-hormone"><strong>運動直後の反応</strong>　軽い重量で加圧運動を行った研究では、血中の成長ホルモンが一時的に増えました。</p>
+      <p class="hope-load-hormone"><strong>日常に活かせる筋力</strong>　階段を軽やかに上るために、脚やお尻を。着たい服を楽しむために、肩や腕まわりを。目指したい変化に合わせて鍛えます。</p>
+      <div class="hope-load-references">
+        <a href="https://www.cepcometti.com/wp-content/uploads/2017/11/ACSM-2009.pdf" target="_blank" rel="noopener">従来の負荷設定例（ACSM 2009年）</a>
+        <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6530612/" target="_blank" rel="noopener">加圧運動の負荷の資料</a>
+        <a href="https://pubmed.ncbi.nlm.nih.gov/10642363/" target="_blank" rel="noopener">成長ホルモンの研究</a>
+      </div>
+    </section>
+
+  </section>
+</div>
 </div></main>
 </div>
 </body>
