@@ -383,6 +383,18 @@ html { scroll-padding-top: 80px; }
   line-height: 1.2;
 }
 #hope-home .hope-header-actions .menu::-webkit-details-marker { display: none; }
+#hope-home .hope-header-actions .hope-menu-close,
+#hope-home .hope-header-actions details[open] .hope-menu-open,
+#hope-home .hope-header-actions details:not([open]) > nav { display: none; }
+#hope-home .hope-header-actions details[open] .hope-menu-close {
+  display: grid;
+  justify-items: center;
+  color: #68301c;
+  font-size: 10px;
+  font-weight: 700;
+}
+#hope-home .hope-header-actions .hope-menu-close span { font-size: 23px; line-height: 1; }
+
 #hope-home .hope-header-actions nav {
   position: absolute;
   right: 0;
@@ -412,7 +424,7 @@ html { scroll-padding-top: 80px; }
 </style>
 <div id="hope-home" lang="ja">
  <h1 class="hope-sr-only">宇部市の加圧パーソナルトレーニング｜スタジオHOPE</h1>
- <header class="hope-site-header"><div class="brand"><strong>加圧パーソナルエクササイズスタジオ</strong><small>山口県宇部市・完全予約制</small></div><div class="hope-header-actions"><details><summary class="menu" aria-label="サイトメニュー">☰</summary><nav aria-label="ページ内メニュー"><a href="#hope-training">HOPEのトレーニング</a><a href="#hope-smart">SMART Diet</a><a href="#hope-items">おすすめアイテム</a><a href="experience.html">体験トレーニング</a><a href="pricing.html">料金案内</a><a href="#hope-access">アクセス</a><a href="membership.html">入会案内</a><a href="faq.html">よくある質問（Q&amp;A）</a><a href="./">ホーム</a><a href="experience.html#contact">WEB申し込み</a></nav></details></div></header>
+ <header class="hope-site-header"><div class="brand"><strong>加圧パーソナルエクササイズスタジオ</strong><small>山口県宇部市・完全予約制</small></div><div class="hope-header-actions"><details><summary class="menu" aria-label="メニューを開く"><span class="hope-menu-open" aria-hidden="true">☰</span><span class="hope-menu-close" aria-hidden="true"><span>×</span>閉じる</span></summary><nav aria-label="ページ内メニュー"><a href="#hope-training">HOPEのトレーニング</a><a href="#hope-smart">SMART Diet</a><a href="#hope-items">おすすめアイテム</a><a href="experience.html">体験トレーニング</a><a href="pricing.html">料金案内</a><a href="#hope-access">アクセス</a><a href="membership.html">入会案内</a><a href="faq.html">よくある質問（Q&amp;A）</a><a href="./">ホーム</a><a href="experience.html#contact">WEB申し込み</a></nav></details></div></header>
  <div class="hope-hero">
   <picture>
     <source media="(max-width: 650px)" srcset="assets/home-hero-mobile-first-visit.png" width="276" height="387">
@@ -556,6 +568,16 @@ html { scroll-padding-top: 80px; }
 
 <script>
 const hopeHeaderMenu = document.querySelector('.hope-header-actions details');
+const hopeHeaderToggle = hopeHeaderMenu.querySelector('summary');
+hopeHeaderMenu.addEventListener('toggle', () => {
+  hopeHeaderToggle.setAttribute('aria-label', hopeHeaderMenu.open ? 'メニューを閉じる' : 'メニューを開く');
+});
+hopeHeaderMenu.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && hopeHeaderMenu.open) {
+    hopeHeaderMenu.open = false;
+    hopeHeaderToggle.focus();
+  }
+});
 hopeHeaderMenu.querySelector('nav').addEventListener('click', (event) => {
   if (event.target.closest('a')) hopeHeaderMenu.open = false;
 });
