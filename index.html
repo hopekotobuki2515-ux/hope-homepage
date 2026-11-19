@@ -51,7 +51,6 @@
  #hope-home .hope-hero picture>img{width:100%;height:auto;max-width:none}
  #hope-home .hope-hero .hope-mobile-program{display:none!important}
  #hope-home .hope-hero .hope-mobile-trial{top:73%!important;height:11.6%!important}
- #hope-home .hope-hero details{top:2%!important;height:16.8%!important}
  #hope-home .hope-feature-banners{padding:12px 12px}
  #hope-home .hope-feature-banner{min-height:184px;padding:22px 40px 20px 22px;gap:8px}
  #hope-home .hope-feature-copy strong{font-size:clamp(18px,5vw,23px)}
@@ -151,16 +150,6 @@
 #hope-home .hope-hero{position:relative;overflow:hidden}
 #hope-home .hope-hero picture>img{width:100%;height:auto;object-fit:contain;object-position:center top}
 #hope-home .hope-hero .hope-mobile-intro,#hope-home .hope-hero .hope-mobile-trial,#hope-home .hope-hero .hope-mobile-program{display:none}
-
-
-#hope-home .hope-hero{--button-inset:min(0.788vw,8.67px);--button-right:calc(max(0px,(100% - 1100px) / 2) + min(1.1%,12.1px));--button-size-x:48px;--button-size-y:49px;--button-gap:calc(var(--button-size-x) + 12px)}
-#hope-home .hope-hero details,#hope-home .hope-hero .hope-web{position:fixed;top:max(var(--button-inset),env(safe-area-inset-top));z-index:21}
-#hope-home .hope-hero details{right:var(--button-right)}
-#hope-home .hope-hero .hope-web{right:calc(var(--button-right) + var(--button-gap));width:var(--button-size-x);height:var(--button-size-y);display:flex;align-items:center;justify-content:center;padding:0;border:1px solid #e7c3a6;border-radius:9px;background:#fff;color:#6d422f;font-size:10px;font-weight:800;line-height:1.1;text-align:center;white-space:nowrap;box-shadow:0 2px 8px #0001}
-#hope-home .hope-hero summary{position:relative;width:var(--button-size-x);height:var(--button-size-y);cursor:pointer;list-style:none;border-radius:9px;background:#fff;color:transparent;background-image:linear-gradient(#513021 0 0),linear-gradient(#513021 0 0),linear-gradient(#513021 0 0);background-repeat:no-repeat;background-size:24px 2px;background-position:center 15px,center 23px,center 31px}
-#hope-home .hope-hero summary::-webkit-details-marker{display:none}
-#hope-home .hope-hero nav{position:absolute;right:0;top:52px;min-width:190px;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 6px 18px #0002;padding:8px}
-#hope-home .hope-hero nav a{display:block;padding:9px 12px;color:var(--deep);font-size:14px}
 #hope-home .hope-call{display:flex;align-items:center;justify-content:center;width:100%;height:54px;min-height:54px;text-align:center;background:#f07809;color:#fff!important;font-weight:800;padding:8px 10px;font-size:20px;line-height:1.3}
 #hope-home .hope-intro-graphic{position:relative;max-width:650px;margin:0 auto}
 #hope-home .hope-intro-graphic img{width:100%;height:auto}
@@ -260,14 +249,9 @@
 #hope-home .hope-sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 @media(max-width:650px){
 #hope-home{font-size:15px}
-
-#hope-home .hope-hero .hope-web{display:none}
 #hope-home .hope-hero .hope-mobile-intro,#hope-home .hope-hero .hope-mobile-trial,#hope-home .hope-hero .hope-mobile-program{display:block}
 #hope-home .hope-hero .hope-mobile-trial,#hope-home .hope-hero .hope-mobile-program{position:absolute;left:var(--left);top:var(--top);width:var(--width);height:var(--height)}
-#hope-home .hope-hero details{position:absolute;top:1.26%;right:1.76%;width:13.33%;height:10.67%}
-#hope-home .hope-hero summary{width:100%;height:100%;background:none}
-#hope-home .hope-hero nav{top:calc(100% + 4px)}
-#hope-home .hope-hero summary:focus-visible,#hope-home .hope-hero .hope-mobile-trial:focus-visible,#hope-home .hope-hero .hope-mobile-program:focus-visible{outline:3px solid #513021;outline-offset:-3px}
+#hope-home .hope-hero .hope-mobile-trial:focus-visible,#hope-home .hope-hero .hope-mobile-program:focus-visible{outline:3px solid #513021;outline-offset:-3px}
 #hope-home .hope-call{font-size:16px;padding:8px 10px}
 #hope-home .hope-section{padding:30px 16px}
 #hope-home .hope-section-head{margin-bottom:20px}
@@ -344,11 +328,6 @@
   #hope-home .hope-hero picture { position: relative; height: auto; max-height: none; }
   #hope-home .hope-hero picture::after { content: ""; position: absolute; inset: 0 0 auto auto; width: 11.2%; height: 8.3%; background: #866240; pointer-events: none; }
   #hope-home .hope-hero picture > img { display: block; }
-  #hope-home .hope-hero details { position: fixed; top: env(safe-area-inset-top, 0px) !important; right: env(safe-area-inset-right, 0px); width: max(11.6vw, 44px); height: max(11.6vw, 44px) !important; }
-  #hope-home .hope-hero summary { box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; border: 1px solid #fff6ea; border-radius: 5px; background: #b92018; color: transparent; font-size: 0; }
-  #hope-home .hope-hero summary::before { content: ""; box-sizing: border-box; width: 55%; max-width: 27px; height: 13px; border-block: 2px solid white; background: linear-gradient(white, white) center / 100% 2px no-repeat; }
-  #hope-home .hope-hero summary::after { content: "MENU"; color: white; font: 800 9px/1 system-ui, sans-serif; letter-spacing: .03em; }
-  #hope-home .hope-hero nav { max-height: calc(100dvh - env(safe-area-inset-top, 0px) - max(11.6vw, 44px) - 8px); overflow-y: auto; }
   #hope-home .hope-hero .hope-mobile-phone { display: block; position: absolute; inset: 89.15% 0 0; }
   #hope-home .hope-hero .hope-mobile-first-visit { display: block; position: absolute; left: 3%; top: 79.33%; width: 45%; height: max(7.4%, 44px); transform: translateY(-50%); border-radius: 24px; }
   #hope-home #hope-feature-banners, #hope-home .hope-call { display: none; }
@@ -368,10 +347,67 @@
   #hope-home .hope-mobile-carousel .hope-feature-pagination button[aria-current="true"]::after { background: #8e4500; }
   #hope-home .hope-hero .hope-mobile-phone:focus-visible, #hope-home .hope-hero .hope-mobile-first-visit:focus-visible { outline: 3px solid white; outline-offset: -4px; }
 }
+html { scroll-padding-top: 80px; }
+#hope-home .hope-site-header {
+  --header-height: 80px;
+  --button-size-x: 46px;
+  --button-size-y: 38px;
+  position: sticky;
+  top: 0;
+  z-index: 22;
+  min-height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 8px;
+  padding: 10px 4.5% 10px 13px;
+  background: #fff;
+  border-bottom: 2px solid #ffe1b6;
+  font-family: "Noto Sans JP","Yu Gothic",Meiryo,sans-serif;
+  line-height: 1.8;
+  color: #302820;
+}
+#hope-home .hope-site-header .brand { display: flex; flex-direction: column; align-items: flex-start; gap: 1px; min-width: 0; text-align: left; }
+#hope-home .hope-site-header .brand strong { font-size: 16px; line-height: 1.4; color: #74391f; }
+#hope-home .hope-site-header .brand small { font-size: 12px; line-height: 1.5; color: #49382d; font-weight: 700; }
+#hope-home .hope-header-actions { display: flex; flex: none; align-items: center; gap: 12px; }
+#hope-home .hope-header-actions .home-link { display: inline-block; padding: 9px 14px; border: 1px solid #e9c39f; border-radius: 8px; color: #74391f; font-size: 14px; font-weight: 800; }
+#hope-home .hope-header-actions .web-pending,
+#hope-home .hope-header-actions .menu { display: grid; place-items: center; width: var(--button-size-x); height: var(--button-size-y); flex: none; }
+#hope-home .hope-header-actions .web-pending { background: #ed7908; border-radius: 8px; color: #fff; font-size: 10px; font-weight: 800; line-height: 1.1; text-align: center; white-space: nowrap; }
+#hope-home .hope-header-actions details { position: relative; }
+#hope-home .hope-header-actions .menu { cursor: pointer; list-style: none; font-size: 25px; border: 1px solid #ddd; border-radius: 8px; line-height: 1.2; }
+#hope-home .hope-header-actions .menu::-webkit-details-marker { display: none; }
+#hope-home .hope-header-actions nav {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 4px);
+  width: max-content;
+  max-width: calc(100vw - 26px);
+  max-height: calc(100vh - var(--header-height) - 8px);
+  max-height: calc(100dvh - var(--header-height) - 8px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 8px;
+  background: #fff;
+  border: 1px solid #f4a24b;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px #0002;
+}
+#hope-home .hope-header-actions nav a { display: block; padding: 9px 12px; color: #68301c; font-size: 14px; }
+@media (max-width: 650px) {
+  html { scroll-padding-top: 65px; }
+  #hope-home .hope-site-header { --header-height: 65px; --button-size-x: 36px; --button-size-y: 32px; padding: 9px 13px; }
+  #hope-home .hope-site-header .brand strong { font-size: 12px; line-height: 1.25; }
+  #hope-home .hope-site-header .brand small { font-size: 9px; }
+  #hope-home .hope-header-actions .web-pending { font-size: 8px; }
+  #hope-home .hope-header-actions .menu { font-size: 20px; }
+}
 </style>
 <div id="hope-home" lang="ja">
  <h1 class="hope-sr-only">宇部市の加圧パーソナルトレーニング｜スタジオHOPE</h1>
- <header class="hope-hero">
+ <header class="hope-site-header"><div class="brand"><strong>加圧パーソナルエクササイズスタジオ</strong><small>山口県宇部市・完全予約制</small></div><div class="hope-header-actions"><a class="home-link" href="./">ホーム</a><a class="web-pending" href="experience.html#contact" aria-label="WEB申し込み"><span>WEB<br>申し込み</span></a><details><summary class="menu" aria-label="メニューを開く">☰</summary><nav aria-label="ページ内メニュー"><a href="#hope-training">HOPEのトレーニング</a><a href="#hope-smart">SMART Diet</a><a href="#hope-items">おすすめアイテム</a><a href="experience.html">体験トレーニング</a><a href="pricing.html">料金案内</a><a href="#hope-access">アクセス</a><a href="membership.html">入会案内</a><a href="faq.html">よくある質問（Q&amp;A）</a></nav></details></div></header>
+ <div class="hope-hero">
   <picture>
     <source media="(max-width: 650px)" srcset="assets/home-hero-mobile-first-visit.png" width="276" height="387">
     <img src="assets/hero.jpg" width="1672" height="941" alt="加圧パーソナルエクササイズスタジオHOPE。目指せ−10歳のボディデザイン" fetchpriority="high">
@@ -379,9 +415,7 @@
   <p class="hope-mobile-intro hope-sr-only">忙しい大人のためのパーソナルトレーニングジム。専任のパーソナルトレーナーが、体力や目標に合わせて1対1でサポートします。</p>
   <a class="hope-mobile-first-visit" href="kaatsu.html" aria-label="初めての方はコチラ"></a>
   <a class="hope-mobile-phone" href="tel:0836398200" aria-label="HOPEに電話する 0836-39-8200"></a>
-  <a class="hope-web" href="experience.html#contact" aria-label="WEBで体験を申し込む"><span>WEB<br>申し込み</span></a>
-  <details><summary aria-label="メニューを開く">メニュー</summary><nav aria-label="ページ内メニュー"><a href="#hope-training">HOPEのトレーニング</a><a href="#hope-smart">SMART Diet</a><a href="#hope-items">おすすめアイテム</a><a href="experience.html">体験トレーニング</a><a href="pricing.html">料金案内</a><a href="#hope-access">アクセス</a><a href="membership.html">入会案内</a><a href="faq.html">よくある質問（Q&amp;A）</a></nav></details>
- </header>
+ </div>
  <section class="hope-feature-banners hope-mobile-carousel" aria-label="HOPEのご案内">
   <div class="hope-feature-track" tabindex="0" aria-label="左右にスワイプして5つの案内を見る">
    <a class="hope-feature-banner" href="https://hope-fitness.jp/" target="_blank" rel="noopener noreferrer"><img src="assets/mobile-carousel/blog.webp" alt="ブログ" width="1080" height="500"></a>
@@ -515,6 +549,10 @@
 </div>
 
 <script>
+const hopeHeaderMenu = document.querySelector('.hope-header-actions details');
+hopeHeaderMenu.querySelector('nav').addEventListener('click', (event) => {
+  if (event.target.closest('a')) hopeHeaderMenu.open = false;
+});
 (() => {
   const gallery = document.querySelector('.kaatsu-gallery');
   const track = gallery.querySelector('.kaatsu-gallery-track');
