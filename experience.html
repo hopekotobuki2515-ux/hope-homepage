@@ -14,19 +14,59 @@
 #hope-trial-page{scroll-behavior:smooth}
 #hope-trial-page{margin:0;background:#fffaf6;color:var(--ink);font-family:"Noto Sans JP","Yu Gothic",Meiryo,sans-serif;line-height:1.8}
 #hope-trial-page a{color:inherit}
-#hope-trial-page header{position:sticky;top:0;z-index:21;height:80px;background:white;display:flex;align-items:center;justify-content:space-between;column-gap:8px;padding:10px 4.5% 10px 13px;border-bottom:2px solid #ffe1b6}
+#hope-trial-page header{--header-height:80px;position:sticky;top:0;z-index:21;height:var(--header-height);background:white;display:flex;align-items:center;justify-content:space-between;column-gap:8px;padding:10px 4.5% 10px 13px;border-bottom:2px solid #ffe1b6}
 #hope-trial-page .brand{display:flex;flex-direction:column;align-items:flex-start;gap:1px;min-width:0;text-align:left}
 #hope-trial-page .brand strong{font-family:inherit;font-size:16px;line-height:1.4;color:#74391f;letter-spacing:0}
 #hope-trial-page .brand small{font-size:12px;line-height:1.5;color:#49382d;font-weight:700}
-#hope-trial-page .nav{--button-size-x:46px;--button-size-y:38px;display:flex;flex:none;align-items:center;gap:12px}
-#hope-trial-page .nav .home-link{display:inline-block;padding:9px 14px;border:1px solid #e9c39f;border-radius:8px;color:#74391f;font-size:14px;font-weight:800;text-decoration:none}
-#hope-trial-page .nav .web-pending,#hope-trial-page .menu{display:grid;place-items:center;width:var(--button-size-x);height:var(--button-size-y);flex:none}
-#hope-trial-page .nav .web-pending{background:var(--orange);border-radius:8px;color:#fff;font-size:10px;font-weight:800;text-decoration:none;line-height:1.1;text-align:center;white-space:nowrap}
-#hope-trial-page details{position:relative}
-#hope-trial-page .menu{cursor:pointer;list-style:none;font-size:25px;border:1px solid #ddd;border-radius:8px;line-height:1.2}
-#hope-trial-page .menu::-webkit-details-marker{display:none}
-#hope-trial-page details nav{position:absolute;right:0;top:calc(100% + 4px);width:max-content;max-width:calc(100vw - 26px);padding:8px;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 6px 18px #0002}
-#hope-trial-page details nav a{display:block;padding:9px 12px;color:var(--deep);font-size:14px;text-decoration:none}
+#hope-trial-page .hope-header-actions { flex: none; }
+#hope-trial-page .hope-header-actions details { position: relative; }
+#hope-trial-page .hope-header-actions .menu {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 44px;
+  cursor: pointer;
+  list-style: none;
+  font-size: 25px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  line-height: 1.2;
+}
+#hope-trial-page .hope-header-actions .menu::-webkit-details-marker { display: none; }
+#hope-trial-page .hope-header-actions .hope-menu-close,
+#hope-trial-page .hope-header-actions details[open] .hope-menu-open,
+#hope-trial-page .hope-header-actions details:not([open]) > nav { display: none; }
+#hope-trial-page .hope-header-actions details[open] .hope-menu-close {
+  display: grid;
+  justify-items: center;
+  color: #68301c;
+  font-size: 10px;
+  font-weight: 700;
+}
+#hope-trial-page .hope-header-actions .hope-menu-close span { font-size: 23px; line-height: 1; }
+
+#hope-trial-page .hope-header-actions nav {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 4px);
+  width: min(19rem, calc(100vw - 26px));
+  max-height: calc(100vh - var(--header-height) - env(safe-area-inset-bottom, 0px));
+  max-height: calc(100dvh - var(--header-height) - env(safe-area-inset-bottom, 0px));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: #fff;
+  border: 1px solid #f3d6bf;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px #0002;
+}
+#hope-trial-page .hope-header-actions nav a { display: flex; align-items: center; min-height: 44px; padding: 8px 16px; color: #68301c; font-size: 14px; text-decoration: none; }
+#hope-trial-page .hope-header-actions nav a + a { border-top: 1px solid #f3e3d8; }
+#hope-trial-page .hope-header-actions :is(summary, a):focus-visible { outline: 2px solid #843407; outline-offset: -2px; }
+@media (max-width: 650px) {
+  #hope-trial-page .hope-header-actions details { position: static; }
+  #hope-trial-page .hope-header-actions .menu { width: 44px; font-size: 20px; }
+  #hope-trial-page .hope-header-actions nav { inset: 100% 0 auto; width: auto; border-inline: 0; border-radius: 0; }
+}
 #hope-trial-page #contact{scroll-margin-top:80px}
 #hope-trial-page .hero{padding:clamp(22px,4vw,44px) clamp(16px,5vw,38px);background:#fff5e8;color:var(--ink);text-align:center}
 #hope-trial-page .hero-copy{max-width:620px;margin:0 auto}
@@ -35,7 +75,7 @@
 #hope-trial-page .hero-rate{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:center;gap:0 .55rem;margin:10px 0 0;color:#a63f00;font-size:17px;font-weight:800;line-height:1.2}
 #hope-trial-page .hero-rate strong{font-size:clamp(36px,9vw,48px);font-weight:900;white-space:nowrap}
 #hope-trial-page .hero-copy .hero-details{margin-top:5px;font-weight:700}
-#hope-trial-page .hero-contact{display:inline-flex;align-items:center;justify-content:center;min-height:48px;max-width:100%;margin-top:14px;padding:8px 18px;border-radius:999px;background:#a63f00;color:#fff;font-size:16px;font-weight:800;text-decoration:none}
+#hope-trial-page .hero-contact{display:inline-flex;align-items:center;justify-content:center;min-height:52px;width:min(100%,340px);margin-top:14px;padding:8px 18px;border-radius:999px;background:#a63f00;color:#fff;font-size:16px;font-weight:800;text-decoration:none}
 #hope-trial-page .hero-contact:focus-visible{outline:3px solid var(--deep);outline-offset:3px}
 #hope-trial-page .hero-photo{display:block;width:min(100%,640px);height:auto;margin:22px auto 0;border-radius:12px}
 #hope-trial-page .hero-call{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:0 12px;min-height:48px;padding:6px 12px;background:#a63f00;color:#fff;text-align:center;text-decoration:none;font-size:clamp(19px,4.8vw,24px);font-weight:900;line-height:1.4}
@@ -76,12 +116,9 @@
 #hope-trial-page .footer{background:#fff;padding:28px 18px 48px;text-align:center;color:#655c54;font-size:13px}
 #hope-trial-page .bottom{position:sticky;bottom:0;background:#fff;border-top:1px solid #edd6c3;padding:10px 14px;text-align:center;box-shadow:0 -4px 15px #0000000c}
 #hope-trial-page .bottom a{display:block;background:#ef7c07;color:white;text-decoration:none;border-radius:9px;font-weight:900;padding:10px}
-@media (max-width:650px){#hope-trial-page header{height:65px;padding:9px 13px}
+@media (max-width:650px){#hope-trial-page header{--header-height:65px;padding:9px 13px}
 #hope-trial-page .brand strong{font-size:12px;line-height:1.25}
 #hope-trial-page .brand small{font-size:9px}
-#hope-trial-page .nav{--button-size-x:36px;--button-size-y:32px}
-#hope-trial-page .nav .web-pending{font-size:8px}
-#hope-trial-page .menu{font-size:20px}
 #hope-trial-page #contact{scroll-margin-top:65px}
 #hope-trial-page .section{padding:38px 19px}
 #hope-trial-page .section h2{font-size:24px}
@@ -97,7 +134,7 @@
 </style>
 <div id="hope-trial-page">
 
-<header><div class="brand"><strong>加圧パーソナルエクササイズスタジオ</strong><small>山口県宇部市・完全予約制</small></div><div class="nav"><a class="home-link" href="index.html">ホーム</a><a class="web-pending" href="#contact" aria-label="WEB申し込み"><span>WEB<br>申し込み</span></a><details><summary class="menu" aria-label="メニューを開く">☰</summary><nav aria-label="サイトメニュー"><a href="index.html#hope-training">HOPEのトレーニング</a><a href="index.html#hope-smart">SMART Diet</a><a href="index.html#hope-items">おすすめアイテム</a><a href="#contact">体験のお問い合わせ・ご予約</a><a href="index.html#hope-access">アクセス</a></nav></details></div></header>
+<header class="hope-site-header"><div class="brand"><strong>加圧パーソナルエクササイズスタジオ</strong><small>山口県宇部市・完全予約制</small></div><div class="hope-header-actions"><details><summary class="menu" aria-label="メニューを開く"><span class="hope-menu-open" aria-hidden="true">☰</span><span class="hope-menu-close" aria-hidden="true"><span>×</span>閉じる</span></summary><nav aria-label="サイトメニュー"><a href="index.html#hope-training">HOPEのトレーニング</a><a href="index.html#hope-smart">SMART Diet</a><a href="index.html#hope-items">おすすめアイテム</a><a href="#contact">体験のお問い合わせ・ご予約</a><a href="index.html#hope-access">アクセス</a><a href="index.html">ホーム</a><a href="#contact">WEB申し込み</a></nav></details></div></header>
 <section class="hero" aria-labelledby="hero-heading">
   <div class="hero-copy">
     <h1 id="hero-heading">体験トレーニング</h1>
@@ -106,7 +143,7 @@
     <p class="hero-details">約60分・完全予約制</p>
     <a class="hero-contact" href="#contact">体験のお問い合わせはこちら</a>
   </div>
-  <img class="hero-photo" src="assets/training-session-04.jpg" width="640" height="426" alt="スタジオでトレーナーと加圧トレーニング用のベルトを確認する様子">
+  <img class="hero-photo" src="assets/experience-training-session.webp" width="960" height="640" alt="HOPEでトレーナーの指導を受けながら加圧トレーニングをする様子">
 </section>
 <a class="hero-call" href="tel:0836398200"><strong>0836-39-8200</strong></a>
 <main><div class="wrap">
@@ -119,5 +156,21 @@
 
 </div>
 
+<script>
+const hopeHeaderMenu = document.querySelector('.hope-header-actions details');
+const hopeHeaderToggle = hopeHeaderMenu.querySelector('summary');
+hopeHeaderMenu.addEventListener('toggle', () => {
+  hopeHeaderToggle.setAttribute('aria-label', hopeHeaderMenu.open ? 'メニューを閉じる' : 'メニューを開く');
+});
+hopeHeaderMenu.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && hopeHeaderMenu.open) {
+    hopeHeaderMenu.open = false;
+    hopeHeaderToggle.focus();
+  }
+});
+hopeHeaderMenu.querySelector('nav').addEventListener('click', (event) => {
+  if (event.target.closest('a')) hopeHeaderMenu.open = false;
+});
+</script>
 </body>
 </html>
