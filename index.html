@@ -315,7 +315,8 @@
 <style>
 #hope-home .hope-mobile-phone, #hope-home .hope-mobile-first-visit, #hope-home .hope-mobile-carousel { display: none; }
 @media (max-width: 650px) {
-  #hope-home .hope-hero picture { height: auto; max-height: none; }
+  #hope-home .hope-hero picture { position: relative; height: auto; max-height: none; }
+  #hope-home .hope-hero picture::after { content: ""; position: absolute; inset: 0 0 auto auto; width: 11.2%; height: 8.3%; background: #866240; pointer-events: none; }
   #hope-home .hope-hero picture > img { display: block; }
   #hope-home .hope-hero details { position: fixed; top: env(safe-area-inset-top, 0px) !important; right: env(safe-area-inset-right, 0px); width: max(11.6vw, 44px); height: max(11.6vw, 44px) !important; }
   #hope-home .hope-hero summary { box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; border: 1px solid #fff6ea; border-radius: 5px; background: #b92018; color: transparent; font-size: 0; }
