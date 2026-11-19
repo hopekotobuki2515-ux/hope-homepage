@@ -317,7 +317,11 @@
 @media (max-width: 650px) {
   #hope-home .hope-hero picture { height: auto; max-height: none; }
   #hope-home .hope-hero picture > img { display: block; }
-  #hope-home .hope-hero details { top: 0 !important; right: 0; width: max(11.6%, 44px); height: max(8%, 44px) !important; }
+  #hope-home .hope-hero details { position: fixed; top: env(safe-area-inset-top, 0px) !important; right: env(safe-area-inset-right, 0px); width: max(11.6vw, 44px); height: max(11.6vw, 44px) !important; }
+  #hope-home .hope-hero summary { box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; border: 1px solid #fff6ea; border-radius: 5px; background: #b92018; color: transparent; font-size: 0; }
+  #hope-home .hope-hero summary::before { content: ""; box-sizing: border-box; width: 55%; max-width: 27px; height: 13px; border-block: 2px solid white; background: linear-gradient(white, white) center / 100% 2px no-repeat; }
+  #hope-home .hope-hero summary::after { content: "MENU"; color: white; font: 800 9px/1 system-ui, sans-serif; letter-spacing: .03em; }
+  #hope-home .hope-hero nav { max-height: calc(100dvh - env(safe-area-inset-top, 0px) - max(11.6vw, 44px) - 8px); overflow-y: auto; }
   #hope-home .hope-hero .hope-mobile-phone { display: block; position: absolute; inset: 89.15% 0 0; }
   #hope-home .hope-hero .hope-mobile-first-visit { display: block; position: absolute; left: 3%; top: 79.33%; width: 45%; height: max(7.4%, 44px); transform: translateY(-50%); border-radius: 24px; }
   #hope-home #hope-feature-banners, #hope-home .hope-call { display: none; }
