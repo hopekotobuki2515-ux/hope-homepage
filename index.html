@@ -312,23 +312,60 @@
   #hope-daily-goals { max-width: 668px; }
 }
 </style>
+<style>
+#hope-home .hope-mobile-phone, #hope-home .hope-mobile-carousel { display: none; }
+@media (max-width: 650px) {
+  #hope-home .hope-hero picture { height: auto; max-height: none; }
+  #hope-home .hope-hero picture > img { display: block; }
+  #hope-home .hope-hero details { top: 0 !important; right: 0; width: max(11.6%, 44px); height: max(8%, 44px) !important; }
+  #hope-home .hope-hero .hope-mobile-phone { display: block; position: absolute; inset: 89.15% 0 0; }
+  #hope-home #hope-feature-banners, #hope-home .hope-call { display: none; }
+  #hope-home .hope-mobile-carousel { display: block; padding: 12px 12px 5px; background: #fff3c1; }
+  #hope-home .hope-mobile-carousel .hope-feature-track { border-radius: 0; }
+  #hope-home .hope-mobile-carousel .hope-feature-banner { display: block; min-height: 0; padding: 0; border: 0; border-radius: 0; background: transparent; }
+  #hope-home .hope-mobile-carousel .hope-feature-banner::after { content: none; }
+  #hope-home .hope-mobile-carousel .hope-feature-banner img { display: block; width: 100%; height: auto; }
+  #hope-home .hope-mobile-carousel-controls { display: flex; align-items: center; justify-content: center; gap: 10px; }
+  #hope-home .hope-mobile-carousel-controls .hope-feature-arrow { position: static; transform: none; width: 44px; height: 44px; border: 0; background: transparent; }
+  #hope-home .hope-mobile-carousel .hope-feature-pagination { gap: 0; margin: 0; }
+  #hope-home .hope-mobile-carousel .hope-feature-pagination button { width: 27px; height: 44px; border-radius: 0; background: none; transform: none; }
+  #hope-home .hope-mobile-carousel .hope-feature-pagination button::after { content: ""; display: block; margin: auto; width: 8px; height: 8px; border-radius: 50%; background: #a4895d; }
+  #hope-home .hope-mobile-carousel .hope-feature-pagination button[aria-current="true"]::after { background: #8e4500; }
+  #hope-home .hope-hero .hope-mobile-phone:focus-visible { outline: 3px solid white; outline-offset: -4px; }
+}
+</style>
 <div id="hope-home" lang="ja">
  <h1 class="hope-sr-only">宇部市の加圧パーソナルトレーニング｜スタジオHOPE</h1>
  <header class="hope-hero">
   <picture>
-    <source media="(max-width: 650px)" srcset="assets/home-hero-mobile-v2.png" width="1080" height="1350">
+    <source media="(max-width: 650px)" srcset="assets/home-hero-mobile-latest.png" width="276" height="387">
     <img src="assets/hero.jpg" width="1672" height="941" alt="加圧パーソナルエクササイズスタジオHOPE。目指せ−10歳のボディデザイン" fetchpriority="high">
   </picture>
   <p class="hope-mobile-intro hope-sr-only">忙しい大人のためのパーソナルトレーニングジム。専任のパーソナルトレーナーが、体力や目標に合わせて1対1でサポートします。</p>
-  <a class="hope-mobile-trial" href="kaatsu.html" aria-label="初めてのHOPE" style="--left:19.44%;--top:45.70%;--width:54.72%;--height:7.26%"></a>
-  <a class="hope-mobile-program" href="#hope-training-kaatsu" aria-label="加圧トレーニング" style="--left:1.85%;--top:69.93%;--width:46.85%;--height:12.44%"></a>
-  <a class="hope-mobile-program" href="experience.html#courses" aria-label="ストレッチング" style="--left:50.19%;--top:69.93%;--width:47.96%;--height:12.44%"></a>
-  <a class="hope-mobile-program" href="experience.html#courses" aria-label="ウェイトトレーニング" style="--left:2.22%;--top:84.22%;--width:46.94%;--height:12.37%"></a>
-  <a class="hope-mobile-program" href="#hope-smart" aria-label="スマートダイエット" style="--left:50.65%;--top:84.22%;--width:47.22%;--height:12.37%"></a>
-  
+  <a class="hope-mobile-phone" href="tel:0836398200" aria-label="HOPEに電話する 0836-39-8200"></a>
   <a class="hope-web" href="experience.html#contact" aria-label="WEBで体験を申し込む"><span>WEB<br>申し込み</span></a>
   <details><summary aria-label="メニューを開く">メニュー</summary><nav aria-label="ページ内メニュー"><a href="#hope-training">HOPEのトレーニング</a><a href="#hope-smart">SMART Diet</a><a href="#hope-items">おすすめアイテム</a><a href="experience.html">体験トレーニング</a><a href="#hope-access">アクセス</a></nav></details>
  </header>
+ <section class="hope-feature-banners hope-mobile-carousel" aria-label="HOPEのご案内">
+  <div class="hope-feature-track" tabindex="0" aria-label="左右にスワイプして5つの案内を見る">
+   <a class="hope-feature-banner" href="https://hope-fitness.jp/" target="_blank" rel="noopener noreferrer"><img src="assets/mobile-carousel/blog.webp" alt="ブログ" width="1080" height="500"></a>
+   <a class="hope-feature-banner" href="https://rakudadou719.web.fc2.com/" target="_blank" rel="noopener noreferrer"><img src="assets/mobile-carousel/shop.webp" alt="暮らしのいいもの案内所" width="1080" height="500" loading="lazy"></a>
+   <a class="hope-feature-banner" href="#hope-smart"><img src="assets/mobile-carousel/smart-diet.webp" alt="スマートダイエット" width="1080" height="500" loading="lazy"></a>
+   <a class="hope-feature-banner" href="#hope-profile"><img src="assets/mobile-carousel/profile.webp" alt="プロフィール" width="1080" height="500" loading="lazy"></a>
+   <a class="hope-feature-banner" href="experience.html"><img src="assets/mobile-carousel/trial.webp" alt="体験" width="1080" height="500" loading="lazy"></a>
+  </div>
+  <div class="hope-mobile-carousel-controls">
+   <button type="button" class="hope-feature-arrow hope-feature-prev" aria-label="前のサムネイル">‹</button>
+   <div class="hope-feature-pagination" role="group" aria-label="表示するサムネイル">
+    <button type="button" aria-label="ブログを表示" aria-current="true" data-slide="0"></button>
+    <button type="button" aria-label="暮らしのいいもの案内所を表示" aria-current="false" data-slide="1"></button>
+    <button type="button" aria-label="スマートダイエットを表示" aria-current="false" data-slide="2"></button>
+    <button type="button" aria-label="プロフィールを表示" aria-current="false" data-slide="3"></button>
+    <button type="button" aria-label="体験を表示" aria-current="false" data-slide="4"></button>
+   </div>
+   <button type="button" class="hope-feature-arrow hope-feature-next" aria-label="次のサムネイル">›</button>
+  </div>
+ </section>
  <section class="hope-feature-banners" id="hope-feature-banners" aria-label="HOPEのご案内・横スライド"><div class="hope-feature-frame"><div class="hope-feature-track" tabindex="0" aria-label="左右にスワイプして4つの案内を見る">
 <a class="hope-feature-banner hope-feature-blog" href="https://hope-fitness.jp/" target="_blank" rel="noopener noreferrer" aria-label="ブログ：記事を読む"><span class="hope-feature-copy"><span class="hope-feature-eyebrow">HOPE BLOG</span><strong>ブログ</strong><span class="hope-feature-desc">トレーニングとセルフケアを、わかりやすく。</span><span class="hope-feature-cta">記事を読む<span aria-hidden="true"> ›</span></span></span><span class="hope-feature-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6.5C8 4 11 5 12 6.5c1-1.5 4-2.5 8 0v12c-4-2.5-7-1.5-8 0-1-1.5-4-2.5-8 0z"/><path d="M12 6.5v12M7 10h2M15 10h2M7 13h2M15 13h2"/></svg></span></a>
 <a class="hope-feature-banner hope-feature-profile" href="#hope-profile"  aria-label="トレーナープロフィール：プロフィールを見る"><span class="hope-feature-copy"><span class="hope-feature-eyebrow">PERSONAL TRAINER</span><strong>トレーナープロフィール</strong><span class="hope-feature-desc">どんな人が、どんな思いで指導しているの？</span><span class="hope-feature-cta">プロフィールを見る<span aria-hidden="true"> ›</span></span></span><span class="hope-feature-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.25"/><path d="M5 21v-2c0-3.9 3-6 7-6s7 2.1 7 6v2M3 21h18"/></svg></span></a>
@@ -468,7 +505,8 @@
 
 
 <script>
-(()=>{const root=document.getElementById('hope-feature-banners');if(!root)return;
+document.querySelectorAll('.hope-feature-banners').forEach(root=>{
+const mobile=root.classList.contains('hope-mobile-carousel');
 const track=root.querySelector('.hope-feature-track'),slides=[...root.querySelectorAll('.hope-feature-banner')],dots=[...root.querySelectorAll('.hope-feature-pagination button')];
 const motion=window.matchMedia('(prefers-reduced-motion: reduce)');let index=0,pausedUntil=0,hover=false,focused=false,visible=true;
 function goto(i,manual=false){index=(i+slides.length)%slides.length;if(manual)pausedUntil=Date.now()+15000;track.scrollTo({left:index*track.clientWidth,behavior:motion.matches?'instant':'smooth'});dots.forEach((b,j)=>b.setAttribute('aria-current',String(j===index)));}
@@ -476,13 +514,18 @@ root.querySelector('.hope-feature-prev').addEventListener('click',()=>goto(index
 root.querySelector('.hope-feature-next').addEventListener('click',()=>goto(index+1,true));
 dots.forEach((b,i)=>b.addEventListener('click',()=>goto(i,true)));
 track.addEventListener('pointerdown',()=>{pausedUntil=Date.now()+15000});
-track.addEventListener('keydown',()=>{pausedUntil=Date.now()+15000});
+track.addEventListener('keydown',event=>{
+  pausedUntil=Date.now()+15000;
+  if(!mobile || event.target!==track || !['ArrowLeft','ArrowRight'].includes(event.key))return;
+  event.preventDefault();
+  goto(index+(event.key==='ArrowRight'?1:-1),true);
+});
 root.addEventListener('mouseenter',()=>hover=true);root.addEventListener('mouseleave',()=>hover=false);
 root.addEventListener('focusin',()=>focused=true);root.addEventListener('focusout',e=>{if(!root.contains(e.relatedTarget))focused=false});
 track.addEventListener('scroll',()=>{let i=Math.round(track.scrollLeft/Math.max(1,track.clientWidth));index=Math.min(slides.length-1,Math.max(0,i));dots.forEach((b,j)=>b.setAttribute('aria-current',String(j===index)))},{passive:true});
 if('IntersectionObserver' in window)new IntersectionObserver(es=>{visible=es[0].isIntersecting},{threshold:.25}).observe(root);
-window.setInterval(()=>{if(!motion.matches&&!document.hidden&&visible&&!hover&&!focused&&Date.now()>pausedUntil)goto(index+1)},10000);
-})();
+if(!mobile)window.setInterval(()=>{if(!motion.matches&&!document.hidden&&visible&&!hover&&!focused&&Date.now()>pausedUntil)goto(index+1)},10000);
+});
 </script>
 <script>
 (() => {
