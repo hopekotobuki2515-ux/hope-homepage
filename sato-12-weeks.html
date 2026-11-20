@@ -388,6 +388,9 @@
     outline-offset: -2px;
     background: var(--mint);
   }
+
+  #week-1-diary .diet-entry-check-second { border-top: 1px solid var(--line); }
+  #week-1-diary .diet-entry-check-second input:disabled + span { opacity: .45; }
 </style>
 </head>
 <body>
@@ -437,6 +440,8 @@
         <section id="week-1-diary" class="diet-entry" aria-labelledby="week-1-diary-title">
           <h4 id="week-1-diary-title">食事ダイアリーに直接記入する</h4>
           <p>左の欄に食べたものを書き、当てはまる食品群をタップして○を付けます。もう一度タップすると○が外れます。</p>
+          <p>同じ群の食品が2つあるときは、上下に○を1つずつ付けます。</p>
+          <p class="diet-entry-note"><strong>迷ったとき</strong>　どの群に入れればよいか分からなくなったら、第4群に○を付けて大丈夫です。</p>
           <div class="diet-guide">
             <div class="diet-guide-intro">
               <h5>四群点数法を知って、朝食を記録してみる</h5>
@@ -463,42 +468,90 @@
             <tr>
               <td>
                 <label for="week-one-breakfast">朝食</label>
-                <textarea id="week-one-breakfast" data-diary-key="breakfast-meal" rows="3" placeholder="食べたもの"></textarea>
+                <textarea id="week-one-breakfast" data-diary-key="breakfast-meal" rows="4" placeholder="食べたもの"></textarea>
               </td>
-              <td><label class="diet-entry-check"><input type="checkbox" data-diary-key="breakfast-group-1" aria-label="朝食の第1群"><span aria-hidden="true"></span></label></td>
-              <td><label class="diet-entry-check"><input type="checkbox" data-diary-key="breakfast-group-2" aria-label="朝食の第2群"><span aria-hidden="true"></span></label></td>
-              <td><label class="diet-entry-check"><input type="checkbox" data-diary-key="breakfast-group-3" aria-label="朝食の第3群"><span aria-hidden="true"></span></label></td>
-              <td><label class="diet-entry-check"><input type="checkbox" data-diary-key="breakfast-group-4" aria-label="朝食の第4群"><span aria-hidden="true"></span></label></td>
+              <td>
+                <label class="diet-entry-check"><input type="checkbox" data-diary-key="breakfast-group-1" aria-label="朝食の第1群の上"><span aria-hidden="true"></span></label>
+                <label class="diet-entry-check diet-entry-check-second"><input type="checkbox" data-diary-key="breakfast-extra-group-1" data-diary-extra aria-label="朝食の第1群の下"><span aria-hidden="true"></span></label>
+              </td>
+              <td>
+                <label class="diet-entry-check"><input type="checkbox" data-diary-key="breakfast-group-2" aria-label="朝食の第2群の上"><span aria-hidden="true"></span></label>
+                <label class="diet-entry-check diet-entry-check-second"><input type="checkbox" data-diary-key="breakfast-extra-group-2" data-diary-extra aria-label="朝食の第2群の下"><span aria-hidden="true"></span></label>
+              </td>
+              <td>
+                <label class="diet-entry-check"><input type="checkbox" data-diary-key="breakfast-group-3" aria-label="朝食の第3群の上"><span aria-hidden="true"></span></label>
+                <label class="diet-entry-check diet-entry-check-second"><input type="checkbox" data-diary-key="breakfast-extra-group-3" data-diary-extra aria-label="朝食の第3群の下"><span aria-hidden="true"></span></label>
+              </td>
+              <td>
+                <label class="diet-entry-check"><input type="checkbox" data-diary-key="breakfast-group-4" aria-label="朝食の第4群の上"><span aria-hidden="true"></span></label>
+                <label class="diet-entry-check diet-entry-check-second"><input type="checkbox" data-diary-key="breakfast-extra-group-4" data-diary-extra aria-label="朝食の第4群の下"><span aria-hidden="true"></span></label>
+              </td>
             </tr>
             <tr>
               <td>
                 <label for="week-one-lunch">昼食</label>
-                <textarea id="week-one-lunch" data-diary-key="lunch-meal" rows="3" placeholder="食べたもの"></textarea>
+                <textarea id="week-one-lunch" data-diary-key="lunch-meal" rows="4" placeholder="食べたもの"></textarea>
               </td>
-              <td><label class="diet-entry-check"><input type="checkbox" data-diary-key="lunch-group-1" aria-label="昼食の第1群"><span aria-hidden="true"></span></label></td>
-              <td><label class="diet-entry-check"><input type="checkbox" data-diary-key="lunch-group-2" aria-label="昼食の第2群"><span aria-hidden="true"></span></label></td>
-              <td><label class="diet-entry-check"><input type="checkbox" data-diary-key="lunch-group-3" aria-label="昼食の第3群"><span aria-hidden="true"></span></label></td>
-              <td><label class="diet-entry-check"><input type="checkbox" data-diary-key="lunch-group-4" aria-label="昼食の第4群"><span aria-hidden="true"></span></label></td>
+              <td>
+                <label class="diet-entry-check"><input type="checkbox" data-diary-key="lunch-group-1" aria-label="昼食の第1群の上"><span aria-hidden="true"></span></label>
+                <label class="diet-entry-check diet-entry-check-second"><input type="checkbox" data-diary-key="lunch-extra-group-1" data-diary-extra aria-label="昼食の第1群の下"><span aria-hidden="true"></span></label>
+              </td>
+              <td>
+                <label class="diet-entry-check"><input type="checkbox" data-diary-key="lunch-group-2" aria-label="昼食の第2群の上"><span aria-hidden="true"></span></label>
+                <label class="diet-entry-check diet-entry-check-second"><input type="checkbox" data-diary-key="lunch-extra-group-2" data-diary-extra aria-label="昼食の第2群の下"><span aria-hidden="true"></span></label>
+              </td>
+              <td>
+                <label class="diet-entry-check"><input type="checkbox" data-diary-key="lunch-group-3" aria-label="昼食の第3群の上"><span aria-hidden="true"></span></label>
+                <label class="diet-entry-check diet-entry-check-second"><input type="checkbox" data-diary-key="lunch-extra-group-3" data-diary-extra aria-label="昼食の第3群の下"><span aria-hidden="true"></span></label>
+              </td>
+              <td>
+                <label class="diet-entry-check"><input type="checkbox" data-diary-key="lunch-group-4" aria-label="昼食の第4群の上"><span aria-hidden="true"></span></label>
+                <label class="diet-entry-check diet-entry-check-second"><input type="checkbox" data-diary-key="lunch-extra-group-4" data-diary-extra aria-label="昼食の第4群の下"><span aria-hidden="true"></span></label>
+              </td>
             </tr>
             <tr>
               <td>
                 <label for="week-one-dinner">夕食</label>
-                <textarea id="week-one-dinner" data-diary-key="dinner-meal" rows="3" placeholder="食べたもの"></textarea>
+                <textarea id="week-one-dinner" data-diary-key="dinner-meal" rows="4" placeholder="食べたもの"></textarea>
               </td>
-              <td><label class="diet-entry-check"><input type="checkbox" data-diary-key="dinner-group-1" aria-label="夕食の第1群"><span aria-hidden="true"></span></label></td>
-              <td><label class="diet-entry-check"><input type="checkbox" data-diary-key="dinner-group-2" aria-label="夕食の第2群"><span aria-hidden="true"></span></label></td>
-              <td><label class="diet-entry-check"><input type="checkbox" data-diary-key="dinner-group-3" aria-label="夕食の第3群"><span aria-hidden="true"></span></label></td>
-              <td><label class="diet-entry-check"><input type="checkbox" data-diary-key="dinner-group-4" aria-label="夕食の第4群"><span aria-hidden="true"></span></label></td>
+              <td>
+                <label class="diet-entry-check"><input type="checkbox" data-diary-key="dinner-group-1" aria-label="夕食の第1群の上"><span aria-hidden="true"></span></label>
+                <label class="diet-entry-check diet-entry-check-second"><input type="checkbox" data-diary-key="dinner-extra-group-1" data-diary-extra aria-label="夕食の第1群の下"><span aria-hidden="true"></span></label>
+              </td>
+              <td>
+                <label class="diet-entry-check"><input type="checkbox" data-diary-key="dinner-group-2" aria-label="夕食の第2群の上"><span aria-hidden="true"></span></label>
+                <label class="diet-entry-check diet-entry-check-second"><input type="checkbox" data-diary-key="dinner-extra-group-2" data-diary-extra aria-label="夕食の第2群の下"><span aria-hidden="true"></span></label>
+              </td>
+              <td>
+                <label class="diet-entry-check"><input type="checkbox" data-diary-key="dinner-group-3" aria-label="夕食の第3群の上"><span aria-hidden="true"></span></label>
+                <label class="diet-entry-check diet-entry-check-second"><input type="checkbox" data-diary-key="dinner-extra-group-3" data-diary-extra aria-label="夕食の第3群の下"><span aria-hidden="true"></span></label>
+              </td>
+              <td>
+                <label class="diet-entry-check"><input type="checkbox" data-diary-key="dinner-group-4" aria-label="夕食の第4群の上"><span aria-hidden="true"></span></label>
+                <label class="diet-entry-check diet-entry-check-second"><input type="checkbox" data-diary-key="dinner-extra-group-4" data-diary-extra aria-label="夕食の第4群の下"><span aria-hidden="true"></span></label>
+              </td>
             </tr>
             <tr>
               <td>
                 <label for="week-one-snack">間食</label>
-                <textarea id="week-one-snack" data-diary-key="snack-meal" rows="3" placeholder="食べたもの"></textarea>
+                <textarea id="week-one-snack" data-diary-key="snack-meal" rows="4" placeholder="食べたもの"></textarea>
               </td>
-              <td><label class="diet-entry-check"><input type="checkbox" data-diary-key="snack-group-1" aria-label="間食の第1群"><span aria-hidden="true"></span></label></td>
-              <td><label class="diet-entry-check"><input type="checkbox" data-diary-key="snack-group-2" aria-label="間食の第2群"><span aria-hidden="true"></span></label></td>
-              <td><label class="diet-entry-check"><input type="checkbox" data-diary-key="snack-group-3" aria-label="間食の第3群"><span aria-hidden="true"></span></label></td>
-              <td><label class="diet-entry-check"><input type="checkbox" data-diary-key="snack-group-4" aria-label="間食の第4群"><span aria-hidden="true"></span></label></td>
+              <td>
+                <label class="diet-entry-check"><input type="checkbox" data-diary-key="snack-group-1" aria-label="間食の第1群の上"><span aria-hidden="true"></span></label>
+                <label class="diet-entry-check diet-entry-check-second"><input type="checkbox" data-diary-key="snack-extra-group-1" data-diary-extra aria-label="間食の第1群の下"><span aria-hidden="true"></span></label>
+              </td>
+              <td>
+                <label class="diet-entry-check"><input type="checkbox" data-diary-key="snack-group-2" aria-label="間食の第2群の上"><span aria-hidden="true"></span></label>
+                <label class="diet-entry-check diet-entry-check-second"><input type="checkbox" data-diary-key="snack-extra-group-2" data-diary-extra aria-label="間食の第2群の下"><span aria-hidden="true"></span></label>
+              </td>
+              <td>
+                <label class="diet-entry-check"><input type="checkbox" data-diary-key="snack-group-3" aria-label="間食の第3群の上"><span aria-hidden="true"></span></label>
+                <label class="diet-entry-check diet-entry-check-second"><input type="checkbox" data-diary-key="snack-extra-group-3" data-diary-extra aria-label="間食の第3群の下"><span aria-hidden="true"></span></label>
+              </td>
+              <td>
+                <label class="diet-entry-check"><input type="checkbox" data-diary-key="snack-group-4" aria-label="間食の第4群の上"><span aria-hidden="true"></span></label>
+                <label class="diet-entry-check diet-entry-check-second"><input type="checkbox" data-diary-key="snack-extra-group-4" data-diary-extra aria-label="間食の第4群の下"><span aria-hidden="true"></span></label>
+              </td>
             </tr>
             </tbody>
           </table>
@@ -719,6 +772,7 @@
   const diaryStatus = document.getElementById("week-1-diary-status");
   const storagePrefix = "hope:sato:week-1-diary:";
   const fields = [...weekOneDiary.querySelectorAll("[data-diary-key]")];
+  const extraMarks = weekOneDiary.querySelectorAll("[data-diary-extra]");
   const breakfastMeal = document.getElementById("week-one-breakfast");
   const breakfastGroups = [...weekOneDiary.querySelectorAll('[data-diary-key^="breakfast-group-"]')];
   const breakfastFields = [breakfastMeal, ...breakfastGroups];
@@ -729,9 +783,9 @@
   const guideExit = document.getElementById("week-one-guide-exit");
   const guideSteps = [
     { prompt: "朝食に食パンを入れます。", food: "食パン1枚" },
-    { prompt: "食パンは穀類です。朝食の第4群をタップします。", group: breakfastGroups[3] },
+    { prompt: "食パンは穀類です。朝食の第4群の上の欄をタップします。", group: breakfastGroups[3] },
     { prompt: "朝食にヨーグルトを加えます。", food: "ヨーグルト1個" },
-    { prompt: "ヨーグルトは乳製品です。朝食の第1群をタップします。", group: breakfastGroups[0] },
+    { prompt: "ヨーグルトは乳製品です。朝食の第1群の上の欄をタップします。", group: breakfastGroups[0] },
   ];
   let guideStep = 0;
   let savedBreakfast = null;
@@ -797,6 +851,7 @@
     guideStep = 0;
     breakfastMeal.value = "";
     breakfastMeal.readOnly = true;
+    for (const field of extraMarks) field.disabled = true;
     for (const field of breakfastGroups) {
       field.checked = false;
     }
@@ -817,6 +872,7 @@
     if (!savedBreakfast) return;
     breakfastMeal.value = savedBreakfast[0];
     breakfastMeal.readOnly = false;
+    for (const field of extraMarks) field.disabled = false;
     breakfastGroups.forEach((field, index) => {
       field.checked = savedBreakfast[index + 1];
       field.disabled = false;
