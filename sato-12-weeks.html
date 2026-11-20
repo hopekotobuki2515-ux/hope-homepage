@@ -325,6 +325,10 @@
   #week-1-diary .diet-entry-note { font-size: .85rem; }
 
   #smart-diet-chat #week-1 .diet-entry-shortcut {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
     margin-top: 12px;
     text-align: center;
   }
@@ -503,7 +507,10 @@
     </nav>
     <section class="diet-panel" id="week-1">
       <h2><span class="diet-week">第1週｜</span>普段の食事を書いてみる</h2>
-      <p class="diet-entry-shortcut"><a href="#week-1-diary">食事ダイアリーを入力する</a></p>
+      <p class="diet-entry-shortcut">
+        <a href="#week-1-diary">食事ダイアリーを入力する</a>
+        <a href="#week-1-example">佐藤さんの記入例を見る</a>
+      </p>
       <div class="diet-lesson">
         <h3>ステップ1｜なぜ減量が必要か？</h3>
         <p>皮膚のすぐ下につく脂肪を皮下脂肪、お腹の中で臓器のまわりにつく脂肪を内臓脂肪と呼びます。内臓脂肪がたまり、血圧・血糖・血中脂質の異常が重なると、心臓病や脳卒中のリスクが高まります。健診をきっかけに、体重とあわせて腹囲や検査結果にも目を向けてみましょう。</p>
@@ -637,13 +644,14 @@
           <p class="diet-entry-note">第1週は点数計算なしで記録できます。</p>
           <p class="diet-entry-note" id="week-1-diary-status" role="status">入力内容はこのブラウザーに自動保存されます。</p>
         </section>
-        <h4 class="diet-entry-example">佐藤さんの記入例</h4>
+        <h4 class="diet-entry-example" id="week-1-example">佐藤さんの記入例</h4>
         <dl class="diet-diary">
           <dt>朝食</dt><dd>食パン1枚、ヨーグルト1個、コーヒー1杯</dd>
           <dt>昼食</dt><dd>おにぎり2個、お茶1本</dd>
           <dt>夕食</dt><dd>ご飯1杯、焼き魚1切れ、みそ汁1杯</dd>
           <dt>間食</dt><dd>クッキー2枚</dd>
         </dl>
+        <p><a href="#week-1-diary">食事ダイアリーの記入欄に戻る</a></p>
         <p>記録を見返して、食事や飲み物でよく選ぶものを一つ見つけてみましょう。<a href="#week-2">第2週では、体重と腹囲を測り、目標を決めます。</a></p>
       </div>
     </section>
