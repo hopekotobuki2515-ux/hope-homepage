@@ -425,7 +425,7 @@
     font-weight: 700;
   }
 
-  #week-7-tasting .diet-tasting-track {
+  .diet-lesson-carousel .diet-carousel-track {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 100%;
@@ -437,7 +437,7 @@
     overscroll-behavior-inline: contain;
     scroll-snap-type: x mandatory;
   }
-  #week-7-tasting .diet-tasting-track li {
+  .diet-lesson-carousel .diet-carousel-track > li {
     min-width: 0;
     padding: 12px;
     border: 1px solid var(--line);
@@ -446,23 +446,23 @@
     scroll-snap-align: start;
     overflow-wrap: anywhere;
   }
-  #week-7-tasting h4 {
+  .diet-lesson-carousel h4 {
     margin: 0 0 5px;
     color: var(--green);
     font-size: 1rem;
     line-height: 1.5;
   }
-  #week-7-tasting dl { margin: 6px 0; }
-  #week-7-tasting dt { font-weight: 700; }
-  #week-7-tasting dd { margin: 0 0 6px; }
-  #week-7-tasting .diet-tasting-controls:not([hidden]) {
+  .diet-lesson-carousel dl { margin: 6px 0; }
+  .diet-lesson-carousel dt { font-weight: 700; }
+  .diet-lesson-carousel dd { margin: 0 0 6px; }
+  .diet-lesson-carousel .diet-carousel-controls:not([hidden]) {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 12px;
     margin-top: 8px;
   }
-  #week-7-tasting button {
+  .diet-lesson-carousel button {
     min-width: 58px;
     min-height: 44px;
     padding: 4px 8px;
@@ -473,7 +473,7 @@
     font: inherit;
     cursor: pointer;
   }
-  #week-7-tasting button:disabled { opacity: .55; cursor: default; }
+  .diet-lesson-carousel button:disabled { opacity: .55; cursor: default; }
 </style>
 </head>
 <body>
@@ -823,10 +823,10 @@
         <p class="diet-message diet-message--sato"><strong class="diet-speaker">佐藤さん</strong><span class="diet-bubble">「しょうゆを少なめにしてレモンを足すと、さっぱりしておいしいですね」</span></p>
         <p class="diet-message diet-message--murata"><strong class="diet-speaker">村田健作</strong><span class="diet-bubble">「ほかの方の感想も聞いて、家で試してみたい味付けを一つ見つけましょう」</span></p>
       </div>
-      <div class="diet-lesson" id="week-7-tasting">
+      <div class="diet-lesson diet-lesson-carousel" id="week-7-tasting">
         <h3 id="week-7-tasting-title">実習｜蒸し野菜の味付けを食べ比べる</h3>
         <p id="week-7-tasting-help">横にスワイプすると、次の手順が見られます。</p>
-        <ol class="diet-tasting-track" aria-labelledby="week-7-tasting-title" aria-describedby="week-7-tasting-help" tabindex="0">
+        <ol class="diet-carousel-track" aria-labelledby="week-7-tasting-title" aria-describedby="week-7-tasting-help" tabindex="0">
           <li>
             <h4>同じ蒸し野菜を2皿に分ける</h4>
             <p>味付けをする前の蒸し野菜を、同じくらいの量ずつ2皿に取り分けます。</p>
@@ -844,10 +844,10 @@
             <p>「Bはレモンの香りがして食べやすかった」など、感じた違いを書き留めます。次に蒸し野菜を作るとき、どちらの味付けを試してみますか？</p>
           </li>
         </ol>
-        <div class="diet-tasting-controls" hidden>
-          <button type="button" class="diet-tasting-prev" aria-label="前の手順">前へ</button>
-          <output class="diet-tasting-position" aria-live="polite" aria-label="現在の手順">1 / 3</output>
-          <button type="button" class="diet-tasting-next" aria-label="次の手順">次へ</button>
+        <div class="diet-carousel-controls" hidden>
+          <button type="button" class="diet-carousel-prev" aria-label="前の手順">前へ</button>
+          <output class="diet-carousel-position" aria-live="polite" aria-label="現在の手順">1 / 3</output>
+          <button type="button" class="diet-carousel-next" aria-label="次の手順">次へ</button>
         </div>
       </div>
     </section>
@@ -857,28 +857,36 @@
         <p class="diet-message diet-message--sato"><strong class="diet-speaker">佐藤さん</strong><span class="diet-bubble">「ここ数日、体重があまり変わりません。何を見直せばいいですか？」</span></p>
         <p class="diet-message diet-message--murata"><strong class="diet-speaker">村田健作</strong><span class="diet-bubble">「少し長い期間の体重と食事の記録を見てみましょう。今日は歩きやすいペースも試します」</span></p>
       </div>
-      <div class="diet-lesson" id="week-8-review">
-        <h3>実習｜佐藤さんの体重と食事の記録を見直す</h3>
+      <div class="diet-lesson diet-lesson-carousel" id="week-8-review">
+        <h3 id="week-8-review-title">実習｜佐藤さんの体重と食事の記録を見直す</h3>
         <p>体重を測る時間や条件をそろえて記録し、前の週と今週を見比べます。</p>
-        <details class="diet-exercise-answer" name="week-8-review">
-          <summary>体重の記録を見比べる</summary>
-          <dl class="diet-diary">
-            <dt>前の週の記録例</dt>
-            <dd>最後の日は70.3 kg、7日間の平均は70.5 kg。</dd>
-            <dt>今週の記録例</dt>
-            <dd>最後の日は70.8 kg、7日間の平均は70.5 kg。</dd>
-          </dl>
-          <p>最後の日の数字は違いますが、週の平均は同じです。数日だけで判断せず、週ごとの傾向を見ていきます。</p>
-        </details>
-        <details class="diet-exercise-answer" name="week-8-review">
-          <summary>食事メモで見直す項目を一つ選ぶ</summary>
-          <p>佐藤さんのメモには、午後のカフェラテは書いてありましたが、量が空欄でした。「次はカフェラテの量もメモする」と決めました。</p>
-          <p>自分の記録なら、飲み物、間食、盛り付けの量のうち、どれを確認しますか？</p>
-        </details>
-        <details class="diet-exercise-answer" name="week-8-review">
-          <summary>歩きやすいペースを試す</summary>
-          <p>普段のペースで短い距離を歩いてみます。体調に合わせて速さや距離を調整し、続けやすそうな道や時間帯を一つ決めます。</p>
-        </details>
+        <p id="week-8-review-help">横にスワイプすると、次の手順が見られます。</p>
+        <ol class="diet-carousel-track" aria-labelledby="week-8-review-title" aria-describedby="week-8-review-help" tabindex="0">
+          <li>
+            <h4>体重の記録を見比べる</h4>
+            <dl class="diet-diary">
+              <dt>前の週の記録例</dt>
+              <dd>最後の日は70.3 kg、7日間の平均は70.5 kg。</dd>
+              <dt>今週の記録例</dt>
+              <dd>最後の日は70.8 kg、7日間の平均は70.5 kg。</dd>
+            </dl>
+            <p>最後の日の数字は違いますが、週の平均は同じです。数日だけで判断せず、週ごとの傾向を見ていきます。</p>
+          </li>
+          <li>
+            <h4>食事メモで見直す項目を一つ選ぶ</h4>
+            <p>佐藤さんのメモには、午後のカフェラテは書いてありましたが、量が空欄でした。「次はカフェラテの量もメモする」と決めました。</p>
+            <p>自分の記録なら、飲み物、間食、盛り付けの量のうち、どれを確認しますか？</p>
+          </li>
+          <li>
+            <h4>歩きやすいペースを試す</h4>
+            <p>普段のペースで短い距離を歩いてみます。体調に合わせて速さや距離を調整し、続けやすそうな道や時間帯を一つ決めます。</p>
+          </li>
+        </ol>
+        <div class="diet-carousel-controls" hidden>
+          <button type="button" class="diet-carousel-prev" aria-label="前の手順">前へ</button>
+          <output class="diet-carousel-position" aria-live="polite" aria-label="現在の手順">1 / 3</output>
+          <button type="button" class="diet-carousel-next" aria-label="次の手順">次へ</button>
+        </div>
         <p><small>参考（厚生労働省） <a href="https://www.mhlw.go.jp/bunya/kenkou/seikatsu/pdf/hs-d_024.pdf">体重記録</a>・<a href="https://kennet.mhlw.go.jp/information/information/exercise/s-00-002.html">身体活動・運動ガイド</a></small></p>
       </div>
     </section>
@@ -888,20 +896,28 @@
         <p class="diet-message diet-message--sato"><strong class="diet-speaker">佐藤さん</strong><span class="diet-bubble">「グループで聞いた、お惣菜に冷凍野菜を足す工夫。帰りが遅い日にもできそうです」</span></p>
         <p class="diet-message diet-message--murata"><strong class="diet-speaker">村田健作</strong><span class="diet-bubble">「運動も生活に取り入れやすいものを試しましょう。今日は椅子に座ってできる体操です」</span></p>
       </div>
-      <div class="diet-lesson" id="week-9-practice">
-        <h3>実習｜忙しい日の献立を一つ決める</h3>
+      <div class="diet-lesson diet-lesson-carousel" id="week-9-practice">
+        <h3 id="week-9-practice-title">実習｜忙しい日の献立を一つ決める</h3>
         <p>帰りが遅くなった日を想像して、買って帰れるものと家にあるものを組み合わせます。</p>
-        <details class="diet-exercise-answer" name="week-9-practice">
-          <summary>佐藤さんの献立例を見る</summary>
-          <p>家にあるごはんに、買ってきた焼き魚と、温めた冷凍ブロッコリーを合わせます。</p>
-          <p>自分なら、どんなお惣菜と野菜を合わせますか？ 帰りが遅い日に試せそうな組み合わせを一つ決めます。</p>
-          <p><small>参考 <a href="https://www.maff.go.jp/j/syokuiku/minna_navi/topics/topics5_01.html">農林水産省「バランス良く食べる食事例」</a></small></p>
-        </details>
-        <details class="diet-exercise-answer" name="week-9-practice" id="week-9-chair">
-          <summary>椅子に座って足踏みを試す</summary>
-          <p>安定した椅子に座り、両足を床につけます。右足、左足の順に軽く持ち上げて、静かに床に戻します。体調に合わせてゆっくり試し、痛みが出たら中止します。</p>
-          <p><small>参考 <a href="https://www.ncgg.go.jp/ri/pamph/documents/cgss2.pdf">国立長寿医療研究センター「介護予防ガイド」</a></small></p>
-        </details>
+        <p id="week-9-practice-help">横にスワイプすると、次の手順が見られます。</p>
+        <ol class="diet-carousel-track" aria-labelledby="week-9-practice-title" aria-describedby="week-9-practice-help" tabindex="0">
+          <li>
+            <h4>佐藤さんの献立例を見る</h4>
+            <p>家にあるごはんに、買ってきた焼き魚と、温めた冷凍ブロッコリーを合わせます。</p>
+            <p>自分なら、どんなお惣菜と野菜を合わせますか？ 帰りが遅い日に試せそうな組み合わせを一つ決めます。</p>
+            <p><small>参考 <a href="https://www.maff.go.jp/j/syokuiku/minna_navi/topics/topics5_01.html">農林水産省「バランス良く食べる食事例」</a></small></p>
+          </li>
+          <li id="week-9-chair">
+            <h4>椅子に座って足踏みを試す</h4>
+            <p>安定した椅子に座り、両足を床につけます。右足、左足の順に軽く持ち上げて、静かに床に戻します。体調に合わせてゆっくり試し、痛みが出たら中止します。</p>
+            <p><small>参考 <a href="https://www.ncgg.go.jp/ri/pamph/documents/cgss2.pdf">国立長寿医療研究センター「介護予防ガイド」</a></small></p>
+          </li>
+        </ol>
+        <div class="diet-carousel-controls" hidden>
+          <button type="button" class="diet-carousel-prev" aria-label="前の手順">前へ</button>
+          <output class="diet-carousel-position" aria-live="polite" aria-label="現在の手順">1 / 2</output>
+          <button type="button" class="diet-carousel-next" aria-label="次の手順">次へ</button>
+        </div>
       </div>
     </section>
     <section class="diet-panel" id="week-10">
@@ -1129,14 +1145,13 @@
   })();
 </script>
 <script>
-  (() => {
-    const lesson = document.getElementById("week-7-tasting");
-    const track = lesson.querySelector(".diet-tasting-track");
+  for (const lesson of document.querySelectorAll(".diet-lesson-carousel")) {
+    const track = lesson.querySelector(".diet-carousel-track");
     const slides = [...track.children];
-    const controls = lesson.querySelector(".diet-tasting-controls");
-    const previous = lesson.querySelector(".diet-tasting-prev");
-    const next = lesson.querySelector(".diet-tasting-next");
-    const position = lesson.querySelector(".diet-tasting-position");
+    const controls = lesson.querySelector(".diet-carousel-controls");
+    const previous = lesson.querySelector(".diet-carousel-prev");
+    const next = lesson.querySelector(".diet-carousel-next");
+    const position = lesson.querySelector(".diet-carousel-position");
 
     function currentSlide() {
       const left = track.getBoundingClientRect().left;
@@ -1160,21 +1175,28 @@
       if (position.value !== text) position.value = text;
     }
 
-    function move(by) {
-      const target = slides[currentSlide() + by];
+    function scrollToSlide(target) {
       if (!target) return;
       const left = target.getBoundingClientRect().left - slides[0].getBoundingClientRect().left;
       track.scrollTo({ left, behavior: "instant" });
       syncControls();
     }
 
-    previous.addEventListener("click", () => move(-1));
-    next.addEventListener("click", () => move(1));
+    function showLinkedSlide() {
+      const hash = window.location.hash;
+      const linkedSlide = slides.find(slide => slide.id && `#${slide.id}` === hash);
+      scrollToSlide(linkedSlide);
+    }
+
+    previous.addEventListener("click", () => scrollToSlide(slides[currentSlide() - 1]));
+    next.addEventListener("click", () => scrollToSlide(slides[currentSlide() + 1]));
     track.addEventListener("scroll", syncControls, { passive: true });
     window.addEventListener("resize", syncControls);
+    window.addEventListener("hashchange", showLinkedSlide);
     controls.hidden = false;
+    showLinkedSlide();
     syncControls();
-  })();
+  }
 </script>
 </body>
 </html>
