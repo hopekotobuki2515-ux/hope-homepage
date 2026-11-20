@@ -253,6 +253,76 @@
     font-weight: 700;
     cursor: pointer;
   }
+
+  #week-1-diary { margin-block: 16px 20px; }
+  #week-1-diary-title, #week-1 .diet-entry-example {
+    margin: 0 0 5px;
+    color: var(--green);
+    font-size: 1rem;
+  }
+  #week-1-diary table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin: 10px 0 6px;
+    background: #fff;
+    font-size: .85rem;
+    line-height: 1.4;
+  }
+  #week-1-diary .diet-entry-group { width: clamp(40px, 11.3vw, 58px); }
+  #week-1-diary th, #week-1-diary td {
+    border: 1px solid var(--line);
+  }
+  #week-1-diary th { padding: 7px 0; background: var(--mint); }
+  #week-1-diary th:first-child { text-align: start; padding-inline-start: 6px; }
+  #week-1-diary td:first-child { padding: 4px 5px; }
+  #week-1-diary td:first-child label { display: block; font-weight: 700; }
+  #week-1-diary textarea {
+    display: block;
+    width: 100%;
+    min-height: 65px;
+    margin-top: 3px;
+    padding: 4px;
+    resize: vertical;
+    border: 1px solid #80978a;
+    border-radius: 4px;
+    background: #fff;
+    color: var(--ink);
+    font: inherit;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  #week-1-diary .diet-entry-check {
+    position: relative;
+    display: grid;
+    min-height: 48px;
+    place-items: center;
+    cursor: pointer;
+  }
+  #week-1-diary .diet-entry-check input {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+  #week-1-diary .diet-entry-check span {
+    width: 19px;
+    height: 19px;
+    border: 1px solid #6f8879;
+    border-radius: 4px;
+  }
+  #week-1-diary .diet-entry-check input:checked + span {
+    border: 3px solid var(--green);
+    border-radius: 50%;
+  }
+  #week-1-diary .diet-entry-check input:focus-visible + span {
+    outline: 2px solid var(--green);
+    outline-offset: 3px;
+  }
+  #week-1-diary .diet-entry-note { font-size: .85rem; }
 </style>
 </head>
 <body>
@@ -298,6 +368,59 @@
           <div class="diet-lesson">
         <h3>食事ダイアリーの書き方</h3>
         <p>朝食・昼食・夕食・間食に分けて、口にしたものを普段どおりに記録します。飲み物も一緒に書き、量は分かる範囲で残しましょう。</p>
+        <section id="week-1-diary" class="diet-entry" aria-labelledby="week-1-diary-title">
+          <h4 id="week-1-diary-title">食事ダイアリーに直接記入する</h4>
+          <p>左の欄に食べたものを書き、当てはまる食品群をタップして○を付けます。もう一度タップすると○が外れます。</p>
+          <table aria-labelledby="week-1-diary-title">
+            <colgroup><col><col class="diet-entry-group"><col class="diet-entry-group"><col class="diet-entry-group"><col class="diet-entry-group"></colgroup>
+            <thead><tr><th scope="col">食べたもの</th><th scope="col">第1群</th><th scope="col">第2群</th><th scope="col">第3群</th><th scope="col">第4群</th></tr></thead>
+            <tbody>
+            <tr>
+              <td>
+                <label for="week-one-breakfast">朝食</label>
+                <textarea id="week-one-breakfast" data-diary-key="breakfast-meal" rows="3" placeholder="食べたもの"></textarea>
+              </td>
+              <td><label class="diet-entry-check"><input type="checkbox" data-diary-key="breakfast-group-1" aria-label="朝食の第1群"><span aria-hidden="true"></span></label></td>
+              <td><label class="diet-entry-check"><input type="checkbox" data-diary-key="breakfast-group-2" aria-label="朝食の第2群"><span aria-hidden="true"></span></label></td>
+              <td><label class="diet-entry-check"><input type="checkbox" data-diary-key="breakfast-group-3" aria-label="朝食の第3群"><span aria-hidden="true"></span></label></td>
+              <td><label class="diet-entry-check"><input type="checkbox" data-diary-key="breakfast-group-4" aria-label="朝食の第4群"><span aria-hidden="true"></span></label></td>
+            </tr>
+            <tr>
+              <td>
+                <label for="week-one-lunch">昼食</label>
+                <textarea id="week-one-lunch" data-diary-key="lunch-meal" rows="3" placeholder="食べたもの"></textarea>
+              </td>
+              <td><label class="diet-entry-check"><input type="checkbox" data-diary-key="lunch-group-1" aria-label="昼食の第1群"><span aria-hidden="true"></span></label></td>
+              <td><label class="diet-entry-check"><input type="checkbox" data-diary-key="lunch-group-2" aria-label="昼食の第2群"><span aria-hidden="true"></span></label></td>
+              <td><label class="diet-entry-check"><input type="checkbox" data-diary-key="lunch-group-3" aria-label="昼食の第3群"><span aria-hidden="true"></span></label></td>
+              <td><label class="diet-entry-check"><input type="checkbox" data-diary-key="lunch-group-4" aria-label="昼食の第4群"><span aria-hidden="true"></span></label></td>
+            </tr>
+            <tr>
+              <td>
+                <label for="week-one-dinner">夕食</label>
+                <textarea id="week-one-dinner" data-diary-key="dinner-meal" rows="3" placeholder="食べたもの"></textarea>
+              </td>
+              <td><label class="diet-entry-check"><input type="checkbox" data-diary-key="dinner-group-1" aria-label="夕食の第1群"><span aria-hidden="true"></span></label></td>
+              <td><label class="diet-entry-check"><input type="checkbox" data-diary-key="dinner-group-2" aria-label="夕食の第2群"><span aria-hidden="true"></span></label></td>
+              <td><label class="diet-entry-check"><input type="checkbox" data-diary-key="dinner-group-3" aria-label="夕食の第3群"><span aria-hidden="true"></span></label></td>
+              <td><label class="diet-entry-check"><input type="checkbox" data-diary-key="dinner-group-4" aria-label="夕食の第4群"><span aria-hidden="true"></span></label></td>
+            </tr>
+            <tr>
+              <td>
+                <label for="week-one-snack">間食</label>
+                <textarea id="week-one-snack" data-diary-key="snack-meal" rows="3" placeholder="食べたもの"></textarea>
+              </td>
+              <td><label class="diet-entry-check"><input type="checkbox" data-diary-key="snack-group-1" aria-label="間食の第1群"><span aria-hidden="true"></span></label></td>
+              <td><label class="diet-entry-check"><input type="checkbox" data-diary-key="snack-group-2" aria-label="間食の第2群"><span aria-hidden="true"></span></label></td>
+              <td><label class="diet-entry-check"><input type="checkbox" data-diary-key="snack-group-3" aria-label="間食の第3群"><span aria-hidden="true"></span></label></td>
+              <td><label class="diet-entry-check"><input type="checkbox" data-diary-key="snack-group-4" aria-label="間食の第4群"><span aria-hidden="true"></span></label></td>
+            </tr>
+            </tbody>
+          </table>
+          <p class="diet-entry-note">第1週は点数計算なしで記録できます。</p>
+          <p class="diet-entry-note" id="week-1-diary-status" role="status">入力内容はこのブラウザーに自動保存されます。</p>
+        </section>
+        <h4 class="diet-entry-example">佐藤さんの記入例</h4>
         <dl class="diet-diary">
           <dt>朝食</dt><dd>食パン1枚、ヨーグルト1個、コーヒー1杯</dd>
           <dt>昼食</dt><dd>おにぎり2個、お茶1本</dd>
@@ -486,5 +609,43 @@
   </div>
 </article>
 </main>
+<script>
+  const weekOneDiary = document.getElementById("week-1-diary");
+  const diaryStatus = document.getElementById("week-1-diary-status");
+  const storagePrefix = "hope:sato:week-1-diary:";
+
+  function showDiaryStorageError() {
+    diaryStatus.textContent = "このブラウザーでは自動保存が使えません。";
+  }
+
+  for (const field of weekOneDiary.querySelectorAll("[data-diary-key]")) {
+    const key = storagePrefix + field.dataset.diaryKey;
+    const isGroup = field.type === "checkbox";
+
+    try {
+      const saved = localStorage.getItem(key);
+      if (isGroup) {
+        field.checked = saved === "checked";
+      } else {
+        field.value = saved ?? "";
+      }
+    } catch {
+      showDiaryStorageError();
+    }
+
+    field.addEventListener(isGroup ? "change" : "input", () => {
+      try {
+        const value = isGroup ? (field.checked ? "checked" : "") : field.value;
+        if (value) {
+          localStorage.setItem(key, value);
+        } else {
+          localStorage.removeItem(key);
+        }
+      } catch {
+        showDiaryStorageError();
+      }
+    });
+  }
+</script>
 </body>
 </html>
