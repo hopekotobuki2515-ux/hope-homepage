@@ -130,6 +130,15 @@
     text-align: center;
   }
 
+  #smart-diet-chat .diet-close-sentence {
+    display: block;
+    text-wrap: balance;
+  }
+  #smart-diet-chat .diet-close-sentence > span {
+    display: inline-block;
+    max-width: 100%;
+  }
+
   body { margin: 0; }
   #smart-diet-chat .diet-bmi {
     margin: 18px 0 0;
@@ -1019,8 +1028,11 @@
         </details>
       </div>
     </section>
-    <footer class="diet-close">
-      <p>昨日のお昼は、何を食べて、何を飲みましたか？<br>まずは思い出せるものを一つ、書いてみましょう。</p>
+    <footer class="diet-close" id="week-12-closing">
+      <p class="diet-close-message">
+        <span class="diet-close-sentence"><span>昨日のお昼は、</span><span>何を食べて、</span><span>何を飲みましたか？</span></span>
+        <span class="diet-close-sentence"><span>まずは思い出せるものを</span><span>一つ、書いてみましょう。</span></span>
+      </p>
       <p><a href="./#hope-smart">HOPEのSMART Diet紹介に戻る</a></p>
     </footer>
   </div>
