@@ -324,26 +324,48 @@
 }
 </style>
 <style>
-#hope-home .hope-mobile-phone, #hope-home .hope-mobile-first-visit, #hope-home .hope-mobile-carousel, #hope-home .hope-hero-details { display: none; }
+#hope-home .hope-mobile-phone, #hope-home .hope-mobile-first-visit, #hope-home .hope-mobile-carousel, #hope-home .hope-hero-details, #hope-home .hope-hero-city-label { display: none; }
 @media (max-width: 650px) {
   #hope-home .hope-hero picture { position: relative; height: auto; max-height: none; }
   #hope-home .hope-hero picture::after { content: ""; position: absolute; inset: 0 0 auto auto; width: 11.2%; height: 8.3%; background: #866240; pointer-events: none; }
   #hope-home .hope-hero picture > img { display: block; }
-  #hope-home .hope-hero-details {
-    display: grid;
-    align-content: start;
-    gap: 2px;
-    position: absolute;
-    inset: 31.78% auto auto 0;
-    width: 43.12%;
-    min-height: 12.15%;
+  #hope-home .hope-hero-city-label,
+  #hope-home .hope-hero-studio-name,
+  #hope-home .hope-hero-contact-lines {
     padding: 1px 3px 1px 3.25%;
     background: #866240;
     color: #fff;
     line-height: 1.12;
   }
+  #hope-home .hope-hero-city-label {
+    display: block;
+    position: absolute;
+    inset: 8.15% auto auto 0;
+    width: 54%;
+    font-size: clamp(12px, 4.375vw, 23px);
+    font-weight: 800;
+  }
+  #hope-home .hope-hero-details {
+    display: block;
+    position: absolute;
+    inset: 28.68% 0 auto;
+  }
+  #hope-home .hope-hero-studio-name {
+    width: 53.5%;
+    font-size: clamp(10.5px, 3.75vw, 21px);
+    font-weight: 800;
+  }
+  #hope-home .hope-hero-studio-name > span { display: block; }
+  #hope-home .hope-hero-studio-name small { font-size: .88em; }
+  #hope-home .hope-hero-contact-lines {
+    display: grid;
+    align-content: start;
+    gap: 2px;
+    width: 44%;
+    min-height: 13vw;
+  }
   #hope-home .hope-hero-address {
-    font-size: clamp(14px, 3.74vw, 22px);
+    font-size: clamp(10.5px, 3.74vw, 22px);
     font-style: normal;
     font-weight: 800;
   }
@@ -353,7 +375,7 @@
     font-variant-numeric: tabular-nums;
   }
   #hope-home .hope-hero-hours-note {
-    font-size: clamp(11px, 2.85vw, 16px);
+    font-size: clamp(10px, calc(2.5vw + 3px), 16px);
     font-weight: 700;
   }
   #hope-home .hope-hero-address > span,
@@ -476,10 +498,14 @@ html { scroll-padding-top: 80px; }
   </picture>
   <p class="hope-mobile-intro hope-sr-only">忙しい大人のためのパーソナルトレーニングジム。専任のパーソナルトレーナーが、体力や目標に合わせて1対1でサポートします。</p>
   <a class="hope-mobile-first-visit" href="kaatsu.html" aria-label="初めての方はコチラ"></a>
+  <p class="hope-hero-city-label">宇部市のパーソナルジム</p>
   <div class="hope-hero-details">
-    <address class="hope-hero-address"><span>宇部市寿町</span><span>2丁目5-15</span></address>
-    <p class="hope-hero-hours"><span class="hope-sr-only">営業時間 </span>11:00〜22:00</p>
-    <p class="hope-hero-hours-note"><span>最終受付21:30</span> <span>年中無休</span></p>
+    <p class="hope-hero-studio-name"><span>加圧パーソナル</span><span>エクササイズスタジオ<small>HOPE</small></span></p>
+    <div class="hope-hero-contact-lines">
+      <address class="hope-hero-address"><span>宇部市寿町</span><span>2丁目5-15</span></address>
+      <p class="hope-hero-hours"><span class="hope-sr-only">営業時間 </span>11:00〜22:00</p>
+      <p class="hope-hero-hours-note"><span>最終受付21:30</span> <span>年中無休</span></p>
+    </div>
   </div>
   <a class="hope-mobile-phone" href="tel:0836398200" aria-label="HOPEに電話する 0836-39-8200">
     <span class="hope-hero-phone-label">ご予約・お問い合わせ</span>
