@@ -243,6 +243,16 @@
   #smart-diet-chat #week-4 .diet-point-table th:first-child { width: 40%; }
   #smart-diet-chat #week-4 .diet-point-table th:nth-child(2) { width: 23%; }
   #smart-diet-chat #week-4 .diet-point-table td:last-child { text-align: end; }
+
+  #smart-diet-chat #week-5 .diet-exercise-answer { margin-top: 8px; }
+  #smart-diet-chat #week-5 .diet-exercise-answer summary {
+    min-height: 44px;
+    padding-block: 8px;
+    box-sizing: border-box;
+    color: var(--green);
+    font-weight: 700;
+    cursor: pointer;
+  }
 </style>
 </head>
 <body>
@@ -370,6 +380,21 @@
       <div class="diet-dialogue">
         <p class="diet-message diet-message--sato"><strong class="diet-speaker">佐藤さん</strong><span class="diet-bubble">「『1袋あたり160 kcal』なら、全部で2点ですね」</span></p>
         <p class="diet-message diet-message--murata"><strong class="diet-speaker">村田健作</strong><span class="diet-bubble">「そうです。表示の単位を確認したら、お惣菜の組み合わせもグループで考えてみましょう」</span></p>
+      </div>
+      <div class="diet-lesson">
+        <h3>表示の単位を見て、食べた分を計算する</h3>
+        <p>パッケージの栄養成分表示で、まず「何あたり」かを見ます。次に、熱量（kcal）を食べた分に換算し、80で割って点数を出します。</p>
+        <dl class="diet-diary">
+          <dt>1袋あたり160 kcalの食品を半分食べた場合</dt>
+          <dd>160 × 1/2 ＝ 80 kcal。<strong>80 ÷ 80 ＝ 1点</strong>です。</dd>
+          <dt>100 gあたり160 kcalの食品を75 g食べた場合</dt>
+          <dd>160 × 75 ÷ 100 ＝ 120 kcal。<strong>120 ÷ 80 ＝ 1.5点</strong>です。</dd>
+        </dl>
+        <p><strong>練習</strong>　100 gあたり240 kcalのお惣菜を75 g食べたら、何点になりますか？</p>
+        <details class="diet-exercise-answer">
+          <summary>答えを見る</summary>
+          <p>食べた分は240 × 75 ÷ 100 ＝ 180 kcal。<strong>180 ÷ 80 ＝ 2.25点</strong>です。</p>
+        </details>
       </div>
     </section>
     <section class="diet-panel" id="week-6">
