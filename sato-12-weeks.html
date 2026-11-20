@@ -391,6 +391,35 @@
 
   #week-1-diary .diet-entry-check-second { border-top: 1px solid var(--line); }
   #week-1-diary .diet-entry-check-second input:disabled + span { opacity: .45; }
+
+  #smart-diet-chat .diet-bmi-calculator { margin-top: 14px; }
+  #smart-diet-chat .diet-bmi-calculator h4 {
+    margin: 0 0 6px;
+    color: var(--green);
+    font-size: 1rem;
+  }
+  #smart-diet-chat .diet-bmi-field { margin-block: 6px; max-width: 18rem; }
+  #smart-diet-chat .diet-bmi-field label { display: block; font-weight: 700; }
+  #smart-diet-chat .diet-bmi-field input {
+    width: 100%;
+    min-height: 44px;
+    padding: 6px 10px;
+    border: 1px solid #80978a;
+    border-radius: 6px;
+    background: #fff;
+    color: var(--ink);
+    font: inherit;
+    font-size: 16px;
+  }
+  #smart-diet-chat #week-2-bmi-result {
+    display: block;
+    margin-top: 10px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    background: var(--mint);
+    color: var(--green);
+    font-weight: 700;
+  }
 </style>
 </head>
 <body>
@@ -578,6 +607,18 @@
         <p><strong>BMI（体格指数）</strong>は、身長と体重から体格をみる目安です。</p>
         <p>BMI ＝ 体重（kg）÷ 身長（m）÷ 身長（m）</p>
         <p>身長165 cm、体重70 kgの場合は、70 ÷ 1.65 ÷ 1.65 ＝ 約25.7です。</p>
+        <section class="diet-bmi-calculator" id="week-2-bmi" aria-labelledby="week-2-bmi-title">
+          <h4 id="week-2-bmi-title">BMIを自動計算する</h4>
+          <div class="diet-bmi-field">
+            <label for="week-2-bmi-height">身長（cm）</label>
+            <input id="week-2-bmi-height" type="number" step="any" inputmode="decimal">
+          </div>
+          <div class="diet-bmi-field">
+            <label for="week-2-bmi-weight">体重（kg）</label>
+            <input id="week-2-bmi-weight" type="number" step="any" inputmode="decimal">
+          </div>
+          <output id="week-2-bmi-result" for="week-2-bmi-height week-2-bmi-weight" aria-live="polite">身長と体重を入力すると、ここにBMIが表示されます。</output>
+        </section>
         <p><a href="https://kennet.mhlw.go.jp/information/information/metabolic/bmi_check.html">BMIの見方を確認する（厚生労働省）</a></p>
       </aside>
     </section>
@@ -885,6 +926,42 @@
   });
 
   guideStart.hidden = false;
+</script>
+<script>
+  (() => {
+    const heightInput = document.getElementById("week-2-bmi-height");
+    const weightInput = document.getElementById("week-2-bmi-weight");
+    const result = document.getElementById("week-2-bmi-result");
+    const inputs = [heightInput, weightInput];
+    const bmiNumber = new Intl.NumberFormat("ja-JP", {
+      minimumFractionDigits: 1,
+      maximumFractionDigits: 1,
+    });
+
+    function updateBmi() {
+      const invalid = inputs.some(input => input.validity.badInput ||
+        (input.value !== "" && (!Number.isFinite(input.valueAsNumber) || input.valueAsNumber <= 0)));
+      if (invalid) {
+        result.value = "身長と体重には0より大きい数値を入力してください。";
+        return;
+      }
+
+      if (inputs.some(input => input.value === "")) {
+        result.value = "身長と体重を入力すると、ここにBMIが表示されます。";
+        return;
+      }
+
+      const heightMetres = heightInput.valueAsNumber / 100;
+      const bmi = weightInput.valueAsNumber / (heightMetres ** 2);
+      result.value = Number.isFinite(bmi) && bmi > 0
+        ? `BMI ${bmiNumber.format(bmi)}`
+        : "入力した身長と体重を確認してください。";
+    }
+
+    for (const input of inputs) input.addEventListener("input", updateBmi);
+    window.addEventListener("pageshow", updateBmi);
+    updateBmi();
+  })();
 </script>
 </body>
 </html>
