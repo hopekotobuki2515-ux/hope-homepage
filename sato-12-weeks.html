@@ -487,6 +487,7 @@
     cursor: pointer;
   }
   .diet-lesson-carousel button:disabled { opacity: .55; cursor: default; }
+  #smart-diet-chat #week-3-food-groups .diet-carousel-controls + p { margin-top: 10px; }
 </style>
 </head>
 <body>
@@ -706,15 +707,33 @@
         <p class="diet-message diet-message--sato"><strong class="diet-speaker">佐藤さん</strong><span class="diet-bubble">「お茶碗ごと量るんですか？」</span></p>
         <p class="diet-message diet-message--murata"><strong class="diet-speaker">村田健作</strong><span class="diet-bubble">「空のお茶碗をはかりに載せてゼロにしてから、ご飯を盛ります。表示された数字が、ご飯だけの重さです」</span></p>
       </div>
-      <div class="diet-lesson">
+      <div class="diet-lesson diet-lesson-carousel" id="week-3-food-groups">
         <h3 id="diet-four-groups">四群点数法とは</h3>
         <p>香川綾氏が考案した、食品を栄養の特徴によって4つの群に分ける方法です。スマートダイエットでは、<strong>80 kcalを1点</strong>として、食べた食品を群ごとに記録します。</p>
-        <dl class="diet-diary">
-          <dt>第1群</dt><dd>牛乳・乳製品、卵</dd>
-          <dt>第2群</dt><dd>魚介類、肉類、豆・豆製品</dd>
-          <dt>第3群</dt><dd>野菜、きのこ・海藻類、いも類、果物</dd>
-          <dt>第4群</dt><dd>ご飯・パン・麺などの穀類、油脂、砂糖、菓子など</dd>
-        </dl>
+        <p id="week-3-food-groups-help">横にスワイプして、食品群ごとの例を見られます。</p>
+        <ol class="diet-carousel-track" aria-labelledby="diet-four-groups" aria-describedby="week-3-food-groups-help" tabindex="0">
+          <li>
+            <h4>第1群</h4>
+            <p>牛乳・乳製品、卵</p>
+          </li>
+          <li>
+            <h4>第2群</h4>
+            <p>魚介類、肉類、豆・豆製品</p>
+          </li>
+          <li>
+            <h4>第3群</h4>
+            <p>野菜、きのこ・海藻類、いも類、果物</p>
+          </li>
+          <li>
+            <h4>第4群</h4>
+            <p>ご飯・パン・麺などの穀類、油脂、砂糖、菓子など</p>
+          </li>
+        </ol>
+        <div class="diet-carousel-controls" hidden>
+          <button type="button" class="diet-carousel-prev" aria-label="前の食品群">前へ</button>
+          <output class="diet-carousel-position" aria-live="polite" aria-label="表示中の食品群">1 / 4</output>
+          <button type="button" class="diet-carousel-next" aria-label="次の食品群">次へ</button>
+        </div>
         <p>同じ点数でも食品によって重さが違います。早見表で1点分の重さを調べ、食べた重さをその数字で割ります。</p>
       </div>
       <div class="diet-lesson">
