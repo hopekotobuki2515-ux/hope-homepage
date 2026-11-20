@@ -244,8 +244,8 @@
   #smart-diet-chat #week-4 .diet-point-table th:nth-child(2) { width: 23%; }
   #smart-diet-chat #week-4 .diet-point-table td:last-child { text-align: end; }
 
-  #smart-diet-chat #week-5 .diet-exercise-answer { margin-top: 8px; }
-  #smart-diet-chat #week-5 .diet-exercise-answer summary {
+  #smart-diet-chat :is(#week-5, #week-8) .diet-exercise-answer { margin-top: 8px; }
+  #smart-diet-chat :is(#week-5, #week-8) .diet-exercise-answer summary {
     min-height: 44px;
     padding-block: 8px;
     box-sizing: border-box;
@@ -848,6 +848,30 @@
       <div class="diet-dialogue">
         <p class="diet-message diet-message--sato"><strong class="diet-speaker">佐藤さん</strong><span class="diet-bubble">「ここ数日、体重があまり変わりません。何を見直せばいいですか？」</span></p>
         <p class="diet-message diet-message--murata"><strong class="diet-speaker">村田健作</strong><span class="diet-bubble">「少し長い期間の体重と食事の記録を見てみましょう。今日は歩きやすいペースも試します」</span></p>
+      </div>
+      <div class="diet-lesson" id="week-8-review">
+        <h3>実習｜佐藤さんの体重と食事の記録を見直す</h3>
+        <p>体重を測る時間や条件をそろえて記録し、前の週と今週を見比べます。</p>
+        <details class="diet-exercise-answer" name="week-8-review">
+          <summary>体重の記録を見比べる</summary>
+          <dl class="diet-diary">
+            <dt>前の週の記録例</dt>
+            <dd>最後の日は70.3 kg、7日間の平均は70.5 kg。</dd>
+            <dt>今週の記録例</dt>
+            <dd>最後の日は70.8 kg、7日間の平均は70.5 kg。</dd>
+          </dl>
+          <p>最後の日の数字は違いますが、週の平均は同じです。数日だけで判断せず、週ごとの傾向を見ていきます。</p>
+        </details>
+        <details class="diet-exercise-answer" name="week-8-review">
+          <summary>食事メモで見直す項目を一つ選ぶ</summary>
+          <p>佐藤さんのメモには、午後のカフェラテは書いてありましたが、量が空欄でした。「次はカフェラテの量もメモする」と決めました。</p>
+          <p>自分の記録なら、飲み物、間食、盛り付けの量のうち、どれを確認しますか？</p>
+        </details>
+        <details class="diet-exercise-answer" name="week-8-review">
+          <summary>歩きやすいペースを試す</summary>
+          <p>普段のペースで短い距離を歩いてみます。体調に合わせて速さや距離を調整し、続けやすそうな道や時間帯を一つ決めます。</p>
+        </details>
+        <p><small>参考（厚生労働省） <a href="https://www.mhlw.go.jp/bunya/kenkou/seikatsu/pdf/hs-d_024.pdf">体重記録</a>・<a href="https://kennet.mhlw.go.jp/information/information/exercise/s-00-002.html">身体活動・運動ガイド</a></small></p>
       </div>
     </section>
     <section class="diet-panel" id="week-9">
