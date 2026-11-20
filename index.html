@@ -324,12 +324,55 @@
 }
 </style>
 <style>
-#hope-home .hope-mobile-phone, #hope-home .hope-mobile-first-visit, #hope-home .hope-mobile-carousel { display: none; }
+#hope-home .hope-mobile-phone, #hope-home .hope-mobile-first-visit, #hope-home .hope-mobile-carousel, #hope-home .hope-hero-details { display: none; }
 @media (max-width: 650px) {
   #hope-home .hope-hero picture { position: relative; height: auto; max-height: none; }
   #hope-home .hope-hero picture::after { content: ""; position: absolute; inset: 0 0 auto auto; width: 11.2%; height: 8.3%; background: #866240; pointer-events: none; }
   #hope-home .hope-hero picture > img { display: block; }
-  #hope-home .hope-hero .hope-mobile-phone { display: block; position: absolute; inset: 89.15% 0 0; }
+  #hope-home .hope-hero-details {
+    display: grid;
+    align-content: start;
+    gap: 2px;
+    position: absolute;
+    inset: 31.78% auto auto 0;
+    width: 43.12%;
+    min-height: 12.15%;
+    padding: 1px 3px 1px 3.25%;
+    background: #866240;
+    color: #fff;
+    line-height: 1.12;
+  }
+  #hope-home .hope-hero-address {
+    font-size: clamp(14px, 3.74vw, 22px);
+    font-style: normal;
+    font-weight: 800;
+  }
+  #hope-home .hope-hero-hours {
+    font-size: clamp(16px, 4vw, 24px);
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+  }
+  #hope-home .hope-hero-hours-note {
+    font-size: clamp(11px, 2.85vw, 16px);
+    font-weight: 700;
+  }
+  #hope-home .hope-hero-address > span,
+  #hope-home .hope-hero-hours-note > span { display: inline-block; white-space: nowrap; }
+  #hope-home .hope-hero .hope-mobile-phone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+    position: absolute;
+    inset: 89.15% 0 0;
+    background: #b52313;
+    color: #fff;
+    font-weight: 800;
+    line-height: 1.12;
+  }
+  #hope-home .hope-hero-phone-label { font-size: clamp(12px, 3.2vw, 17px); }
+  #hope-home .hope-hero-phone-number { font-size: clamp(25px, 7.75vw, 46px); font-variant-numeric: tabular-nums; }
   #hope-home .hope-hero .hope-mobile-first-visit { display: block; position: absolute; left: 3%; top: 79.33%; width: 45%; height: max(7.4%, 44px); transform: translateY(-50%); border-radius: 24px; }
   #hope-home #hope-feature-banners, #hope-home .hope-call { display: none; }
   #hope-home .hope-mobile-carousel { display: block; padding: 12px 12px 5px; background: #fff3c1; }
@@ -433,7 +476,15 @@ html { scroll-padding-top: 80px; }
   </picture>
   <p class="hope-mobile-intro hope-sr-only">忙しい大人のためのパーソナルトレーニングジム。専任のパーソナルトレーナーが、体力や目標に合わせて1対1でサポートします。</p>
   <a class="hope-mobile-first-visit" href="kaatsu.html" aria-label="初めての方はコチラ"></a>
-  <a class="hope-mobile-phone" href="tel:0836398200" aria-label="HOPEに電話する 0836-39-8200"></a>
+  <div class="hope-hero-details">
+    <address class="hope-hero-address"><span>宇部市寿町</span><span>2丁目5-15</span></address>
+    <p class="hope-hero-hours"><span class="hope-sr-only">営業時間 </span>11:00〜22:00</p>
+    <p class="hope-hero-hours-note"><span>最終受付21:30</span> <span>年中無休</span></p>
+  </div>
+  <a class="hope-mobile-phone" href="tel:0836398200" aria-label="HOPEに電話する 0836-39-8200">
+    <span class="hope-hero-phone-label">ご予約・お問い合わせ</span>
+    <span class="hope-hero-phone-number">0836-39-8200</span>
+  </a>
  </div>
  <section class="hope-feature-banners hope-mobile-carousel" aria-label="HOPEのご案内">
   <div class="hope-feature-track" tabindex="0" aria-label="左右にスワイプして5つの案内を見る">
