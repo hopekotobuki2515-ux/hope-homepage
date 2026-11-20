@@ -346,6 +346,19 @@
     text-underline-offset: .16em;
   }
 
+  #smart-diet-chat #week-1 .diet-entry-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 400px;
+    margin-inline: auto;
+  }
+  #smart-diet-chat #week-1 .diet-entry-actions a {
+    padding-inline: 2px;
+    font-size: .875rem;
+    line-height: 1.45;
+    text-wrap: balance;
+  }
+
   #week-1-diary .diet-guide {
     margin-block: 12px;
     padding: 12px;
@@ -507,10 +520,6 @@
     </nav>
     <section class="diet-panel" id="week-1">
       <h2><span class="diet-week">第1週｜</span>普段の食事を書いてみる</h2>
-      <p class="diet-entry-shortcut">
-        <a href="#week-1-diary">食事ダイアリーを入力する</a>
-        <a href="#week-1-example">佐藤さんの記入例を見る</a>
-      </p>
       <div class="diet-lesson">
         <h3>ステップ1｜なぜ減量が必要か？</h3>
         <p>皮膚のすぐ下につく脂肪を皮下脂肪、お腹の中で臓器のまわりにつく脂肪を内臓脂肪と呼びます。内臓脂肪がたまり、血圧・血糖・血中脂質の異常が重なると、心臓病や脳卒中のリスクが高まります。健診をきっかけに、体重とあわせて腹囲や検査結果にも目を向けてみましょう。</p>
@@ -523,6 +532,10 @@
           <div class="diet-lesson">
         <h3>食事ダイアリーの書き方</h3>
         <p>朝食・昼食・夕食・間食に分けて、口にしたものを普段どおりに記録します。飲み物も一緒に書き、量は分かる範囲で残しましょう。</p>
+        <p class="diet-entry-shortcut diet-entry-actions" id="week-1-diary-actions">
+          <a href="#week-1-diary">食事ダイアリーを入力する</a>
+          <a href="#week-1-example">佐藤さんの記入例を見る</a>
+        </p>
         <section id="week-1-diary" class="diet-entry" aria-labelledby="week-1-diary-title">
           <h4 id="week-1-diary-title">食事ダイアリーに直接記入する</h4>
           <p>左の欄に食べたものを書き、当てはまる食品群をタップして○を付けます。もう一度タップすると○が外れます。</p>
