@@ -216,6 +216,33 @@
   }
   #smart-diet-chat .diet-measure { padding-inline-start: 1.6em; }
   #smart-diet-chat [id^="week-"] { scroll-margin-top: 14px; }
+
+  #smart-diet-chat #week-4 .diet-point-table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin-block: 14px 8px;
+    background: #fff;
+    font-size: .9rem;
+    line-height: 1.5;
+  }
+  #smart-diet-chat #week-4 .diet-point-table caption {
+    text-align: start;
+    padding-bottom: 6px;
+    color: var(--green);
+    font-weight: 700;
+  }
+  #smart-diet-chat #week-4 .diet-point-table :is(th, td) {
+    padding: 7px clamp(4px, 1.4vw, 10px);
+    text-align: start;
+    vertical-align: top;
+    overflow-wrap: anywhere;
+    border: 1px solid var(--line);
+  }
+  #smart-diet-chat #week-4 .diet-point-table thead { background: var(--mint); }
+  #smart-diet-chat #week-4 .diet-point-table th:first-child { width: 40%; }
+  #smart-diet-chat #week-4 .diet-point-table th:nth-child(2) { width: 23%; }
+  #smart-diet-chat #week-4 .diet-point-table td:last-child { text-align: end; }
 </style>
 </head>
 <body>
@@ -322,6 +349,18 @@
           <dt>主菜</dt><dd>焼き魚・第2群（魚介類）</dd>
           <dt>副菜</dt><dd>小松菜のおひたし・第3群（野菜）</dd>
         </dl>
+        <table class="diet-point-table">
+          <caption>第4週の早見表（1点＝80 kcal）</caption>
+          <thead><tr><th scope="col">食品</th><th scope="col">食品群</th><th scope="col">1点分の重さ</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">ご飯（炊いた白米）</th><td>第4群</td><td>50 g</td></tr>
+            <tr><th scope="row">シロサケ</th><td>第2群</td><td>60 g</td></tr>
+            <tr><th scope="row">マサバ</th><td>第2群</td><td>40 g</td></tr>
+            <tr><th scope="row">マアジ</th><td>第2群</td><td>65 g</td></tr>
+            <tr><th scope="row">小松菜</th><td>第3群</td><td>570 g</td></tr>
+          </tbody>
+        </table>
+        <p>「80キロカロリー早見表」の食品ごとの目安量です。焼き魚は使った魚の種類を確認し、小松菜のおひたしは小松菜の量を見ます。</p>
         <p>第3週で量ったご飯は150 gでした。この例の早見表ではご飯50 gが1点分なので、<strong>150 g ÷ 50 g ＝ 3.0点</strong>です。</p>
         <p>焼き魚と小松菜は、食べた量が分かったら、それぞれ早見表の1点分の重さで割ります。献立全体の点数は、各食品の点数がそろってから合計します。</p>
       </div>
