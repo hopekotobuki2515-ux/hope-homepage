@@ -548,143 +548,24 @@
         <p>希望する場合は、食事記録と写真をトレーナーに共有してチェックを依頼できます。返信はアプリの確認画面で読み返せます。</p>
       </div>
           <div class="diet-lesson">
-        <h3>参考｜食事記録の練習と記入例</h3>
-        <p>エクイネリスの第1週は写真や簡単なメモで十分です。下の表は、希望する方が四群の記入方法を先に試せるホームページ上の練習用です。アプリの記録とは連動しません。</p>
-        <p class="diet-entry-shortcut diet-entry-actions" id="week-1-diary-actions">
-          <a href="#week-1-diary">練習用ダイアリーを入力する</a>
-          <a href="#week-1-example">佐藤さんの記入例を見る</a>
-        </p>
-        <section id="week-1-diary" class="diet-entry" aria-labelledby="week-1-diary-title">
-          <h4 id="week-1-diary-title">練習用ダイアリーに記入する</h4>
-          <p>左の欄に食べたものを書き、当てはまる食品群をタップして○を付けます。もう一度タップすると○が外れます。</p>
-          <p>同じ群の食品が2つあるときは、上下に○を1つずつ付けます。</p>
-          <p class="diet-entry-note"><strong>迷ったとき</strong>　どの群に入るか分からない食品は、無理に分類せず、食品名を記録して後から確認しましょう。</p>
-          <div class="diet-guide">
-            <div class="diet-guide-intro">
-              <h5>四群点数法を知って、朝食を記録してみる</h5>
-              <p>食品を4つの群に分け、80 kcalを1点として記録する方法です。ここでは希望する方が、食べた群に○を付ける練習をできます。</p>
-              <dl class="diet-guide-groups">
-                <dt>第1群</dt><dd>牛乳・乳製品、卵</dd>
-                <dt>第2群</dt><dd>魚介類、肉、豆・豆製品</dd>
-                <dt>第3群</dt><dd>野菜、きのこ・海藻、いも、果物</dd>
-                <dt>第4群</dt><dd>ご飯・パン・麺、油脂、砂糖、菓子など</dd>
-              </dl>
-              <button type="button" id="week-one-guide-start" hidden>朝食の例で練習する</button>
-            </div>
-            <div id="week-one-guide-controls" hidden>
-              <p id="week-one-guide-instruction" aria-live="polite" tabindex="-1"></p>
-              <p class="diet-guide-note">この練習は保存されません。</p>
-              <button type="button" id="week-one-guide-food" hidden></button>
-              <button type="button" id="week-one-guide-exit">自分の記録に戻る</button>
-            </div>
-          </div>
-          <table aria-labelledby="week-1-diary-title">
-            <colgroup><col><col class="diet-entry-group"><col class="diet-entry-group"><col class="diet-entry-group"><col class="diet-entry-group"></colgroup>
-            <thead><tr><th scope="col">食べたもの</th><th scope="col">第1群</th><th scope="col">第2群</th><th scope="col">第3群</th><th scope="col">第4群</th></tr></thead>
-            <tbody>
-            <tr>
-              <td>
-                <label for="week-one-breakfast">朝食</label>
-                <textarea id="week-one-breakfast" data-diary-key="breakfast-meal" rows="4" placeholder="食べたもの"></textarea>
-              </td>
-              <td>
-                <label class="diet-entry-check"><input type="checkbox" data-diary-key="breakfast-group-1" aria-label="朝食の第1群の上"><span aria-hidden="true"></span></label>
-                <label class="diet-entry-check diet-entry-check-second"><input type="checkbox" data-diary-key="breakfast-extra-group-1" data-diary-extra aria-label="朝食の第1群の下"><span aria-hidden="true"></span></label>
-              </td>
-              <td>
-                <label class="diet-entry-check"><input type="checkbox" data-diary-key="breakfast-group-2" aria-label="朝食の第2群の上"><span aria-hidden="true"></span></label>
-                <label class="diet-entry-check diet-entry-check-second"><input type="checkbox" data-diary-key="breakfast-extra-group-2" data-diary-extra aria-label="朝食の第2群の下"><span aria-hidden="true"></span></label>
-              </td>
-              <td>
-                <label class="diet-entry-check"><input type="checkbox" data-diary-key="breakfast-group-3" aria-label="朝食の第3群の上"><span aria-hidden="true"></span></label>
-                <label class="diet-entry-check diet-entry-check-second"><input type="checkbox" data-diary-key="breakfast-extra-group-3" data-diary-extra aria-label="朝食の第3群の下"><span aria-hidden="true"></span></label>
-              </td>
-              <td>
-                <label class="diet-entry-check"><input type="checkbox" data-diary-key="breakfast-group-4" aria-label="朝食の第4群の上"><span aria-hidden="true"></span></label>
-                <label class="diet-entry-check diet-entry-check-second"><input type="checkbox" data-diary-key="breakfast-extra-group-4" data-diary-extra aria-label="朝食の第4群の下"><span aria-hidden="true"></span></label>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="week-one-lunch">昼食</label>
-                <textarea id="week-one-lunch" data-diary-key="lunch-meal" rows="4" placeholder="食べたもの"></textarea>
-              </td>
-              <td>
-                <label class="diet-entry-check"><input type="checkbox" data-diary-key="lunch-group-1" aria-label="昼食の第1群の上"><span aria-hidden="true"></span></label>
-                <label class="diet-entry-check diet-entry-check-second"><input type="checkbox" data-diary-key="lunch-extra-group-1" data-diary-extra aria-label="昼食の第1群の下"><span aria-hidden="true"></span></label>
-              </td>
-              <td>
-                <label class="diet-entry-check"><input type="checkbox" data-diary-key="lunch-group-2" aria-label="昼食の第2群の上"><span aria-hidden="true"></span></label>
-                <label class="diet-entry-check diet-entry-check-second"><input type="checkbox" data-diary-key="lunch-extra-group-2" data-diary-extra aria-label="昼食の第2群の下"><span aria-hidden="true"></span></label>
-              </td>
-              <td>
-                <label class="diet-entry-check"><input type="checkbox" data-diary-key="lunch-group-3" aria-label="昼食の第3群の上"><span aria-hidden="true"></span></label>
-                <label class="diet-entry-check diet-entry-check-second"><input type="checkbox" data-diary-key="lunch-extra-group-3" data-diary-extra aria-label="昼食の第3群の下"><span aria-hidden="true"></span></label>
-              </td>
-              <td>
-                <label class="diet-entry-check"><input type="checkbox" data-diary-key="lunch-group-4" aria-label="昼食の第4群の上"><span aria-hidden="true"></span></label>
-                <label class="diet-entry-check diet-entry-check-second"><input type="checkbox" data-diary-key="lunch-extra-group-4" data-diary-extra aria-label="昼食の第4群の下"><span aria-hidden="true"></span></label>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="week-one-dinner">夕食</label>
-                <textarea id="week-one-dinner" data-diary-key="dinner-meal" rows="4" placeholder="食べたもの"></textarea>
-              </td>
-              <td>
-                <label class="diet-entry-check"><input type="checkbox" data-diary-key="dinner-group-1" aria-label="夕食の第1群の上"><span aria-hidden="true"></span></label>
-                <label class="diet-entry-check diet-entry-check-second"><input type="checkbox" data-diary-key="dinner-extra-group-1" data-diary-extra aria-label="夕食の第1群の下"><span aria-hidden="true"></span></label>
-              </td>
-              <td>
-                <label class="diet-entry-check"><input type="checkbox" data-diary-key="dinner-group-2" aria-label="夕食の第2群の上"><span aria-hidden="true"></span></label>
-                <label class="diet-entry-check diet-entry-check-second"><input type="checkbox" data-diary-key="dinner-extra-group-2" data-diary-extra aria-label="夕食の第2群の下"><span aria-hidden="true"></span></label>
-              </td>
-              <td>
-                <label class="diet-entry-check"><input type="checkbox" data-diary-key="dinner-group-3" aria-label="夕食の第3群の上"><span aria-hidden="true"></span></label>
-                <label class="diet-entry-check diet-entry-check-second"><input type="checkbox" data-diary-key="dinner-extra-group-3" data-diary-extra aria-label="夕食の第3群の下"><span aria-hidden="true"></span></label>
-              </td>
-              <td>
-                <label class="diet-entry-check"><input type="checkbox" data-diary-key="dinner-group-4" aria-label="夕食の第4群の上"><span aria-hidden="true"></span></label>
-                <label class="diet-entry-check diet-entry-check-second"><input type="checkbox" data-diary-key="dinner-extra-group-4" data-diary-extra aria-label="夕食の第4群の下"><span aria-hidden="true"></span></label>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="week-one-snack">間食</label>
-                <textarea id="week-one-snack" data-diary-key="snack-meal" rows="4" placeholder="食べたもの"></textarea>
-              </td>
-              <td>
-                <label class="diet-entry-check"><input type="checkbox" data-diary-key="snack-group-1" aria-label="間食の第1群の上"><span aria-hidden="true"></span></label>
-                <label class="diet-entry-check diet-entry-check-second"><input type="checkbox" data-diary-key="snack-extra-group-1" data-diary-extra aria-label="間食の第1群の下"><span aria-hidden="true"></span></label>
-              </td>
-              <td>
-                <label class="diet-entry-check"><input type="checkbox" data-diary-key="snack-group-2" aria-label="間食の第2群の上"><span aria-hidden="true"></span></label>
-                <label class="diet-entry-check diet-entry-check-second"><input type="checkbox" data-diary-key="snack-extra-group-2" data-diary-extra aria-label="間食の第2群の下"><span aria-hidden="true"></span></label>
-              </td>
-              <td>
-                <label class="diet-entry-check"><input type="checkbox" data-diary-key="snack-group-3" aria-label="間食の第3群の上"><span aria-hidden="true"></span></label>
-                <label class="diet-entry-check diet-entry-check-second"><input type="checkbox" data-diary-key="snack-extra-group-3" data-diary-extra aria-label="間食の第3群の下"><span aria-hidden="true"></span></label>
-              </td>
-              <td>
-                <label class="diet-entry-check"><input type="checkbox" data-diary-key="snack-group-4" aria-label="間食の第4群の上"><span aria-hidden="true"></span></label>
-                <label class="diet-entry-check diet-entry-check-second"><input type="checkbox" data-diary-key="snack-extra-group-4" data-diary-extra aria-label="間食の第4群の下"><span aria-hidden="true"></span></label>
-              </td>
-            </tr>
-            </tbody>
-          </table>
-          <p class="diet-entry-note">第1週のアプリ利用では、点数や四群の入力は必須ではありません。</p>
-          <p class="diet-entry-note" id="week-1-diary-status" role="status">練習欄はこのブラウザー内に保存されます。エクイネリスには送信されません。</p>
-        </section>
-        <h4 class="diet-entry-example" id="week-1-example">佐藤さんの記入例</h4>
+        <h3>佐藤さんが使う、エクイネリスの食事記録</h3>
+        <p>エクイネリスの「食事記録」では、同じページでSTEP1・STEP2・STEP3と「振り返り」を切り替えられます。日付を選び、体重も一緒に記録できます。</p>
+        <dl class="diet-diary">
+          <dt>STEP1｜写真・メモ・四群チェック</dt><dd>朝食・昼食・夕食・間食の写真を選び、必要に応じてメモを入力します。四群チェックもできますが、第1週は写真やメモから始め、点数計算は必要ありません。</dd>
+          <dt>STEP2｜食品名・分量・食品群</dt><dd>食事ごとに食材名・分量・単位・食品群を入力します。食材は追加できます。分からない量は空欄でも構いません。このステップでは点数計算は行いません。</dd>
+          <dt>STEP3｜食品検索・重量・点数計算</dt><dd>食品マスターから食材を選び、食べた重量を入力します。1点＝80 kcalを基準に点数を計算し、食事ごとの四群別小計や1日の合計点数を確認できます。</dd>
+          <dt>振り返り</dt><dd>保存済みの食事記録や体重の推移を確認します。</dd>
+        </dl>
+        <h4 class="diet-entry-example" id="week-1-example">佐藤さんのSTEP1のメモ例</h4>
         <dl class="diet-diary">
           <dt>朝食</dt><dd>食パン1枚、ヨーグルト1個、コーヒー1杯</dd>
           <dt>昼食</dt><dd>おにぎり2個、お茶1本</dd>
           <dt>夕食</dt><dd>ご飯1杯、焼き魚1切れ、みそ汁1杯</dd>
           <dt>間食</dt><dd>クッキー2枚</dd>
         </dl>
-        <p><a href="#week-1-diary">練習用ダイアリーに戻る</a></p>
-        <p>記録を見返して、食事や飲み物でよく選ぶものを一つ見つけてみましょう。</p>
-        <p class="diet-entry-shortcut" id="week-1-print"><a href="smart-diet-food-diary-a4.pdf" download>参考：食事ダイアリーPDF（A4印刷用）</a></p>
+        <p>佐藤さんは、食事の写真とメモを入力した後、「記録を保存」を押します。「記録を確認」で内容を見返せます。これは説明用の例で、このホームページでは食事の入力や保存を行いません。</p>
+        <p>普段の食事記録と写真は利用しているブラウザに保存され、別端末へは自動同期されません。トレーナーに確認を希望するときは、アプリから共有に同意して確認依頼を送ります。</p>
+        <p class="diet-entry-shortcut"><a href="https://rakudadou.sakura.ne.jp/smart-diet/equineris/record.html?stage=1&amp;mode=record-only">実際のエクイネリスの食事記録を見る</a></p>
         <p><a href="#week-2">第2週では、体重と腹囲を測り、目標を決めます。</a></p>
       </div>
     </section>
@@ -788,6 +669,7 @@
       <div class="diet-lesson">
         <h3>STEP2で食材名と分量を記録する</h3>
         <p>空のお茶碗をはかりに載せてゼロにし、ご飯を盛って重さを確認します。佐藤さんは食事記録のSTEP2で、ご飯150 gと食材名を入力しました。次の週に食品マスターを使って点数を確認します。</p>
+        <p><a href="https://rakudadou.sakura.ne.jp/smart-diet/equineris/record.html?stage=2&amp;mode=record-only">実際のSTEP2を見る</a></p>
       </div>
       <div class="diet-lesson">
         <h3>お茶碗をはかりに載せてゼロにしてから量ります</h3>
@@ -839,6 +721,7 @@
       <div class="diet-lesson">
         <h3>STEP3で1食の点数を確認する</h3>
         <p>食品マスターから食品を選び、実際に食べた量を入力すると、その食品の点数の目安が表示されます。1食の食品群ごとの小計も確認できるので、食べた量を整理する練習になります。食品や調理法によって実際の値は異なります。</p>
+        <p><a href="https://rakudadou.sakura.ne.jp/smart-diet/equineris/record.html?stage=3&amp;mode=record-only">実際のSTEP3を見る</a></p>
       </div>
       <div class="diet-lesson">
         <h3>参考｜市販品の表示から食べた分を確認する</h3>
@@ -877,6 +760,7 @@
       <div class="diet-lesson">
         <h3>四群のバランスを見ながら、相談する</h3>
         <p>佐藤さんは食事記録から写真と内容を読み込み、トレーナーチェックを依頼しました。返信の一例は「昼食に野菜を使った副菜を一品加えてみましょう」。AIによる確認は任意の同意が必要で、AIのコメント案はトレーナーが確認・承認してから送信されます。</p>
+        <p>食事記録の「トレーナーに食事記録を確認してもらう（任意）」から、確認依頼画面へ進めます。返信は同じ画面で確認できます。</p>
       </div>
       <div class="diet-lesson">
         <h3>栄養成分表示で見るところ</h3>
@@ -1092,125 +976,7 @@
   </div>
 </article>
 </main>
-<script>
-  const weekOneDiary = document.getElementById("week-1-diary");
-  const diaryStatus = document.getElementById("week-1-diary-status");
-  const storagePrefix = "hope:sato:week-1-diary:";
-  const fields = [...weekOneDiary.querySelectorAll("[data-diary-key]")];
-  const extraMarks = weekOneDiary.querySelectorAll("[data-diary-extra]");
-  const breakfastMeal = document.getElementById("week-one-breakfast");
-  const breakfastGroups = [...weekOneDiary.querySelectorAll('[data-diary-key^="breakfast-group-"]')];
-  const breakfastFields = [breakfastMeal, ...breakfastGroups];
-  const guideStart = document.getElementById("week-one-guide-start");
-  const guideControls = document.getElementById("week-one-guide-controls");
-  const guideInstruction = document.getElementById("week-one-guide-instruction");
-  const guideFood = document.getElementById("week-one-guide-food");
-  const guideExit = document.getElementById("week-one-guide-exit");
-  const guideSteps = [
-    { prompt: "朝食に食パンを入れます。", food: "食パン1枚" },
-    { prompt: "食パンは穀類です。朝食の第4群の上の欄をタップします。", group: breakfastGroups[3] },
-    { prompt: "朝食にヨーグルトを加えます。", food: "ヨーグルト1個" },
-    { prompt: "ヨーグルトは乳製品です。朝食の第1群の上の欄をタップします。", group: breakfastGroups[0] },
-  ];
-  let guideStep = 0;
-  let savedBreakfast = null;
 
-  function showDiaryStorageError() {
-    diaryStatus.textContent = "このブラウザーでは自動保存が使えません。";
-  }
-
-  function showGuideStep() {
-    const step = guideSteps[guideStep];
-    guideInstruction.textContent = step
-      ? `${guideStep + 1} / ${guideSteps.length}　${step.prompt}`
-      : "練習完了。朝食に食材が2つ入り、第1群と第4群に○が付きました。";
-    guideFood.hidden = !step?.food;
-    guideFood.textContent = step?.food ? `${step.food}を入れる` : "";
-
-    for (const field of breakfastGroups) {
-      const isTarget = field === step?.group;
-      field.disabled = !isTarget;
-      field.closest("label").classList.toggle("diet-guide-target", isTarget);
-    }
-    (step?.group ?? (step?.food ? guideFood : guideInstruction)).focus();
-  }
-
-  for (const field of fields) {
-    const key = storagePrefix + field.dataset.diaryKey;
-    const isGroup = field.type === "checkbox";
-
-    try {
-      const saved = localStorage.getItem(key);
-      if (isGroup) {
-        field.checked = saved === "checked";
-      } else {
-        field.value = saved ?? "";
-      }
-    } catch {
-      showDiaryStorageError();
-    }
-
-    field.addEventListener(isGroup ? "change" : "input", () => {
-      if (savedBreakfast) {
-        if (field === guideSteps[guideStep]?.group && field.checked) {
-          guideStep += 1;
-          showGuideStep();
-        }
-        return;
-      }
-      try {
-        const value = isGroup ? (field.checked ? "checked" : "") : field.value;
-        if (value) {
-          localStorage.setItem(key, value);
-        } else {
-          localStorage.removeItem(key);
-        }
-      } catch {
-        showDiaryStorageError();
-      }
-    });
-  }
-
-  guideStart.addEventListener("click", () => {
-    savedBreakfast = breakfastFields.map(field => field.type === "checkbox" ? field.checked : field.value);
-    guideStep = 0;
-    breakfastMeal.value = "";
-    breakfastMeal.readOnly = true;
-    for (const field of extraMarks) field.disabled = true;
-    for (const field of breakfastGroups) {
-      field.checked = false;
-    }
-    weekOneDiary.setAttribute("data-diary-guided", "");
-    guideControls.hidden = false;
-    showGuideStep();
-  });
-
-  guideFood.addEventListener("click", () => {
-    const food = guideSteps[guideStep]?.food;
-    if (!savedBreakfast || !food) return;
-    breakfastMeal.value = [breakfastMeal.value, food].filter(Boolean).join("、");
-    guideStep += 1;
-    showGuideStep();
-  });
-
-  guideExit.addEventListener("click", () => {
-    if (!savedBreakfast) return;
-    breakfastMeal.value = savedBreakfast[0];
-    breakfastMeal.readOnly = false;
-    for (const field of extraMarks) field.disabled = false;
-    breakfastGroups.forEach((field, index) => {
-      field.checked = savedBreakfast[index + 1];
-      field.disabled = false;
-      field.closest("label").classList.remove("diet-guide-target");
-    });
-    savedBreakfast = null;
-    guideControls.hidden = true;
-    weekOneDiary.removeAttribute("data-diary-guided");
-    guideStart.focus();
-  });
-
-  guideStart.hidden = false;
-</script>
 <script>
   (() => {
     const heightInput = document.getElementById("week-2-bmi-height");
