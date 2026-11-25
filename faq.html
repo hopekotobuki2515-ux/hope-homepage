@@ -9,6 +9,20 @@
   gtag('js', new Date());
   gtag('config', 'G-ZCETMLPKX3');
 </script>
+<!-- HOPE phone click tracking -->
+<script>
+document.addEventListener('click', function(event) {
+  var target = event.target;
+  var link = target && typeof target.closest === 'function' ? target.closest('a[href^="tel:"]') : null;
+  if (!link || typeof window.gtag !== 'function') return;
+  window.gtag('event', 'phone_click', {
+    send_to: 'G-ZCETMLPKX3',
+    link_url: link.getAttribute('href'),
+    transport_type: 'beacon'
+  });
+}, true);
+</script>
+
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
