@@ -1,0 +1,8 @@
+# HOPE mobile SEO routes only
+RewriteEngine On
+RewriteRule ^experience\.html$ /hope-mobile/%E4%BD%93%E9%A8%93%E3%83%88%E3%83%AC%E3%83%BC%E3%83%8B%E3%83%B3%E3%82%B0/ [R=301,L,NE]
+RewriteRule ^kaatsu\.html$ /hope-mobile/%E5%8A%A0%E5%9C%A7%E3%83%88%E3%83%AC%E3%83%BC%E3%83%8B%E3%83%B3%E3%82%B0%E3%81%AE%E5%8A%B9%E6%9E%9C/ [R=301,L,NE]
+RewriteRule ^pricing\.html$ /hope-mobile/%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%83%88%E3%83%AC%E3%83%BC%E3%83%8B%E3%83%B3%E3%82%B0%E6%96%99%E9%87%91/ [R=301,L,NE]
+RewriteRule ^membership\.html$ /hope-mobile/%E5%85%A5%E4%BC%9A%E6%A1%88%E5%86%85/ [R=301,L,NE]
+RewriteRule ^faq\.html$ /hope-mobile/%E3%82%88%E3%81%8F%E3%81%82%E3%82%8B%E8%B3%AA%E5%95%8F/ [R=301,L,NE]
+RewriteRule ^profile\.html$ /hope-mobile/%E3%83%88%E3%83%AC%E3%83%BC%E3%83%8A%E3%83%BC%E7%B4%B9%E4%BB%8B/ [R=301,L,NE]

@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<!-- Google Analytics 4: HOPE mobile -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZCETMLPKX3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZCETMLPKX3');
+</script>
+<!-- HOPE phone click tracking -->
+<script>
+document.addEventListener('click', function(event) {
+  var target = event.target;
+  var link = target && typeof target.closest === 'function' ? target.closest('a[href^="tel:"]') : null;
+  if (!link || typeof window.gtag !== 'function') return;
+  window.gtag('event', 'phone_click', {
+    send_to: 'G-ZCETMLPKX3',
+    link_url: link.getAttribute('href'),
+    transport_type: 'beacon'
+  });
+}, true);
+</script>
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>体験トレーニング｜HOPE</title>
+<meta name="description" content="宇部市でパーソナルジムの体験をお探しの方へ。HOPEでは加圧トレーニング、ウェイト、ストレッチングを目的や体力に合わせてご案内します。初めての方も体験内容をご確認いただけます。">
+<style>html{scroll-behavior:smooth}body{margin:0;background:#fff;color:#333}img{max-width:100%}</style>
+<link rel="canonical" href="https://rakudadou.sakura.ne.jp/hope-mobile/%E4%BD%93%E9%A8%93%E3%83%88%E3%83%AC%E3%83%BC%E3%83%8B%E3%83%B3%E3%82%B0/">
+</head>
+<body>
+<style>
+#hope-trial-page{--orange:#ed7908;--deep:#68301c;--line:#f4a24b;--ink:#302820}
+#hope-trial-page, #hope-trial-page *{box-sizing:border-box}
+#hope-trial-page{scroll-behavior:smooth}
+#hope-trial-page{margin:0;background:#fffaf6;color:var(--ink);font-family:"Noto Sans JP","Yu Gothic",Meiryo,sans-serif;line-height:1.8}
+#hope-trial-page a{color:inherit}
+#hope-trial-page header{--header-height:80px;position:sticky;top:0;z-index:21;height:var(--header-height);background:white;display:flex;align-items:center;justify-content:space-between;column-gap:8px;padding:10px 4.5% 10px 13px;border-bottom:2px solid #ffe1b6}
+#hope-trial-page .brand{display:flex;flex-direction:column;align-items:flex-start;gap:1px;min-width:0;text-align:left}
+#hope-trial-page .brand strong{font-family:inherit;font-size:16px;line-height:1.4;color:#74391f;letter-spacing:0}
+#hope-trial-page .brand small{font-size:12px;line-height:1.5;color:#49382d;font-weight:700}
+#hope-trial-page .hope-header-actions { flex: none; }
+#hope-trial-page .hope-header-actions details { position: relative; }
+#hope-trial-page .hope-header-actions .menu {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 44px;
+  cursor: pointer;
+  list-style: none;
+  font-size: 25px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  line-height: 1.2;
+}
+#hope-trial-page .hope-header-actions .menu::-webkit-details-marker { display: none; }
+#hope-trial-page .hope-header-actions .hope-menu-close,
+#hope-trial-page .hope-header-actions details[open] .hope-menu-open,
+#hope-trial-page .hope-header-actions details:not([open]) > nav { display: none; }
+#hope-trial-page .hope-header-actions details[open] .hope-menu-close {
+  display: grid;
+  justify-items: center;
+  color: #68301c;
+  font-size: 10px;
+  font-weight: 700;
+}
+#hope-trial-page .hope-header-actions .hope-menu-close span { font-size: 23px; line-height: 1; }
+
+#hope-trial-page .hope-header-actions nav {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 4px);
+  width: min(19rem, calc(100vw - 26px));
+  max-height: calc(100vh - var(--header-height) - env(safe-area-inset-bottom, 0px));
+  max-height: calc(100dvh - var(--header-height) - env(safe-area-inset-bottom, 0px));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: #fff;
+  border: 1px solid #f3d6bf;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px #0002;
+}
+#hope-trial-page .hope-header-actions nav a { display: flex; align-items: center; min-height: 44px; padding: 8px 16px; color: #68301c; font-size: 14px; text-decoration: none; }
+#hope-trial-page .hope-header-actions nav a + a { border-top: 1px solid #f3e3d8; }
+#hope-trial-page .hope-header-actions :is(summary, a):focus-visible { outline: 2px solid #843407; outline-offset: -2px; }
+@media (max-width: 650px) {
+  #hope-trial-page .hope-header-actions details { position: static; }
+  #hope-trial-page .hope-header-actions .menu { width: 44px; font-size: 20px; }
+  #hope-trial-page .hope-header-actions nav { inset: 100% 0 auto; width: auto; border-inline: 0; border-radius: 0; }
+}
+#hope-trial-page #contact{scroll-margin-top:80px}
+#hope-trial-page .hero{padding:clamp(22px,4vw,44px) clamp(16px,5vw,38px);background:#fff5e8;color:var(--ink);text-align:center}
+#hope-trial-page .hero-copy{max-width:620px;margin:0 auto}
+#hope-trial-page .hero h1{margin:0;color:var(--deep);font-size:clamp(28px,7.5vw,54px);font-weight:900;line-height:1.25}
+#hope-trial-page .hero-copy p{margin:10px 0 0;font-size:clamp(16px,3.5vw,18px);line-height:1.55;text-wrap:balance}
+#hope-trial-page .hero-rate{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:center;gap:0 .55rem;margin:10px 0 0;color:#a63f00;font-size:17px;font-weight:800;line-height:1.2}
+#hope-trial-page .hero-rate strong{font-size:clamp(36px,9vw,48px);font-weight:900;white-space:nowrap}
+#hope-trial-page .hero-copy .hero-details{margin-top:5px;font-weight:700}
+#hope-trial-page .hero-contact{display:inline-flex;align-items:center;justify-content:center;min-height:52px;width:min(100%,340px);margin-top:14px;padding:8px 18px;border-radius:999px;background:#a63f00;color:#fff;font-size:16px;font-weight:800;text-decoration:none}
+#hope-trial-page .hero-contact:focus-visible{outline:3px solid var(--deep);outline-offset:3px}
+#hope-trial-page .hero-photo{display:block;width:min(100%,640px);height:auto;aspect-ratio:1080 / 1140;object-fit:cover;object-position:center bottom;margin:22px auto 0;border-radius:12px}
+#hope-trial-page .hero-call{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:0 12px;min-height:48px;padding:6px 12px;background:#a63f00;color:#fff;text-align:center;text-decoration:none;font-size:clamp(19px,4.8vw,24px);font-weight:900;line-height:1.4}
+#hope-trial-page .hero-call strong{white-space:nowrap}
+#hope-trial-page .hero-call:focus-visible{outline:3px solid #fff;outline-offset:-5px}
+#hope-trial-page .wrap{max-width:960px;margin:auto}
+#hope-trial-page .cta{display:inline-block;border:0;border-radius:40px;background:var(--orange);padding:13px 34px;color:#fff;text-decoration:none;font-weight:800;box-shadow:0 5px 0 #cc6500}
+#hope-trial-page main{background:#fff}
+#hope-trial-page .section{padding:58px 32px;border-bottom:1px solid #eee6df}
+#hope-trial-page .section h2{font-size:clamp(24px,3.5vw,32px);font-weight:900;color:var(--deep);margin:0 0 20px;line-height:1.4;padding-bottom:12px;border-bottom:4px solid var(--orange)}
+#hope-trial-page .section h3{font-size:23px;margin:0 0 13px;color:#bd5000}
+#hope-trial-page .section p{font-size:17px;margin:0 0 15px}
+#hope-trial-page .sub{color:#5c524b;font-size:16px}
+#hope-trial-page .price{display:flex;align-items:baseline;justify-content:center;gap:26px;flex-wrap:wrap;background:#fff5e8;border-top:2px solid #fbd4a0;border-bottom:2px solid #fbd4a0;padding:22px;margin:25px 0}
+#hope-trial-page .price .regular{color:#777;font-size:17px}
+#hope-trial-page .price .first{color:#c95200;font-size:32px;font-weight:900}
+#hope-trial-page .price .first span{font-size:15px}
+#hope-trial-page .photo{display:block;width:100%;max-width:630px;height:auto;margin:18px auto 22px;border-radius:12px}
+#hope-trial-page .course{padding:30px 0;border-bottom:1px solid #f1dfd0}
+#hope-trial-page .course:last-child{border-bottom:0}
+#hope-trial-page .course .tag{font-weight:800;color:#d26b09;font-size:14px;letter-spacing:.06em}
+#hope-trial-page .course h3{margin:4px 0 10px}
+#hope-trial-page .course p{margin-bottom:12px}
+#hope-trial-page .course .photo{max-width:620px}
+#hope-trial-page .steps{counter-reset:step;display:grid;gap:18px}
+#hope-trial-page .step{display:flex;gap:16px;align-items:flex-start}
+#hope-trial-page .step:before{counter-increment:step;content:counter(step);display:grid;place-items:center;flex:0 0 40px;height:40px;background:#ef810e;border-radius:50%;color:white;font-weight:900}
+#hope-trial-page .step strong{display:block;font-size:18px}
+#hope-trial-page .step span{font-size:15px}
+#hope-trial-page #flow .step:nth-child(3){margin-top:6px}
+#hope-trial-page #flow .step:nth-child(4){margin-top:28px}
+#hope-trial-page #flow .step:is(:nth-child(3), :nth-child(4)) span{display:block;margin-top:8px;line-height:2.3}
+#hope-trial-page .check{margin:0;padding:0;list-style:none;display:grid;gap:9px}
+#hope-trial-page .check li{padding:9px 12px 9px 39px;position:relative;background:#fff7ed;border-radius:8px}
+#hope-trial-page .check li:before{content:"✓";position:absolute;left:13px;color:#de6900;font-weight:900}
+#hope-trial-page .note{font-size:13px!important;color:#756b63}
+#hope-trial-page .contact{background:#fff5e7;text-align:center}
+#hope-trial-page .contact .phone{font-size:32px;font-weight:900;color:#d76500;text-decoration:none;letter-spacing:.02em}
+#hope-trial-page .contact p{margin-bottom:10px}
+#hope-trial-page .contact .cta{margin-top:13px}
+#hope-trial-page .footer{background:#fff;padding:28px 18px 48px;text-align:center;color:#655c54;font-size:13px}
+#hope-trial-page .bottom{position:sticky;bottom:0;background:#fff;border-top:1px solid #edd6c3;padding:10px 14px;text-align:center;box-shadow:0 -4px 15px #0000000c}
+#hope-trial-page .bottom a{display:block;background:#ef7c07;color:white;text-decoration:none;border-radius:9px;font-weight:900;padding:10px}
+@media (max-width:650px){#hope-trial-page header{--header-height:65px;padding:9px 13px}
+#hope-trial-page .brand strong{font-size:12px;line-height:1.25}
+#hope-trial-page .brand small{font-size:9px}
+#hope-trial-page #contact{scroll-margin-top:65px}
+#hope-trial-page .section{padding:38px 19px}
+#hope-trial-page .section h2{font-size:24px}
+#hope-trial-page .section h3{font-size:21px}
+#hope-trial-page .section p{font-size:15px}
+#hope-trial-page .price{gap:10px;padding:16px 6px}
+#hope-trial-page .price .regular{font-size:14px}
+#hope-trial-page .price .first{font-size:28px}
+#hope-trial-page .course{padding:26px 0}
+#hope-trial-page .contact .phone{font-size:27px}}
+#hope-trial-page{display:block;box-sizing:border-box;width:100%;margin:0;min-width:0;overflow-x:clip}
+
+</style>
+<div id="hope-trial-page">
+
+<header class="hope-site-header"><div class="brand"><strong>加圧パーソナルエクササイズスタジオ</strong><small>山口県宇部市・完全予約制</small></div><div class="hope-header-actions"><details><summary class="menu" aria-label="メニューを開く"><span class="hope-menu-open" aria-hidden="true">☰</span><span class="hope-menu-close" aria-hidden="true"><span>×</span>閉じる</span></summary><nav aria-label="サイトメニュー"><a href="../">ホーム</a><a href="../#hope-training">HOPEのトレーニング</a><a href="../#hope-smart">SMART Diet</a><a href="../#hope-items">おすすめアイテム</a><a href="#contact">体験のお問い合わせ・ご予約</a><a href="../#hope-access">アクセス</a><a aria-disabled="true" style="cursor:default">WEB申し込み 準備中</a></nav></details></div></header>
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="hero-copy">
+    <h1 id="hero-heading">体験トレーニング</h1>
+    <p>運動が初めての方も、久しぶりの方も。<br>目的や体力に合わせて、1対1で進めます。</p>
+    <div class="hero-rate"><span>初回体験</span> <strong>3,000円</strong></div>
+    <p class="hero-details">約60分・完全予約制</p>
+    <a class="hero-contact" href="#contact">体験のお問い合わせはこちら</a>
+  </div>
+  <img class="hero-photo" src="../assets/experience-trial-photo.webp" width="1080" height="1350" alt="トレーナーのそばで加圧ベルトを着け、ベンチに座って脚を動かす様子">
+</section>
+<a class="hero-call" href="tel:0836398200"><strong>0836-39-8200</strong></a>
+<main><div class="wrap">
+<section class="section" id="intro"><h2>HOPEの体験トレーニング</h2><p>「自分に合う運動がわからない」「体力や姿勢が気になる」「筋肉や筋力をつけたい」。そんな方に向けて、身体の状態やご希望を伺いながら、無理のない内容をご提案します。</p><p>トレーニング経験の有無にかかわらず、マンツーマンで一つひとつ確認しながら進めます。</p><div class="price"><span class="regular">通常料金 <s>6,000円</s></span><span class="first"><span>初回体験</span> 3,000円</span></div><p class="sub" style="text-align:center">カウンセリングを含めて約60分</p></section>
+<section class="section" id="courses"><h2>目的に合わせて選べる3つの体験コース</h2><p class="sub">迷った場合は、体験前にご希望をお聞きして内容を一緒に考えます。</p><article class="course"><div class="tag">COURSE 01</div><h3>理想のカラダづくり</h3><img class="photo" src="../assets/taiken_photo_2.png" alt="ウェイトトレーニングのイメージ"><p>筋力アップ、引き締め、ボディラインづくりを目指す方に。ウェイトトレーニングを基本に、目的や体力に応じて加圧トレーニングも組み合わせます。</p><p>シェイプアップが目的の場合は、複数の運動を続けて行うサーキット形式にも対応します。</p></article><article class="course"><div class="tag">COURSE 02</div><h3>カラダすっきりケア</h3><img class="photo" src="../assets/taiken_photo_3.png" alt="ストレッチングのイメージ"><p>身体の硬さ、姿勢、動かしにくさが気になる方に。ストレッチングやコンディショニングに加え、加圧トレーニングも行います。身体の状態に合わせて、無理のない範囲で進めます。</p><p class="note">※痛みやしびれなどの症状を治療するものではありません。強い症状や継続する症状は医療機関へご相談ください。</p></article><article class="course"><div class="tag">COURSE 03</div><h3>あなたにぴったり体験</h3><img class="photo" src="../assets/trial-training-collage.jpg" alt="加圧・ウェイトトレーニング・ストレッチングを行う様子のコラージュ"><p>「どの運動が合うかわからない」「体力をつけたい」「自分の目標に合った内容を試したい」という方に。カウンセリングでお話を伺い、加圧・ウェイト・ストレッチングなどから組み立てます。</p></article></section>
+<section class="section" id="flow"><h2>体験当日の流れ</h2><div class="steps"><div class="step"><div><strong>ご希望・体調の確認</strong><span>運動経験、気になること、目標などをお伺いします。</span></div></div><div class="step"><div><strong>体験内容のご案内</strong><span>その日の体調や目的に合わせて内容を調整します。</span></div></div><div class="step"><div><strong>マンツーマンで体験</strong><span>動き方や負荷を確認しながら運動します。</span></div></div><div class="step"><div><strong>振り返り・ご相談</strong><span>気になることや今後の運動についてご相談いただけます。</span></div></div></div></section>
+<section class="section" id="bring"><h2>持ち物・ご利用案内</h2><ul class="check"><li>タオル</li><li>袖のある運動用シャツ</li><li>運動用シューズ</li><li>飲料水</li><li>体験料金</li></ul><p style="margin-top:18px">営業時間：11:00〜22:00／年中無休／完全予約制</p><p class="note">体験はカウンセリングを含めて約60分です。前後の時間には余裕を持ってお越しください。</p></section>
+<section class="section contact" id="contact"><h2>体験のお問い合わせ・ご予約</h2><p>サイズを気にせず着たい服を選ぶためにも、週1回のパーソナルトレーニングから始めてみませんか？</p><p>今すぐお電話を<br><a class="phone" href="tel:0836398200">0836-39-8200</a></p><p>加圧パーソナルエクササイズスタジオHOPE</p><a class="cta" href="mailto:info@rakudadou.jp?subject=%E4%BD%93%E9%A8%93%E3%83%88%E3%83%AC%E3%83%BC%E3%83%8B%E3%83%B3%E3%82%B0%E3%81%AE%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">メールで体験を申し込む　›</a><br><a class="cta" href="tel:0836398200">電話で体験を問い合わせる　›</a><p class="note" style="margin-top:18px">メールまたはお電話でお問い合わせいただけます。</p></section>
+</div></main>
+
+</div>
+
+<script>
+const hopeHeaderMenu = document.querySelector('.hope-header-actions details');
+const hopeHeaderToggle = hopeHeaderMenu.querySelector('summary');
+hopeHeaderMenu.addEventListener('toggle', () => {
+  hopeHeaderToggle.setAttribute('aria-label', hopeHeaderMenu.open ? 'メニューを閉じる' : 'メニューを開く');
+});
+hopeHeaderMenu.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && hopeHeaderMenu.open) {
+    hopeHeaderMenu.open = false;
+    hopeHeaderToggle.focus();
+  }
+});
+hopeHeaderMenu.querySelector('nav').addEventListener('click', (event) => {
+  if (event.target.closest('a')) hopeHeaderMenu.open = false;
+});
+</script>
+</body>
+</html>
