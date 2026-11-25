@@ -210,6 +210,15 @@ document.addEventListener('click', function(event) {
 #hope-home .hope-smart-step strong{color:#2e8048;display:block}
 #hope-home .hope-smart-step small{display:block;color:#777;margin-top:3px}
 #hope-home .hope-smart-foot{margin-top:24px}
+#hope-home #hope-smart .hope-smart-card{background:#fff}
+#hope-home #hope-smart .hope-smart-card h3{font-size:clamp(23px,4.5vw,36px);line-height:1.5;overflow-wrap:break-word}
+#hope-home #hope-smart .hope-equineris-features{display:grid;grid-template-columns:minmax(0,1fr);gap:14px}
+#hope-home #hope-smart .hope-equineris-feature,#hope-home #hope-smart .hope-equineris-program{min-width:0;background:#fff;border:1px solid #d3e5d2;border-radius:16px;padding:clamp(14px,3vw,24px);text-align:center}
+#hope-home #hope-smart .hope-equineris-feature svg{display:block;width:52px;height:52px;margin:0 auto 12px;color:#2f824a}
+#hope-home #hope-smart .hope-equineris-feature h4,#hope-home #hope-smart .hope-equineris-program h4{font-size:clamp(17px,3vw,22px);line-height:1.5;color:#2f824a;margin:0 0 10px}
+#hope-home #hope-smart .hope-equineris-feature p,#hope-home #hope-smart .hope-equineris-program p{font-size:clamp(14px,2vw,16px);line-height:1.85;margin:0;overflow-wrap:break-word}
+#hope-home #hope-smart .hope-equineris-program{margin-top:14px}
+#hope-home #hope-smart .hope-equineris-program .hope-btn{margin-top:18px}
 #hope-home .hope-note{color:#8b8581;font-size:13px;margin-top:20px}
 #hope-home .hope-items .hope-section-head h2{color:#a94d16}
 #hope-home .hope-items-track{display:flex;align-items:stretch;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;gap:12px;padding:16px 4px 20px;scrollbar-width:thin}
@@ -517,7 +526,7 @@ html { scroll-padding-top: 80px; }
 </style>
 <div id="hope-home" lang="ja">
  <h1 class="hope-sr-only">宇部市の加圧パーソナルトレーニング｜スタジオHOPE</h1>
- <header class="hope-site-header"><div class="brand"><strong>加圧パーソナルエクササイズスタジオ</strong><small>山口県宇部市・完全予約制</small></div><div class="hope-header-actions"><details><summary class="menu" aria-label="メニューを開く"><span class="hope-menu-open" aria-hidden="true">☰</span><span class="hope-menu-close" aria-hidden="true"><span>×</span>閉じる</span></summary><nav aria-label="ページ内メニュー"><a href="./">ホーム</a><a href="#hope-training">HOPEのトレーニング</a><a href="#hope-smart">SMART Diet</a><a href="#hope-items">おすすめアイテム</a><a href="experience.html">体験トレーニング</a><a href="pricing.html">料金案内</a><a href="#hope-access">アクセス</a><a href="membership.html">入会案内</a><a href="faq.html">よくある質問（Q&amp;A）</a><a aria-disabled="true" style="cursor:default">WEB申し込み 準備中</a></nav></details></div></header>
+ <header class="hope-site-header"><div class="brand"><strong>加圧パーソナルエクササイズスタジオ</strong><small>山口県宇部市・完全予約制</small></div><div class="hope-header-actions"><details><summary class="menu" aria-label="メニューを開く"><span class="hope-menu-open" aria-hidden="true">☰</span><span class="hope-menu-close" aria-hidden="true"><span>×</span>閉じる</span></summary><nav aria-label="ページ内メニュー"><a href="./">ホーム</a><a href="#hope-training">HOPEのトレーニング</a><a href="#hope-smart">エクイネリス</a><a href="#hope-items">おすすめアイテム</a><a href="experience.html">体験トレーニング</a><a href="pricing.html">料金案内</a><a href="#hope-access">アクセス</a><a href="membership.html">入会案内</a><a href="faq.html">よくある質問（Q&amp;A）</a><a aria-disabled="true" style="cursor:default">WEB申し込み 準備中</a></nav></details></div></header>
  <div class="hope-hero">
   <picture>
     <source media="(max-width: 650px)" srcset="assets/home-hero-mobile-first-visit.png" width="276" height="387">
@@ -619,7 +628,23 @@ html { scroll-padding-top: 80px; }
   </nav>
 </section>
 
- <section class="hope-section hope-smart" id="hope-smart"><div class="hope-section-head"><h2>SMART Diet</h2><p>食習慣を見直す、12週間のサポートアプリ</p></div><div class="hope-smart-card"><span class="hope-pill">現在、準備中</span><h3>SMART Diet</h3><p class="lead">食事を記録し、学び、振り返る。</p><p class="desc">自分のペースで食習慣を整えるための<br>12週間サポートアプリを制作しています。</p><div class="hope-smart-steps"><div class="hope-smart-step"><span class="circle" aria-hidden="true">♜</span><strong>食事を記録</strong><small>毎日の食事を見つめる</small></div><div class="hope-smart-step"><span class="circle" aria-hidden="true">▣</span><strong>毎週の学び</strong><small>12週間のテーマを学ぶ</small></div><div class="hope-smart-step"><span class="circle" aria-hidden="true">↗</span><strong>振り返り</strong><small>変化や気づきを確認する</small></div></div></div><p class="hope-smart-foot">毎日の食事と向き合い、無理なく続ける習慣づくりをサポート。<br>公開に向けて制作を進めています。</p><a class="hope-btn" href="sato-12-weeks.html">佐藤さんの12週間を読む ›</a><p class="hope-note">※アプリは現在準備中です。掲載内容は開発中の構想です。</p></section>
+ <section class="hope-section hope-smart" id="hope-smart">
+  <div class="hope-section-head"><h2>EQUINERIS（エクイネリス）</h2><p>HOPEのダイエット支援アプリ</p></div>
+  <div class="hope-smart-card">
+    <span class="hope-pill">HOPEの施設利用者向け</span>
+    <h3>食べることを学び、<br>自分に合った食習慣へ。</h3>
+    <p class="lead">トレーニングだけでなく、毎日の食生活もサポート。</p>
+    <p class="desc">何を食べたらいいのか、どのくらい食べたらいいのか。そんな疑問を、毎日の記録と学びを通して一緒に整理していきます。</p>
+    <div class="hope-equineris-features"><div class="hope-equineris-feature"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="15" rx="3"/><path d="M8 6l2-3h4l2 3"/><circle cx="12" cy="13" r="4"/></svg><h4>写真とメモで食事を記録</h4><p>まずはいつもの食事を写真に残すことから。食材名や分量、点数の記録にも段階的に取り組めます。</p></div>
+<div class="hope-equineris-feature"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><h4>四群点数法を学ぶ</h4><p>食品の特徴や食事のバランスを学び、自分に合った食品選びや食事量を考える力を養います。</p></div>
+<div class="hope-equineris-feature"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18M6 15l4-5 4 3 6-7"/><path d="M16 6h4v4"/></svg><h4>食事と体重を振り返る</h4><p>食事の履歴や体重の推移を見ながら、日々の変化や気づきを次の食事に生かします。</p></div>
+<div class="hope-equineris-feature"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18v13H10l-5 4v-4H3zM7 10h10M7 14h7"/></svg><h4>トレーナーに相談できる</h4><p>食事記録や写真を共有して確認を依頼できます。迷ったときは、トレーナーと一緒に次の工夫を考えましょう。</p></div></div>
+    <div class="hope-equineris-program"><h4>12週間のダイエットプログラム</h4><p>写真とメモから始め、食事量や四群点数法を段階的に学びます。架空の参加者・佐藤さんの12週間を通して、サポートの流れをご覧いただけます。</p><a class="hope-btn" href="sato-12-weeks.html">佐藤さんの12週間を読む ›</a></div>
+  </div>
+  <p class="hope-smart-foot"><strong>あなたの歩幅であなたと共に</strong></p>
+  <p>エクイネリスは、HOPEのダイエットプログラム参加者や施設をご利用の方へのサポートとして提供しています。アプリ単体の販売は行っていません。</p>
+  <a class="hope-btn" href="experience.html">体験トレーニングの内容を見る ›</a>
+</section>
  <section class="hope-section hope-items" id="hope-items">
   <div class="hope-section-head"><h2>おすすめアイテム</h2><p>トレーニングやセルフケアに役立つアイテムをご紹介</p></div>
   <p class="hope-note">このページにはAmazonアソシエイトの広告リンクを含みます。</p>
